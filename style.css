@@ -19,6 +19,13 @@ body {
     }
 }
 
+/* قاعدة عامة للصور لجعلها متجاوبة */
+img {
+    max-width: 100%; /* ضمان عدم تجاوز الصور لعرض الحاوية */
+    height: auto;    /* الحفاظ على نسبة الأبعاد */
+    display: block;  /* لإزالة المسافات الإضافية أسفل الصور */
+}
+
 /* Container for consistent width */
 .container {
     max-width: 1200px;
@@ -58,7 +65,9 @@ header .logo h1 {
     margin: 0;
     font-size: 24px;
     color: #fff;
-    white-space: nowrap; /* منع النص من الانكسار لأسطر متعددة */
+    white-space: normal; /* **تم التعديل: السماح للنص بالانكسار لأسطر متعددة** */
+    word-wrap: break-word; /* **تم الإضافة: لكسر الكلمات الطويلة جداً** */
+    overflow-wrap: break-word; /* **تم الإضافة: بديل لـ word-wrap لتحسين التوافقية** */
 }
 
 header nav ul {
@@ -630,6 +639,13 @@ footer p {
     header .logo {
         margin-bottom: 15px;
         justify-content: center;
+    }
+
+    header .logo h1 { /* **تم الإضافة: لضبط حجم الخط والسماح بكسر النص في الهيدر على الجوال** */
+        font-size: 20px; /* حجم خط أصغر للهواتف */
+        white-space: normal;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 
     header nav ul {
