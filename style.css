@@ -631,6 +631,10 @@ footer p {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    header { /* **تم التعديل: جعل الهيدر غير ثابت على الهاتف** */
+        position: static;
+        box-shadow: none;
+    }
     header .container {
         flex-direction: column;
         text-align: center;
@@ -641,8 +645,8 @@ footer p {
         justify-content: center;
     }
 
-    header .logo h1 { /* **تم الإضافة: لضبط حجم الخط والسماح بكسر النص في الهيدر على الجوال** */
-        font-size: 20px; /* حجم خط أصغر للهواتف */
+    header .logo h1 {
+        font-size: 20px;
         white-space: normal;
         word-wrap: break-word;
         overflow-wrap: break-word;
