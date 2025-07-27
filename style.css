@@ -1,0 +1,707 @@
+/* General Body Styles - تحديث الخطوط لتشمل Roboto للأرقام */
+body {
+    font-family: 'Cairo', sans-serif; /* الخط الأساسي للنصوص العربية */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    direction: rtl; /* لجعل الموقع من اليمين لليسار */
+    text-align: right; /* محاذاة النص لليمين */
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* تطبيق خط Roboto على الأرقام فقط في جميع أنحاء المستند */
+/* هذا النمط يستخدم لغة CSS4 ويضمن أن الأرقام تظهر بخط Roboto */
+@supports (font-feature-settings: "tnum") {
+    body {
+        font-feature-settings: "tnum"; /* Tabular lining figures */
+        font-variant-numeric: tabular-nums; /* Modern CSS property */
+    }
+}
+
+/* Container for consistent width */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+header {
+    background-color: #004d40; /* لون تيفاني غامق */
+    color: #fff;
+    padding: 15px 0;
+    position: sticky; /* لجعل الهيدر ثابتًا عند التمرير */
+    top: 0;
+    z-index: 1000; /* لضمان ظهوره فوق باقي المحتوى */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    height: 50px; /* حجم اللوجو */
+    margin-left: 15px; /* مسافة بين اللوجو والنص */
+    border-radius: 5px; /* حواف مستديرة للوجو */
+}
+
+header .logo h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #fff;
+    white-space: nowrap; /* منع النص من الانكسار لأسطر متعددة */
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-right: 25px; /* مسافة بين عناصر القائمة */
+}
+
+header nav ul li:last-child {
+    margin-right: 0;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+header nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #e0f2f1; /* لون أفتح كخط تحت الرابط */
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s ease;
+}
+
+header nav ul li a:hover::after,
+header nav ul li a.active::after {
+    width: 100%;
+}
+
+header nav ul li a:hover {
+    color: #e0f2f1;
+}
+
+/* Hero Section Styles */
+.hero-section {
+    position: relative;
+    background: url('https://custom-clearance.com.sa/wp-content/uploads/2024/03/02-1.jpg') no-repeat center center;
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* طبقة لونية شفافة فوق الصورة لجعل النص أوضح */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 77, 64, 0.3); /* لون تيفاني شبه شفاف مع شفافية 0.3 */
+    z-index: 1;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-section h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-section h1 strong {
+    color: #ccff90; /* لون مميز للكلمات المهمة */
+}
+
+.hero-section p {
+    font-size: 20px;
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+.hero-section p strong {
+    color: #a7ffeb; /* لون مميز للأرقام أو الكلمات المهمة في الفقرة */
+}
+
+.btn {
+    display: inline-block;
+    background-color: #00796b; /* لون تيفاني متوسط */
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: #004d40; /* لون تيفاني أغمق عند التمرير */
+    transform: translateY(-2px);
+}
+
+.btn i {
+    margin-right: 10px; /* مسافة بين الأيقونة والنص */
+    transform: rotate(180deg); /* تدوير السهم ليتناسب مع اللغة العربية */
+    display: inline-block; /* لضمان تطبيق التحويل بشكل صحيح */
+}
+
+/* Sections General Styles */
+section {
+    padding: 80px 0;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+section h2 {
+    text-align: center;
+    font-size: 36px;
+    color: #004d40;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 4px;
+    background-color: #00796b;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+/* Services Section */
+.services-section {
+    position: relative; /* مهم لتموضع الصورة كطبقة خلفية */
+    overflow: hidden; /* لمنع أي تجاوز للصورة */
+    background-color: #e0f2f1; /* لون احتياطي إذا لم تظهر الصورة أو قبل تحميلها */
+    margin-bottom: 20px;
+}
+
+.services-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://i.pinimg.com/1200x/22/c3/93/22c393864deefd5a0d118cb2454b581d.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    opacity: 0.1; /* درجة الشفافية هنا */
+    z-index: 0; /* لجعل الطبقة خلف المحتوى */
+}
+
+.services-section .container {
+    position: relative; /* لجعل المحتوى فوق الطبقة الشفافة */
+    z-index: 1; /* تأكد أن المحتوى يظهر فوق ::before */
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.service-item {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.service-item i {
+    color: #00796b;
+    font-size: 60px; /* حجم الأيقونة */
+    margin-bottom: 20px;
+}
+
+.service-item h3 {
+    font-size: 24px;
+    color: #004d40;
+    margin-bottom: 15px;
+}
+
+.service-item p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Why Us Section */
+.why-us-section {
+    position: relative; /* مهم لتموضع الصورة كطبقة خلفية */
+    overflow: hidden; /* لمنع أي تجاوز للصورة */
+    background-color: #fff;
+    margin-bottom: 20px; /* هامش سفلي لهذا القسم */
+}
+
+.why-us-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://i.pinimg.com/1200x/9d/57/47/9d5747c43997b50774de8b6ec450adfa.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    opacity: 0.1; /* درجة الشفافية هنا */
+    z-index: 0; /* لجعل الطبقة خلف المحتوى */
+}
+
+.why-us-section .container {
+    position: relative; /* لجعل المحتوى فوق الطبقة الشفافة */
+    z-index: 1; /* تأكد أن المحتوى يظهر فوق ::before */
+}
+
+.why-us-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.why-us-item {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    border-top: 5px solid #00796b; /* خط علوي بلون مميز */
+    transition: background-color 0.3s ease;
+}
+
+.why-us-item:hover {
+    background-color: #e0f2f1;
+}
+
+.why-us-item i {
+    color: #004d40;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.why-us-item h3 {
+    font-size: 22px;
+    color: #004d40;
+    margin-bottom: 10px;
+}
+
+.why-us-item p {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #666;
+}
+
+/* Branches Section Styles */
+.branches-section {
+    position: relative; /* مهم لتموضع الصورة كطبقة خلفية */
+    overflow: hidden; /* لمنع أي تجاوز للصورة */
+    background-color: #f8f8f8; /* لون خلفية فاتح ومختلف قليلاً */
+    padding: 80px 0;
+    margin-bottom: 80px; /* هامش سفلي إضافي لإبعاد قسم "اتصل بنا" */
+}
+
+.branches-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://i.pinimg.com/1200x/91/52/04/915204290eaa238af7e9239f7dac40a2.jpg'); /* الصورة الجديدة هنا */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    opacity: 0.1; /* درجة الشفافية هنا (يمكنك تعديلها) */
+    z-index: 0; /* لجعل الطبقة خلف المحتوى */
+}
+
+.branches-section .container {
+    position: relative; /* لجعل المحتوى فوق الطبقة الشفافة */
+    z-index: 1; /* تأكد أن المحتوى يظهر فوق ::before */
+}
+
+.branches-section h2 {
+    text-align: center;
+    font-size: 36px;
+    color: #004d40;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.branches-section h2::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 4px;
+    background-color: #00796b;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.branches-section .section-description {
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 50px;
+}
+
+.branches-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* تعديل minmax بعد إزالة الصور */
+    gap: 30px;
+}
+
+.branch-item {
+    background-color: #fff;
+    padding: 30px; /* زيادة البادينج بعد إزالة الصور */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-right: 5px solid #00796b; /* خط جانبي بلون مميز */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex; /* لترتيب الأيقونة والنص */
+    flex-direction: column; /* العناصر عمودية افتراضيًا */
+    align-items: center; /* توسيط العناصر أفقياً */
+    text-align: center; /* محاذاة النص للوسط */
+}
+
+.branch-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.branch-item h3 {
+    color: #004d40;
+    font-size: 24px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* توسيط العنوان مع الأيقونة */
+}
+
+.branch-item h3 i {
+    color: #00796b;
+    margin-left: 10px; /* مسافة بين الأيقونة والنص */
+    font-size: 26px;
+}
+
+.branch-item p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 8px;
+    color: #444;
+}
+
+.branch-item p strong {
+    color: #004d40;
+}
+
+/* Special styling for the general coverage item */
+.branches-grid .general-coverage {
+    flex-direction: column; /* دائمًا عمودي */
+    align-items: center;
+    text-align: center;
+}
+
+.branches-grid .general-coverage h3 {
+    justify-content: center; /* توسيط العنوان */
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: #f0f8f7; /* لون خلفية أفتح */
+}
+
+.contact-intro {
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.contact-content {
+    display: flex;
+    flex-wrap: wrap; /* للسماح للعناصر بالنزول لسطر جديد في الشاشات الصغيرة */
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.contact-info, .contact-section form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    flex: 1; /* لجعلهم يتمددون بالتساوي */
+    min-width: 300px; /* للتحكم في عرضهم الأدنى */
+}
+
+.contact-info h3, .contact-section form h3 {
+    color: #004d40;
+    font-size: 24px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.contact-info p {
+    font-size: 17px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    color: #444;
+    /* هذا مهم لضمان أن الأرقام داخل هذه الفقرات تتبع خط Roboto */
+    font-family: 'Cairo', 'Roboto', sans-serif;
+}
+
+/* تنسيق خاص لأرقام الهاتف في قسم التواصل لجعلها روابط */
+.contact-info p a {
+    color: #00796b; /* لون الرابط */
+    text-decoration: none; /* إزالة الخط السفلي */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.contact-info p a:hover {
+    color: #004d40;
+}
+
+
+.contact-info p i {
+    color: #00796b;
+    margin-left: 15px; /* مسافة من الأيقونة للنص */
+    font-size: 20px;
+    width: 25px; /* لتثبيت عرض الأيقونة والمحافظة على المحاذاة */
+    text-align: center;
+}
+
+.social-icons {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.social-icons a {
+    color: #00796b;
+    font-size: 28px;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #004d40;
+}
+
+.contact-section form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-section form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+.contact-section form input[type="text"],
+.contact-section form input[type="email"],
+.contact-section form input[type="tel"],
+.contact-section form textarea {
+    width: calc(100% - 20px); /* مع مراعاة البادينج */
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Cairo', sans-serif; /* لضمان أن النصوص المكتوبة باليد تتبع الخط العربي */
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+.contact-section form input:focus,
+.contact-section form textarea:focus {
+    border-color: #00796b;
+    outline: none;
+}
+
+.contact-section form textarea {
+    resize: vertical; /* للسماح بتغيير حجم مربع النص عمودياً فقط */
+    min-height: 120px;
+}
+
+.contact-section form button.btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.form-message {
+    text-align: center;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    display: none; /* لإخفائها مبدئياً */
+}
+
+.form-message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.form-message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #004d40;
+    color: #fff;
+    text-align: center;
+    padding: 25px 0;
+    font-size: 15px;
+    margin-top: 20px; /* مسافة بين آخر قسم والفوتر */
+    border-radius: 8px; /* حواف مستديرة للفوتر */
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header .logo {
+        margin-bottom: 15px;
+        justify-content: center;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    .hero-section h1 {
+        font-size: 36px;
+    }
+
+    .hero-section p {
+        font-size: 18px;
+    }
+
+    .btn {
+        padding: 12px 25px;
+        font-size: 16px;
+    }
+
+    /* تعديلات أقسام الخدمات، لماذا نحن، الفروع، والاتصال لتصبح عمودية */
+    .service-grid,
+    .why-us-grid,
+    .contact-content,
+    .branches-grid {
+        grid-template-columns: 1fr; /* عمود واحد فقط */
+        gap: 20px;
+    }
+
+    /* ضمان عرض العناصر الفرعية بملء العرض المتاح */
+    .contact-info,
+    .contact-section form,
+    .branch-item {
+        min-width: unset; /* إلغاء أي حد أدنى للعرض قد يسبب مشكلة */
+        width: 100%; /* اجعلهم يأخذون العرض الكامل */
+    }
+
+    section {
+        padding: 50px 0; /* تقليل البادينج في الشاشات الصغيرة */
+    }
+
+    section h2 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section h1 {
+        font-size: 28px;
+    }
+    .hero-section p {
+        font-size: 16px;
+    }
+    .btn {
+        padding: 12px 25px;
+        font-size: 16px;
+    }
+    .service-item h3 {
+        font-size: 20px;
+    }
+    .why-us-item h3 {
+        font-size: 18px;
+    }
+    .contact-info p {
+        font-size: 15px;
+    }
+    .social-icons a {
+        font-size: 24px;
+        margin: 0 10px;
+    }
+}
