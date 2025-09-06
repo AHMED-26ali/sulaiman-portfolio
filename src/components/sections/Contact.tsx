@@ -1,0 +1,195 @@
+import { Phone, Mail, MapPin, Clock, MessageCircle } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+
+export default function Contact() {
+  const contactInfo = [
+    {
+      name: "سليمان الحويطي",
+      phone: "+966559586786",
+      role: "المدير العام"
+    },
+    {
+      name: "إبراهيم جمعة",
+      phone: "+966509457627",
+      role: "مدير العمليات"
+    },
+    {
+      name: "أحمد علي",
+      phone: "+966551046758",
+      role: "مدير التخليص"
+    },
+    {
+      name: "علاء جاد",
+      phone: "+966553992052",
+      role: "مدير خدمة العملاء"
+    }
+  ];
+
+  const handleCall = (phone: string) => {
+    window.location.href = `tel:${phone}`;
+  };
+
+  const handleWhatsApp = (phone: string) => {
+    window.open(`https://wa.me/${phone.replace('+', '')}`, '_blank');
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const form = e.target as HTMLFormElement;
+    const formData = new FormData(form);
+    const name = formData.get('name');
+    const phone = formData.get('phone');
+    const message = formData.get('message');
+    
+    const whatsappMessage = `السلام عليكم، اسمي ${name}، رقم هاتفي ${phone}. ${message}`;
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+    const ahmadAliPhone = "966551046758"; // أحمد علي
+    
+    window.open(`https://wa.me/${ahmadAliPhone}?text=${encodedMessage}`, '_blank');
+  };
+
+  return (
+    <section id="contact" className="py-20 bg-gradient-to-br from-gray-900 to-blue-900 text-white">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            تواصل معنا
+          </h2>
+          <p className="text-xl text-blue-200 max-w-3xl mx-auto">
+            نحن هنا لخدمتكم على مدار الساعة. تواصلوا معنا لأي استفسار أو طلب خدمة
+          </p>
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-green-400 mx-auto mt-6 rounded-full"></div>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          {/* Contact Information */}
+          <div className="space-y-8">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+              <h3 className="text-2xl font-bold mb-6 flex items-center space-x-3 space-x-reverse">
+                <MessageCircle className="h-6 w-6 text-blue-400" />
+                <span>معلومات التواصل</span>
+              </h3>
+              
+              <div className="space-y-6">
+                <div className="flex items-center space-x-4 space-x-reverse">
+                  <div className="bg-blue-500 p-3 rounded-full">
+                    <Mail className="h-5 w-5 text-white" />
+                  </div>
+                  <div>
+                    <p className="font-medium">البريد الإلكتروني</p>
+                    <p className="text-blue-200">alebawani.ksa@hotmail.com</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-center space-x-4 space-x-reverse">
+                  <div className="bg-green-500 p-3 rounded-full">
+                    <MapPin className="h-5 w-5 text-white" />
+                  </div>
+                  <div>
+                    <p className="font-medium">المقر الرئيسي</p>
+                    <p className="text-blue-200">المملكة العربية السعودية - تبوك - ضبا</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-center space-x-4 space-x-reverse">
+                  <div className="bg-purple-500 p-3 rounded-full">
+                    <Clock className="h-5 w-5 text-white" />
+                  </div>
+                  <div>
+                    <p className="font-medium">ساعات العمل</p>
+                    <p className="text-blue-200">متاح 24/7 لخدمتكم</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Quick Contact Form */}
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+              <h3 className="text-2xl font-bold mb-6">رسالة سريعة</h3>
+              <form className="space-y-4" onSubmit={handleSubmit}>
+                <input 
+                  type="text" 
+                  name="name"
+                  placeholder="الاسم الكامل" 
+                  required
+                  className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 text-right focus:outline-none focus:border-blue-400"
+                />
+                <input 
+                  type="tel" 
+                  name="phone"
+                  placeholder="رقم الهاتف" 
+                  required
+                  className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 text-right focus:outline-none focus:border-blue-400"
+                />
+                <textarea 
+                  name="message"
+                  placeholder="رسالتك" 
+                  rows={4}
+                  required
+                  className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 text-right focus:outline-none focus:border-blue-400 resize-none"
+                ></textarea>
+                <Button type="submit" className="w-full bg-gradient-to-r from-blue-500 to-green-500 hover:from-blue-600 hover:to-green-600 font-bold py-3">
+                  إرسال الرسالة
+                </Button>
+              </form>
+            </div>
+          </div>
+
+          {/* Team Contact Cards */}
+          <div className="space-y-6">
+            <h3 className="text-2xl font-bold mb-6 text-center">فريق العمل</h3>
+            {contactInfo.map((contact, index) => (
+              <Card 
+                key={index} 
+                className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-1"
+              >
+                <CardHeader className="pb-3">
+                  <CardTitle className="text-white text-lg flex items-center justify-between">
+                    <span>{contact.name}</span>
+                    <span className="text-sm bg-blue-500 px-3 py-1 rounded-full">{contact.role}</span>
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center space-x-3 space-x-reverse text-blue-200">
+                      <Phone className="h-4 w-4" />
+                      <span className="font-medium">{contact.phone}</span>
+                    </div>
+                    <div className="flex space-x-2 space-x-reverse">
+                      <Button 
+                        size="sm" 
+                        variant="outline" 
+                        className="border-white/30 text-white hover:bg-white/20"
+                        onClick={() => handleCall(contact.phone)}
+                      >
+                        اتصال
+                      </Button>
+                      <Button 
+                        size="sm" 
+                        className="bg-green-600 hover:bg-green-700"
+                        onClick={() => handleWhatsApp(contact.phone)}
+                      >
+                        واتساب
+                      </Button>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+
+        {/* Map or Additional Info */}
+        <div className="mt-16 text-center">
+          <div className="bg-gradient-to-r from-blue-500 to-green-500 rounded-2xl p-8">
+            <h3 className="text-2xl font-bold mb-4">نخدمكم في جميع أنحاء المملكة</h3>
+            <p className="text-blue-100 text-lg max-w-3xl mx-auto">
+              مع شبكة واسعة من الفروع والمكاتب في أهم المنافذ الحدودية، نضمن لكم خدمة سريعة وموثوقة أينما كنتم
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
