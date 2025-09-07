@@ -145,6 +145,9 @@ export default function Contact() {
                   <CardTitle className="text-white text-lg text-center group-hover:text-blue-300 transition-colors">
                     {contact.name}
                   </CardTitle>
+                  <div className="text-center">
+                    <p className="text-blue-200 font-mono text-lg">{contact.phone}</p>
+                  </div>
                 </CardHeader>
                 <CardContent>
                   <div className="flex flex-col items-center space-y-4">
