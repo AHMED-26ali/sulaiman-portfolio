@@ -1,7 +1,22 @@
-import { ArrowDown, Truck, Shield, Clock } from 'lucide-react';
+import { ArrowLeft, Phone, MessageCircle, Star, Zap, Shield } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export default function Hero() {
+  const images = [
+    "https://i.pinimg.com/1200x/c7/99/10/c799102f79aac7aba1762c9db3bae850.jpg",
+    "https://i.pinimg.com/1200x/36/c9/85/36c985640937681da6c4523a2fa1cf5e.jpg",
+    "https://i.pinimg.com/736x/27/98/a9/2798a95728d6c4475f8f3f4284e8d7d8.jpg",
+    "https://i.pinimg.com/736x/b1/06/86/b1068640d04e24604769dc6130f21189.jpg",
+    "https://i.pinimg.com/736x/7c/6b/76/7c6b768775fa08cbc03f19d42c3ff8a4.jpg",
+    "https://i.pinimg.com/736x/7f/19/fd/7f19fd90ee55a370e0b552886a445838.jpg",
+    "https://i.pinimg.com/736x/c8/22/3e/c8223e47ed75b5aafd4adb5f1bf7611c.jpg",
+    "https://i.pinimg.com/736x/8c/fc/5a/8cfc5aa5a15efea60228f54ebc7d5e67.jpg",
+    "https://i.pinimg.com/1200x/42/42/6f/42426f02b7f95d24e7e0de8a698512d1.jpg",
+    "https://i.pinimg.com/1200x/66/83/a7/6683a7d84cc283a2dd62465bb794e1ba.jpg",
+    "https://i.pinimg.com/1200x/0f/b9/2a/0fb92a8c4734f081262a2e8f467795ff.jpg",
+    "https://i.pinimg.com/736x/22/4f/1a/224f1a4df591b86b6582aad0bb3b50b2.jpg"
+  ];
+
   const scrollToServices = () => {
     const element = document.getElementById('services');
     if (element) {
@@ -9,81 +24,139 @@ export default function Hero() {
     }
   };
 
+  const handleCall = () => {
+    window.location.href = 'tel:+966559586786';
+  };
+
+  const handleWhatsApp = () => {
+    window.open('https://wa.me/966559586786', '_blank');
+  };
+
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-800 to-green-700">
-        <div className="absolute inset-0 bg-black/20"></div>
-        {/* Animated Shapes */}
-        <div className="absolute top-20 left-20 w-32 h-32 bg-white/10 rounded-full animate-pulse"></div>
-        <div className="absolute bottom-20 right-20 w-24 h-24 bg-white/10 rounded-full animate-bounce"></div>
-        <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-white/10 rounded-full animate-ping"></div>
+    <section id="home" className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-green-900 text-white relative overflow-hidden pt-16">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-20 left-20 w-40 h-40 bg-white/10 rounded-full animate-pulse"></div>
+        <div className="absolute bottom-20 right-20 w-32 h-32 bg-white/10 rounded-full animate-bounce"></div>
+        <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-white/10 rounded-full animate-ping"></div>
+        <div className="absolute top-1/3 right-1/3 w-28 h-28 bg-white/10 rounded-full animate-pulse"></div>
+        <div className="absolute bottom-1/3 left-1/2 w-20 h-20 bg-white/10 rounded-full animate-bounce"></div>
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center text-white space-y-8">
-          {/* Logo */}
-          <div className="flex justify-center mb-8">
-            <div className="relative">
-              <img 
-                src="https://i.pinimg.com/736x/7f/12/80/7f1280df00efb23c191881da5c430049.jpg" 
-                alt="شعار سليمان الحويطي" 
-                className="h-32 w-32 rounded-full object-cover shadow-2xl border-4 border-white/20 animate-pulse"
-              />
-              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-400/20 to-green-400/20 animate-spin-slow"></div>
+      <div className="container mx-auto px-4 py-20 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Content */}
+          <div className="space-y-8 animate-fade-in-right">
+            <div className="space-y-6">
+              <h1 className="text-5xl md:text-7xl font-bold leading-tight">
+                <span className="block text-blue-300 animate-fade-in-up">سليمان</span>
+                <span className="block text-green-300 animate-fade-in-up animation-delay-300">الحويطي</span>
+                <span className="block text-2xl md:text-3xl text-gray-300 mt-4 animate-fade-in-up animation-delay-500">
+                  للتخليص الجمركي والترانزيت
+                </span>
+              </h1>
+              
+              <p className="text-xl md:text-2xl text-blue-200 leading-relaxed animate-fade-in-up animation-delay-700">
+                نقدم خدمات التخليص الجمركي والترانزيت بأعلى معايير الجودة والاحترافية في جميع أنحاء المملكة العربية السعودية
+              </p>
+
+              {/* Features */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 animate-fade-in-up animation-delay-700">
+                <div className="flex items-center space-x-3 space-x-reverse bg-white/10 backdrop-blur-sm rounded-lg p-4 hover:bg-white/20 transition-all duration-300">
+                  <Star className="h-6 w-6 text-yellow-400" />
+                  <span className="font-medium">خبرة +15 سنة</span>
+                </div>
+                <div className="flex items-center space-x-3 space-x-reverse bg-white/10 backdrop-blur-sm rounded-lg p-4 hover:bg-white/20 transition-all duration-300">
+                  <Zap className="h-6 w-6 text-blue-400" />
+                  <span className="font-medium">خدمة 24/7</span>
+                </div>
+                <div className="flex items-center space-x-3 space-x-reverse bg-white/10 backdrop-blur-sm rounded-lg p-4 hover:bg-white/20 transition-all duration-300">
+                  <Shield className="h-6 w-6 text-green-400" />
+                  <span className="font-medium">موثوقية عالية</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Action Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up animation-delay-700">
+              <Button 
+                size="lg" 
+                className="bg-gradient-to-r from-blue-500 to-green-500 hover:from-blue-600 hover:to-green-600 text-white font-bold py-4 px-8 rounded-full transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl"
+                onClick={scrollToServices}
+              >
+                اكتشف خدماتنا
+                <ArrowLeft className="mr-2 h-5 w-5" />
+              </Button>
+              
+              <div className="flex gap-3">
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="border-white/30 text-white hover:bg-white/20 font-bold py-4 px-6 rounded-full transform hover:scale-105 transition-all duration-300"
+                  onClick={handleCall}
+                >
+                  <Phone className="ml-2 h-5 w-5" />
+                  اتصل بنا
+                </Button>
+                
+                <Button 
+                  size="lg" 
+                  className="bg-green-600 hover:bg-green-700 font-bold py-4 px-6 rounded-full transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl"
+                  onClick={handleWhatsApp}
+                >
+                  <MessageCircle className="ml-2 h-5 w-5" />
+                  واتساب
+                </Button>
+              </div>
             </div>
           </div>
 
-          {/* Main Title */}
-          <div className="space-y-4 animate-fade-in-up">
-            <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-              <span className="bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
-                سليمان الحويطي
-              </span>
-            </h1>
-            <h2 className="text-2xl md:text-4xl font-semibold text-blue-200">
-              للتخليص الجمركي والترانزيت
-            </h2>
-          </div>
-
-          {/* Subtitle */}
-          <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto leading-relaxed animate-fade-in-up animation-delay-300">
-            نقدم خدمات التخليص الجمركي الاحترافية بأعلى معايير الجودة والسرعة في جميع أنحاء المملكة العربية السعودية
-          </p>
-
-          {/* Features */}
-          <div className="flex flex-wrap justify-center gap-8 mt-12 animate-fade-in-up animation-delay-500">
-            <div className="flex items-center space-x-3 space-x-reverse bg-white/10 backdrop-blur-sm rounded-full px-6 py-3">
-              <Shield className="h-6 w-6 text-green-300" />
-              <span className="font-medium">موثوق ومضمون</span>
+          {/* Images Gallery */}
+          <div className="animate-fade-in-left">
+            <div className="grid grid-cols-3 gap-4">
+              {images.map((image, index) => (
+                <div 
+                  key={index}
+                  className={`relative overflow-hidden rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-500 hover:rotate-2 ${
+                    index % 3 === 0 ? 'animate-bounce' : 
+                    index % 3 === 1 ? 'animate-pulse' : 'animate-ping'
+                  }`}
+                  style={{
+                    animationDelay: `${index * 200}ms`,
+                    animationDuration: index % 3 === 0 ? '3s' : index % 3 === 1 ? '2s' : '4s'
+                  }}
+                >
+                  <img 
+                    src={image} 
+                    alt={`خدمات التخليص الجمركي ${index + 1}`}
+                    className="w-full h-32 object-cover hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+              ))}
             </div>
-            <div className="flex items-center space-x-3 space-x-reverse bg-white/10 backdrop-blur-sm rounded-full px-6 py-3">
-              <Clock className="h-6 w-6 text-blue-300" />
-              <span className="font-medium">سرعة في الإنجاز</span>
-            </div>
-            <div className="flex items-center space-x-3 space-x-reverse bg-white/10 backdrop-blur-sm rounded-full px-6 py-3">
-              <Truck className="h-6 w-6 text-yellow-300" />
-              <span className="font-medium">خدمة شاملة</span>
-            </div>
-          </div>
-
-          {/* CTA Button */}
-          <div className="mt-12 animate-fade-in-up animation-delay-700">
-            <Button 
-              onClick={scrollToServices}
-              size="lg" 
-              className="bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white font-bold py-4 px-8 rounded-full text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
-            >
-              اكتشف خدماتنا
-              <ArrowDown className="mr-2 h-5 w-5 animate-bounce" />
-            </Button>
           </div>
         </div>
-      </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <ArrowDown className="h-8 w-8 text-white/70" />
+        {/* Stats Section */}
+        <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 animate-fade-in-up animation-delay-700">
+          <div className="text-center bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
+            <div className="text-4xl font-bold text-blue-400 mb-2">2000+</div>
+            <div className="text-gray-300">عميل راضي</div>
+          </div>
+          <div className="text-center bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
+            <div className="text-4xl font-bold text-green-400 mb-2">8000+</div>
+            <div className="text-gray-300">معاملة مكتملة</div>
+          </div>
+          <div className="text-center bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
+            <div className="text-4xl font-bold text-purple-400 mb-2">5</div>
+            <div className="text-gray-300">فروع ومواقع</div>
+          </div>
+          <div className="text-center bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
+            <div className="text-4xl font-bold text-yellow-400 mb-2">15+</div>
+            <div className="text-gray-300">سنة خبرة</div>
+          </div>
+        </div>
       </div>
     </section>
   );

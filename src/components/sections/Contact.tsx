@@ -6,23 +6,19 @@ export default function Contact() {
   const contactInfo = [
     {
       name: "سليمان الحويطي",
-      phone: "+966559586786",
-      role: "المدير العام"
+      phone: "+966559586786"
     },
     {
       name: "إبراهيم جمعة",
-      phone: "+966509457627",
-      role: "مدير العمليات"
+      phone: "+966509457627"
     },
     {
       name: "أحمد علي",
-      phone: "+966551046758",
-      role: "مدير التخليص"
+      phone: "+966551046758"
     },
     {
       name: "علاء جاد",
-      phone: "+966553992052",
-      role: "مدير خدمة العملاء"
+      phone: "+966553992052"
     }
   ];
 
@@ -129,7 +125,7 @@ export default function Contact() {
                   required
                   className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 text-right focus:outline-none focus:border-blue-400 resize-none"
                 ></textarea>
-                <Button type="submit" className="w-full bg-gradient-to-r from-blue-500 to-green-500 hover:from-blue-600 hover:to-green-600 font-bold py-3">
+                <Button type="submit" className="w-full bg-gradient-to-r from-blue-500 to-green-500 hover:from-blue-600 hover:to-green-600 font-bold py-3 transform hover:scale-105 transition-all duration-300">
                   إرسال الرسالة
                 </Button>
               </form>
@@ -142,34 +138,35 @@ export default function Contact() {
             {contactInfo.map((contact, index) => (
               <Card 
                 key={index} 
-                className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-1"
+                className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105"
               >
                 <CardHeader className="pb-3">
-                  <CardTitle className="text-white text-lg flex items-center justify-between">
-                    <span>{contact.name}</span>
-                    <span className="text-sm bg-blue-500 px-3 py-1 rounded-full">{contact.role}</span>
+                  <CardTitle className="text-white text-lg text-center">
+                    {contact.name}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="flex items-center justify-between">
+                  <div className="flex flex-col items-center space-y-4">
                     <div className="flex items-center space-x-3 space-x-reverse text-blue-200">
                       <Phone className="h-4 w-4" />
                       <span className="font-medium">{contact.phone}</span>
                     </div>
-                    <div className="flex space-x-2 space-x-reverse">
+                    <div className="flex space-x-3 space-x-reverse w-full">
                       <Button 
                         size="sm" 
                         variant="outline" 
-                        className="border-white/30 text-white hover:bg-white/20"
+                        className="border-white/30 text-white hover:bg-white/20 flex-1 transform hover:scale-105 transition-all duration-300"
                         onClick={() => handleCall(contact.phone)}
                       >
+                        <Phone className="ml-2 h-4 w-4" />
                         اتصال
                       </Button>
                       <Button 
                         size="sm" 
-                        className="bg-green-600 hover:bg-green-700"
+                        className="bg-green-600 hover:bg-green-700 flex-1 transform hover:scale-105 transition-all duration-300"
                         onClick={() => handleWhatsApp(contact.phone)}
                       >
+                        <MessageCircle className="ml-2 h-4 w-4" />
                         واتساب
                       </Button>
                     </div>
@@ -182,7 +179,7 @@ export default function Contact() {
 
         {/* Map or Additional Info */}
         <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-blue-500 to-green-500 rounded-2xl p-8">
+          <div className="bg-gradient-to-r from-blue-500 to-green-500 rounded-2xl p-8 transform hover:scale-105 transition-transform duration-300">
             <h3 className="text-2xl font-bold mb-4">نخدمكم في جميع أنحاء المملكة</h3>
             <p className="text-blue-100 text-lg max-w-3xl mx-auto">
               مع شبكة واسعة من الفروع والمكاتب في أهم المنافذ الحدودية، نضمن لكم خدمة سريعة وموثوقة أينما كنتم
