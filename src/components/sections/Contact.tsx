@@ -147,15 +147,11 @@ export default function Contact() {
                 </CardHeader>
                 <CardContent>
                   <div className="flex flex-col items-center space-y-4">
-                    <div className="flex items-center space-x-3 space-x-reverse text-blue-200 group-hover:text-white transition-colors">
-                      <Phone className="h-4 w-4 animate-pulse" />
-                      <span className="font-medium">{contact.phone}</span>
-                    </div>
                     <div className="flex space-x-3 space-x-reverse w-full">
                       <Button 
                         size="sm" 
                         variant="outline" 
-                        className="border-white/30 text-white hover:bg-blue-600 hover:border-blue-500 hover:text-white flex-1 transform hover:scale-110 transition-all duration-300 hover:shadow-lg animate-bounce"
+                        className="border-orange-400 text-orange-300 bg-orange-500/20 hover:bg-orange-500 hover:border-orange-500 hover:text-white flex-1 transform hover:scale-110 transition-all duration-300 hover:shadow-lg animate-bounce font-bold"
                         onClick={() => handleCall(contact.phone)}
                         style={{
                           animationDelay: `${index * 200}ms`,
@@ -167,7 +163,7 @@ export default function Contact() {
                       </Button>
                       <Button 
                         size="sm" 
-                        className="bg-green-600 hover:bg-green-700 hover:shadow-2xl flex-1 transform hover:scale-110 transition-all duration-300 animate-pulse"
+                        className="bg-green-600 text-green-100 hover:bg-green-700 hover:text-white hover:shadow-2xl flex-1 transform hover:scale-110 transition-all duration-300 animate-pulse font-bold"
                         onClick={() => handleWhatsApp(contact.phone)}
                         style={{
                           animationDelay: `${index * 300}ms`,
