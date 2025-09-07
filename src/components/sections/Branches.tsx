@@ -1,54 +1,58 @@
-import { MapPin, Navigation, Building, Zap, Star } from 'lucide-react';
+import { MapPin, Building, Users, Clock, Phone } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 export default function Branches() {
   const branches = [
     {
-      name: "منفذ الدرة",
-      type: "منفذ حدودي",
-      description: "خدمات تخليص جمركي متكاملة في منفذ الدرة الحدودي مع فريق متخصص",
-      icon: Navigation,
-      features: ["تخليص سريع", "خدمة 24/7", "فريق متخصص"]
+      name: "الفرع الرئيسي - ضبا",
+      location: "تبوك - ضبا",
+      description: "المقر الرئيسي للشركة مع كامل الخدمات والإدارة العامة",
+      services: ["التخليص الجمركي", "الشحن البحري", "الاستشارات"],
+      hours: "24/7",
+      staff: "15+ موظف"
     },
     {
-      name: "منفذ البطحاء",
-      type: "منفذ حدودي",
-      description: "تسهيل إجراءات التخليص الجمركي في منفذ البطحاء بأحدث التقنيات",
-      icon: Navigation,
-      features: ["تقنيات حديثة", "إجراءات مبسطة", "دعم فني"]
+      name: "فرع جدة الإسلامي",
+      location: "جدة - الميناء الإسلامي",
+      description: "خدمات متخصصة في الشحن البحري والتخليص الجمركي",
+      services: ["الشحن البحري", "التخليص الجمركي", "النقل البري"],
+      hours: "24/7",
+      staff: "12+ موظف"
     },
     {
-      name: "منفذ السلوي",
-      type: "منفذ حدودي",
-      description: "خدمات احترافية في منفذ السلوي للتجارة الحدودية والترانزيت",
-      icon: Navigation,
-      features: ["خدمات ترانزيت", "تجارة حدودية", "استشارات مجانية"]
+      name: "فرع الدمام",
+      location: "الدمام - الميناء التجاري",
+      description: "خدمات شاملة للمنطقة الشرقية والخليج العربي",
+      services: ["التخليص الجمركي", "الترانزيت", "التخزين"],
+      hours: "24/7",
+      staff: "10+ موظف"
     },
     {
-      name: "جسر الملك فهد",
-      type: "معبر دولي",
-      description: "تخليص جمركي سريع وموثوق عبر جسر الملك فهد للتجارة الخليجية",
-      icon: Building,
-      features: ["تجارة خليجية", "إجراءات سريعة", "خبرة واسعة"]
+      name: "فرع الرياض",
+      location: "الرياض - المنطقة الصناعية",
+      description: "خدمات النقل البري والتوزيع للمنطقة الوسطى",
+      services: ["النقل البري", "التوزيع", "الاستشارات"],
+      hours: "24/7",
+      staff: "8+ موظف"
     },
     {
-      name: "ضبا",
-      type: "المقر الرئيسي",
-      description: "المقر الرئيسي ومركز العمليات الرئيسي في مدينة ضبا مع جميع الخدمات",
-      icon: Building,
-      isMain: true,
-      features: ["مركز العمليات", "جميع الخدمات", "إدارة مركزية"]
+      name: "فرع جازان",
+      location: "جازان - الميناء التجاري",
+      description: "خدمات متخصصة للمنطقة الجنوبية والتجارة مع اليمن",
+      services: ["التخليص الجمركي", "الشحن البحري", "الترانزيت"],
+      hours: "24/7",
+      staff: "6+ موظف"
     }
   ];
 
   return (
-    <section id="branches" className="py-20 bg-gradient-to-br from-blue-900 via-purple-900 to-green-900 text-white relative overflow-hidden">
+    <section id="branches" className="py-20 bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white relative overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-10 left-10 w-40 h-40 bg-white/10 rounded-full animate-pulse"></div>
-        <div className="absolute bottom-10 right-10 w-32 h-32 bg-white/10 rounded-full animate-bounce"></div>
-        <div className="absolute top-1/2 left-1/3 w-24 h-24 bg-white/10 rounded-full animate-ping"></div>
-        <div className="absolute top-1/4 right-1/4 w-28 h-28 bg-white/10 rounded-full animate-pulse"></div>
+        <div className="absolute top-20 left-20 w-40 h-40 bg-white/10 rounded-full animate-pulse"></div>
+        <div className="absolute bottom-20 right-20 w-32 h-32 bg-white/10 rounded-full animate-bounce"></div>
+        <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-white/10 rounded-full animate-ping"></div>
+        <div className="absolute top-1/3 right-1/3 w-28 h-28 bg-white/10 rounded-full animate-pulse"></div>
         <div className="absolute bottom-1/3 left-1/2 w-20 h-20 bg-white/10 rounded-full animate-bounce"></div>
       </div>
 
@@ -58,73 +62,77 @@ export default function Branches() {
             فروعنا ومواقعنا
           </h2>
           <p className="text-xl text-blue-200 max-w-3xl mx-auto">
-            نخدمكم من خلال شبكة واسعة من الفروع والمواقع الاستراتيجية في أهم المنافذ الحدودية
+            شبكة واسعة من الفروع في أهم المواقع الاستراتيجية لخدمتكم
           </p>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-green-400 mx-auto mt-6 rounded-full"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto mt-6 rounded-full"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {branches.map((branch, index) => (
             <Card 
               key={index} 
-              className={`group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:rotate-1 ${
-                branch.isMain 
-                  ? 'border-2 border-gradient-to-r from-blue-400 to-green-400 bg-gradient-to-br from-blue-800/50 to-green-800/50' 
-                  : 'border-0 bg-white/10'
-              } backdrop-blur-sm`}
+              className="group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:rotate-1 border-0 bg-white/10 backdrop-blur-sm hover:bg-white/20"
+              style={{
+                animationDelay: `${index * 150}ms`
+              }}
             >
-              <CardHeader className="text-center">
-                <div className={`mx-auto mb-4 p-4 rounded-full w-16 h-16 flex items-center justify-center group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 ${
-                  branch.isMain 
-                    ? 'bg-gradient-to-br from-blue-400 to-green-400 shadow-lg shadow-blue-500/50' 
-                    : 'bg-gradient-to-br from-blue-500 to-green-500'
-                }`}>
-                  <branch.icon className="h-8 w-8 text-white" />
+              <CardHeader className="text-center pb-4">
+                <div className="mx-auto mb-4 p-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full w-fit group-hover:scale-110 transition-transform duration-300">
+                  <Building className="h-6 w-6 text-white" />
                 </div>
-                <CardTitle className="text-xl font-bold text-white group-hover:text-blue-300 transition-colors">
+                <CardTitle className="text-lg font-bold text-white group-hover:text-blue-300 transition-colors">
                   {branch.name}
                 </CardTitle>
-                <div className={`inline-block px-3 py-1 rounded-full text-sm font-medium ${
-                  branch.isMain 
-                    ? 'bg-gradient-to-r from-blue-400 to-green-400 text-white shadow-lg' 
-                    : 'bg-blue-500/30 text-blue-200'
-                }`}>
-                  {branch.type}
-                </div>
               </CardHeader>
-              <CardContent className="text-center space-y-4">
-                <p className="text-gray-300 leading-relaxed">{branch.description}</p>
-                
-                {/* Features */}
-                <div className="space-y-2">
-                  {branch.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-center justify-center space-x-2 space-x-reverse text-blue-200">
-                      <Star className="h-3 w-3 text-yellow-400" />
-                      <span className="text-sm">{feature}</span>
-                    </div>
-                  ))}
+              <CardContent className="space-y-4">
+                <div className="flex items-center space-x-3 space-x-reverse text-blue-200">
+                  <MapPin className="h-4 w-4" />
+                  <span className="text-sm">{branch.location}</span>
                 </div>
-
-                <div className="flex items-center justify-center space-x-2 space-x-reverse mt-4 text-green-300">
-                  <Zap className="h-4 w-4 animate-pulse" />
-                  <span className="text-sm font-medium">متاح للخدمة 24/7</span>
+                
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  {branch.description}
+                </p>
+                
+                <div className="space-y-2">
+                  <h4 className="font-semibold text-white text-sm">الخدمات المتاحة:</h4>
+                  <div className="flex flex-wrap gap-1">
+                    {branch.services.map((service, idx) => (
+                      <span key={idx} className="bg-blue-500/30 text-blue-200 px-2 py-1 rounded-full text-xs">
+                        {service}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                
+                <div className="flex justify-between items-center text-sm">
+                  <div className="flex items-center space-x-2 space-x-reverse text-green-300">
+                    <Clock className="h-3 w-3" />
+                    <span>{branch.hours}</span>
+                  </div>
+                  <div className="flex items-center space-x-2 space-x-reverse text-purple-300">
+                    <Users className="h-3 w-3" />
+                    <span>{branch.staff}</span>
+                  </div>
                 </div>
               </CardContent>
             </Card>
           ))}
         </div>
 
-        {/* Location Info */}
-        <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-blue-500 to-green-500 text-white rounded-2xl p-8 max-w-4xl mx-auto transform hover:scale-105 transition-transform duration-300">
-            <h3 className="text-2xl font-bold mb-4">موقعنا الرئيسي</h3>
-            <div className="flex items-center justify-center space-x-2 space-x-reverse text-lg">
-              <MapPin className="h-6 w-6 animate-bounce" />
-              <span>المملكة العربية السعودية - تبوك - ضبا</span>
-            </div>
-            <p className="mt-4 text-blue-100">
-              نخدمكم من موقعنا الاستراتيجي في مدينة ضبا بمنطقة تبوك
+        {/* Expansion Message */}
+        <div className="text-center">
+          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 transform hover:scale-105 transition-transform duration-300 animate-pulse max-w-4xl mx-auto">
+            <h3 className="text-2xl md:text-3xl font-bold mb-4 text-white">توسعات قادمة</h3>
+            <p className="text-blue-100 text-lg leading-relaxed">
+              نحن في طور التوسع لافتتاح فروع جديدة في مواقع استراتيجية إضافية لخدمتكم بشكل أفضل. 
+              ستشمل التوسعات القادمة فروعاً في حائل، الطائف، وأبها، بالإضافة إلى تطوير مكاتب فرعية في المنافذ الحدودية الرئيسية. 
+              هدفنا هو أن نكون قريبين منكم أينما كنتم لتقديم خدمات التخليص الجمركي بأعلى معايير الجودة والسرعة.
             </p>
+            <div className="mt-6 flex items-center justify-center space-x-4 space-x-reverse">
+              <Phone className="h-5 w-5 text-blue-200 animate-bounce" />
+              <span className="text-blue-200 font-medium">تابعونا للإعلان عن الفروع الجديدة قريباً</span>
+            </div>
           </div>
         </div>
       </div>

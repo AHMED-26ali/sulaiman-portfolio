@@ -1,4 +1,4 @@
-import { BookOpen, FileText, Globe, TrendingUp, Shield, Users, Zap, Target, Truck, Package, Calculator, Building, Award, Heart, Lightbulb, Rocket, Settings, Phone } from 'lucide-react';
+import { BookOpen, FileText, Globe, TrendingUp, Shield, Users, Zap, Target, Truck, Package, Calculator, Building, Award, Heart, Lightbulb, Rocket, Settings, Phone, Compass } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 export default function Blog() {
@@ -138,6 +138,14 @@ export default function Blog() {
       category: "خدمة العملاء",
       readTime: "6 دقائق",
       color: "from-green-500 to-teal-700"
+    },
+    {
+      icon: Compass,
+      title: "استراتيجيات التوسع الإقليمي في الأسواق الناشئة",
+      content: "التوسع في الأسواق الناشئة يتطلب فهماً عميقاً للثقافات المحلية والأنظمة التجارية المختلفة. نحن نطور استراتيجيات توسع مدروسة تأخذ في الاعتبار التحديات الفريدة لكل سوق، مثل اللوائح المحلية، البنية التحتية، والعادات التجارية. يشمل ذلك إقامة شراكات استراتيجية مع الشركات المحلية، تدريب الفرق على الثقافات المختلفة، وتطوير حلول مخصصة لكل منطقة. كما نستثمر في دراسة الأسواق الجديدة وتحليل المخاطر والفرص المتاحة. هدفنا هو تقديم خدمات التخليص الجمركي بنفس المعايير العالية في جميع الأسواق التي نعمل بها، مع مراعاة الخصوصيات المحلية لكل منطقة.",
+      category: "توسع إقليمي",
+      readTime: "12 دقائق",
+      color: "from-emerald-500 to-blue-700"
     }
   ];
 
