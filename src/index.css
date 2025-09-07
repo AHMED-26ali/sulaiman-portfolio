@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -63,79 +65,83 @@
   * {
     @apply border-border;
   }
-  body {
-    @apply bg-background text-foreground;
-    direction: rtl;
-    text-align: right;
-  }
   
   html {
     direction: rtl;
   }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Noto Sans Arabic', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    direction: rtl;
+    text-align: right;
+  }
 }
 
-/* Arabic font support */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
-body {
-  font-family: 'Noto Sans Arabic', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* RTL Support for Arabic */
+.rtl-content {
   direction: rtl;
   text-align: right;
 }
 
-/* Ensure RTL for all text elements */
-h1, h2, h3, h4, h5, h6, p, div, span, a, button {
-  direction: rtl;
-  text-align: right;
-}
-
-/* Fix flexbox direction for RTL */
-.flex {
-  direction: ltr;
-}
-
-.flex > * {
-  direction: rtl;
-}
-
-/* Custom RTL utilities */
+/* Fix space-x utilities for RTL */
 .space-x-reverse > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 1;
 }
 
-/* Ensure proper RTL spacing */
+.space-x-1 > :not([hidden]) ~ :not([hidden]) {
+  margin-right: calc(0.25rem * var(--tw-space-x-reverse, 0));
+  margin-left: calc(0.25rem * calc(1 - var(--tw-space-x-reverse, 0)));
+}
+
+.space-x-2 > :not([hidden]) ~ :not([hidden]) {
+  margin-right: calc(0.5rem * var(--tw-space-x-reverse, 0));
+  margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse, 0)));
+}
+
 .space-x-3 > :not([hidden]) ~ :not([hidden]) {
-  margin-right: calc(0.75rem * var(--tw-space-x-reverse));
-  margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
+  margin-right: calc(0.75rem * var(--tw-space-x-reverse, 0));
+  margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse, 0)));
 }
 
 .space-x-4 > :not([hidden]) ~ :not([hidden]) {
-  margin-right: calc(1rem * var(--tw-space-x-reverse));
-  margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+  margin-right: calc(1rem * var(--tw-space-x-reverse, 0));
+  margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse, 0)));
 }
 
 .space-x-6 > :not([hidden]) ~ :not([hidden]) {
-  margin-right: calc(1.5rem * var(--tw-space-x-reverse));
-  margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
+  margin-right: calc(1.5rem * var(--tw-space-x-reverse, 0));
+  margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse, 0)));
 }
 
-/* Fix input and form elements */
+/* Ensure proper RTL for form elements */
 input, textarea, select {
   direction: rtl;
   text-align: right;
 }
 
-/* Fix navigation and menu items */
-nav, .nav, .menu {
+/* Fix flexbox for RTL */
+.flex-rtl {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+/* Custom RTL utilities */
+.text-right-rtl {
+  text-align: right;
   direction: rtl;
 }
 
-/* Fix card and component layouts */
-.card, .component {
-  direction: rtl;
-  text-align: right;
+.mr-auto-rtl {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.ml-auto-rtl {
+  margin-right: auto;
+  margin-left: 0;
 }

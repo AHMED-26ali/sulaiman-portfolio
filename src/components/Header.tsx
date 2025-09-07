@@ -1,103 +1,70 @@
 import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Building2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setIsMenuOpen(false);
-    }
-  };
+  const navItems = [
+    { name: 'الرئيسية', href: '#home' },
+    { name: 'خدماتنا', href: '#services' },
+    { name: 'فروعنا', href: '#branches' },
+    { name: 'لماذا نحن', href: '#why-us' },
+    { name: 'المدونة', href: '#blog' },
+    { name: 'تواصل معنا', href: '#contact' },
+  ];
 
   return (
-    <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-lg z-50 border-b animate-slide-down">
+    <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-3 space-x-reverse animate-fade-in-right">
-            <img 
-              src="https://i.pinimg.com/736x/7f/12/80/7f1280df00efb23c191881da5c430049.jpg" 
-              alt="شعار سليمان الحويطي" 
-              className="h-12 w-12 rounded-full object-cover shadow-md hover:scale-110 transition-transform duration-300 animate-pulse"
-            />
-            <div>
-              <h1 className="text-xl font-bold text-blue-900 hover:text-blue-700 transition-colors">سليمان الحويطي</h1>
-              <p className="text-sm text-blue-600 animate-fade-in">للتخليص الجمركي والترانزيت</p>
+          <div className="flex items-center space-x-3 space-x-reverse">
+            <Building2 className="h-8 w-8 text-blue-600" />
+            <div className="text-right">
+              <h1 className="text-xl font-bold text-gray-900">سليمان الحويطي</h1>
+              <p className="text-xs text-gray-600">للتخليص الجمركي والترانزيت</p>
             </div>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8 space-x-reverse animate-fade-in-left">
-            <button onClick={() => scrollToSection('home')} className="text-gray-700 hover:text-blue-600 font-medium transition-all duration-300 hover:scale-105 relative group">
-              الرئيسية
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
-            </button>
-            <button onClick={() => scrollToSection('services')} className="text-gray-700 hover:text-blue-600 font-medium transition-all duration-300 hover:scale-105 relative group">
-              خدماتنا
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
-            </button>
-            <button onClick={() => scrollToSection('branches')} className="text-gray-700 hover:text-blue-600 font-medium transition-all duration-300 hover:scale-105 relative group">
-              الفروع
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
-            </button>
-            <button onClick={() => scrollToSection('why-us')} className="text-gray-700 hover:text-blue-600 font-medium transition-all duration-300 hover:scale-105 relative group">
-              لماذا نحن
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
-            </button>
-            <button onClick={() => scrollToSection('vision')} className="text-gray-700 hover:text-blue-600 font-medium transition-all duration-300 hover:scale-105 relative group">
-              رؤيتنا
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
-            </button>
-            <button onClick={() => scrollToSection('blog')} className="text-gray-700 hover:text-blue-600 font-medium transition-all duration-300 hover:scale-105 relative group">
-              المدونة
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
-            </button>
-            <button onClick={() => scrollToSection('contact')} className="text-gray-700 hover:text-blue-600 font-medium transition-all duration-300 hover:scale-105 relative group">
-              التواصل
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
-            </button>
+          <nav className="hidden md:flex items-center space-x-8 space-x-reverse">
+            {navItems.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200 text-right"
+              >
+                {item.name}
+              </a>
+            ))}
           </nav>
 
           {/* Mobile Menu Button */}
           <Button
             variant="ghost"
             size="sm"
-            className="md:hidden hover:scale-110 transition-transform duration-300"
+            className="md:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            {isMenuOpen ? <X className="h-6 w-6 rotate-180 transition-transform duration-300" /> : <Menu className="h-6 w-6 hover:rotate-180 transition-transform duration-300" />}
+            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </Button>
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t bg-white animate-slide-down">
-            <nav className="flex flex-col space-y-3">
-              <button onClick={() => scrollToSection('home')} className="text-right py-2 text-gray-700 hover:text-blue-600 font-medium hover:bg-blue-50 rounded px-2 transition-all duration-300">
-                الرئيسية
-              </button>
-              <button onClick={() => scrollToSection('services')} className="text-right py-2 text-gray-700 hover:text-blue-600 font-medium hover:bg-blue-50 rounded px-2 transition-all duration-300">
-                خدماتنا
-              </button>
-              <button onClick={() => scrollToSection('branches')} className="text-right py-2 text-gray-700 hover:text-blue-600 font-medium hover:bg-blue-50 rounded px-2 transition-all duration-300">
-                الفروع
-              </button>
-              <button onClick={() => scrollToSection('why-us')} className="text-right py-2 text-gray-700 hover:text-blue-600 font-medium hover:bg-blue-50 rounded px-2 transition-all duration-300">
-                لماذا نحن
-              </button>
-              <button onClick={() => scrollToSection('vision')} className="text-right py-2 text-gray-700 hover:text-blue-600 font-medium hover:bg-blue-50 rounded px-2 transition-all duration-300">
-                رؤيتنا
-              </button>
-              <button onClick={() => scrollToSection('blog')} className="text-right py-2 text-gray-700 hover:text-blue-600 font-medium hover:bg-blue-50 rounded px-2 transition-all duration-300">
-                المدونة
-              </button>
-              <button onClick={() => scrollToSection('contact')} className="text-right py-2 text-gray-700 hover:text-blue-600 font-medium hover:bg-blue-50 rounded px-2 transition-all duration-300">
-                التواصل
-              </button>
+          <div className="md:hidden py-4 border-t border-gray-200">
+            <nav className="flex flex-col space-y-2">
+              {navItems.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className="text-gray-700 hover:text-blue-600 font-medium py-2 px-4 rounded-lg hover:bg-gray-50 transition-colors duration-200 text-right"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.name}
+                </a>
+              ))}
             </nav>
           </div>
         )}
