@@ -1,4 +1,4 @@
-import { ArrowLeft, Phone, MessageCircle, Star, Zap, Shield } from 'lucide-react';
+import { ArrowLeft, Star, Zap, Shield } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export default function Hero() {
@@ -22,14 +22,6 @@ export default function Hero() {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
-  };
-
-  const handleCall = () => {
-    window.location.href = 'tel:+966559586786';
-  };
-
-  const handleWhatsApp = () => {
-    window.open('https://wa.me/966559586786', '_blank');
   };
 
   return (
@@ -77,8 +69,8 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up animation-delay-700">
+            {/* Action Button - Only Services Button */}
+            <div className="flex justify-center animate-fade-in-up animation-delay-700">
               <Button 
                 size="lg" 
                 className="bg-gradient-to-r from-blue-500 to-green-500 hover:from-blue-600 hover:to-green-600 text-white font-bold py-4 px-8 rounded-full transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl"
@@ -87,27 +79,6 @@ export default function Hero() {
                 اكتشف خدماتنا
                 <ArrowLeft className="mr-2 h-5 w-5" />
               </Button>
-              
-              <div className="flex gap-3">
-                <Button 
-                  size="lg" 
-                  variant="outline" 
-                  className="border-white/30 text-white hover:bg-white/20 font-bold py-4 px-6 rounded-full transform hover:scale-105 transition-all duration-300"
-                  onClick={handleCall}
-                >
-                  <Phone className="ml-2 h-5 w-5" />
-                  اتصل بنا
-                </Button>
-                
-                <Button 
-                  size="lg" 
-                  className="bg-green-600 hover:bg-green-700 font-bold py-4 px-6 rounded-full transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl"
-                  onClick={handleWhatsApp}
-                >
-                  <MessageCircle className="ml-2 h-5 w-5" />
-                  واتساب
-                </Button>
-              </div>
             </div>
           </div>
 
