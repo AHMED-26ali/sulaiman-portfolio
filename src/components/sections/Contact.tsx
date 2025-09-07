@@ -23,7 +23,8 @@ export default function Contact() {
   ];
 
   const handleCall = (phone: string) => {
-    window.location.href = `tel:${phone}`;
+    // Direct call functionality
+    window.open(`tel:${phone}`, '_self');
   };
 
   const handleWhatsApp = (phone: string) => {
