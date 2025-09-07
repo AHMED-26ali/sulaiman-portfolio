@@ -1,47 +1,47 @@
-import { MapPin, Building, Users, Clock, Phone } from 'lucide-react';
+import { MapPin, Building, Users, Clock } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 export default function Branches() {
   const branches = [
     {
-      name: "الفرع الرئيسي - ضبا",
-      location: "تبوك - ضبا",
-      description: "المقر الرئيسي للشركة مع كامل الخدمات والإدارة العامة",
-      services: ["التخليص الجمركي", "الشحن البحري", "الاستشارات"],
-      hours: "24/7",
-      staff: "15+ موظف"
-    },
-    {
-      name: "فرع جدة الإسلامي",
-      location: "جدة - الميناء الإسلامي",
-      description: "خدمات متخصصة في الشحن البحري والتخليص الجمركي",
-      services: ["الشحن البحري", "التخليص الجمركي", "النقل البري"],
-      hours: "24/7",
-      staff: "12+ موظف"
-    },
-    {
-      name: "فرع الدمام",
-      location: "الدمام - الميناء التجاري",
-      description: "خدمات شاملة للمنطقة الشرقية والخليج العربي",
-      services: ["التخليص الجمركي", "الترانزيت", "التخزين"],
-      hours: "24/7",
-      staff: "10+ موظف"
-    },
-    {
-      name: "فرع الرياض",
-      location: "الرياض - المنطقة الصناعية",
-      description: "خدمات النقل البري والتوزيع للمنطقة الوسطى",
-      services: ["النقل البري", "التوزيع", "الاستشارات"],
+      name: "منفذ الدرة",
+      location: "المنطقة الشرقية - الدرة",
+      description: "منفذ حدودي استراتيجي يخدم التجارة مع دول الخليج العربي",
+      services: ["التخليص الجمركي", "الترانزيت", "الشحن البري"],
       hours: "24/7",
       staff: "8+ موظف"
     },
     {
-      name: "فرع جازان",
-      location: "جازان - الميناء التجاري",
-      description: "خدمات متخصصة للمنطقة الجنوبية والتجارة مع اليمن",
+      name: "منفذ ضبا",
+      location: "تبوك - ضبا",
+      description: "المنفذ الرئيسي للتجارة البحرية مع مصر والأردن",
       services: ["التخليص الجمركي", "الشحن البحري", "الترانزيت"],
       hours: "24/7",
-      staff: "6+ موظف"
+      staff: "15+ موظف"
+    },
+    {
+      name: "منفذ السلوي",
+      location: "الحدود الشمالية - السلوي",
+      description: "منفذ حدودي مهم للتجارة مع العراق والدول الشمالية",
+      services: ["التخليص الجمركي", "النقل البري", "الترانزيت"],
+      hours: "24/7",
+      staff: "10+ موظف"
+    },
+    {
+      name: "جسر الملك فهد",
+      location: "المنطقة الشرقية - الخبر",
+      description: "الجسر الرابط مع البحرين ومنفذ حيوي للتجارة الخليجية",
+      services: ["التخليص الجمركي", "النقل البري", "الخدمات السريعة"],
+      hours: "24/7",
+      staff: "12+ موظف"
+    },
+    {
+      name: "منفذ البطحاء",
+      location: "الرياض - البطحاء",
+      description: "منفذ جوي مهم يخدم العاصمة والمنطقة الوسطى",
+      services: ["التخليص الجمركي", "الشحن الجوي", "الخدمات العاجلة"],
+      hours: "24/7",
+      staff: "14+ موظف"
     }
   ];
 
@@ -62,12 +62,12 @@ export default function Branches() {
             فروعنا ومواقعنا
           </h2>
           <p className="text-xl text-blue-200 max-w-3xl mx-auto">
-            شبكة واسعة من الفروع في أهم المواقع الاستراتيجية لخدمتكم
+            شبكة واسعة من الفروع في أهم المنافذ الحدودية الاستراتيجية لخدمتكم
           </p>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto mt-6 rounded-full"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {branches.map((branch, index) => (
             <Card 
               key={index} 
@@ -118,22 +118,6 @@ export default function Branches() {
               </CardContent>
             </Card>
           ))}
-        </div>
-
-        {/* Expansion Message */}
-        <div className="text-center">
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 transform hover:scale-105 transition-transform duration-300 animate-pulse max-w-4xl mx-auto">
-            <h3 className="text-2xl md:text-3xl font-bold mb-4 text-white">توسعات قادمة</h3>
-            <p className="text-blue-100 text-lg leading-relaxed">
-              نحن في طور التوسع لافتتاح فروع جديدة في مواقع استراتيجية إضافية لخدمتكم بشكل أفضل. 
-              ستشمل التوسعات القادمة فروعاً في حائل، الطائف، وأبها، بالإضافة إلى تطوير مكاتب فرعية في المنافذ الحدودية الرئيسية. 
-              هدفنا هو أن نكون قريبين منكم أينما كنتم لتقديم خدمات التخليص الجمركي بأعلى معايير الجودة والسرعة.
-            </p>
-            <div className="mt-6 flex items-center justify-center space-x-4 space-x-reverse">
-              <Phone className="h-5 w-5 text-blue-200 animate-bounce" />
-              <span className="text-blue-200 font-medium">تابعونا للإعلان عن الفروع الجديدة قريباً</span>
-            </div>
-          </div>
         </div>
       </div>
     </section>
