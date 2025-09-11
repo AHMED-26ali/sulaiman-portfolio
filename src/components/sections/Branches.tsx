@@ -1,123 +1,88 @@
-import { MapPin, Building, Users, Clock } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { MapPin, Ship, Truck, Plane } from 'lucide-react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
 export default function Branches() {
   const branches = [
     {
-      name: "منفذ الدرة",
-      location: "المنطقة الشرقية - الدرة",
-      description: "منفذ حدودي استراتيجي يخدم التجارة مع دول الخليج العربي",
-      services: ["التخليص الجمركي", "الترانزيت", "الشحن البري"],
-      hours: "24/7",
-      staff: "8+ موظف"
+      name: 'فرع ضبا',
+      description: 'يقع على الساحل الغربي للمملكة العربية السعودية، ضمن محافظة ضبا في منطقة تبوك، ويبعد حوالي 35 كم غرب المحافظة. أقرب ميناء سعودي إلى قناة السويس ودول حوض البحر المتوسط؛ حيث المسافة حوالي 253 بحريّة إلى قناة السويس، ويُعد نقطة عبور مميزة لسفن التجارة العالمية.',
+      icon: Ship,
+      location: 'محافظة ضبا - منطقة تبوك',
+      type: 'ميناء بحري'
     },
     {
-      name: "منفذ ضبا",
-      location: "تبوك - ضبا",
-      description: "المنفذ الرئيسي للتجارة البحرية مع مصر والأردن",
-      services: ["التخليص الجمركي", "الشحن البحري", "الترانزيت"],
-      hours: "24/7",
-      staff: "15+ موظف"
+      name: 'فرع الدرة',
+      description: 'يقع في محافظة حقل، شمال منطقة تبوك، على خليج العقبة، ويبعد حوالي 11 كم عن محافظة حقل السعودية. يربط السعودية مع الأردن؛ المنفذ هو أحد المعابر الوظيفية بينهم، ويُستخدم لحركة الركاب والشحن البري.',
+      icon: Truck,
+      location: 'محافظة حقل - منطقة تبوك',
+      type: 'منفذ بري'
     },
     {
-      name: "منفذ السلوي",
-      location: "الحدود الشمالية - السلوي",
-      description: "منفذ حدودي مهم للتجارة مع العراق والدول الشمالية",
-      services: ["التخليص الجمركي", "النقل البري", "الترانزيت"],
-      hours: "24/7",
-      staff: "10+ موظف"
+      name: 'فرع السلوي',
+      description: 'في الجزء الشرقي من المملكة، محافظة العديد، وهو المنفذ البري الوحيد مع دولة قطر. يبعد عن الرياض نحو 460 كم، وعن الدوحة نحو 90 كم.',
+      icon: Truck,
+      location: 'محافظة العديد - المنطقة الشرقية',
+      type: 'منفذ بري'
     },
     {
-      name: "جسر الملك فهد",
-      location: "المنطقة الشرقية - الخبر",
-      description: "الجسر الرابط مع البحرين ومنفذ حيوي للتجارة الخليجية",
-      services: ["التخليص الجمركي", "النقل البري", "الخدمات السريعة"],
-      hours: "24/7",
-      staff: "12+ موظف"
+      name: 'جسر الملك فهد',
+      description: 'جسر بحري بطول حوالي 25 كيلومترًا وعرض حوالي 23.2 مترًا، يربط بين مدينة الخبر السعودية وجزيرة الجسرة في مملكة البحرين. يسهل الحركة البرية بين البلدين، ويساهم في التجارة، السياحة، والزيارات العائلية، كما يعتبر إنجازًا هندسيًا له أثر اقتصادي واجتماعي كبير في الخليج.',
+      icon: Ship,
+      location: 'الخبر - المنطقة الشرقية',
+      type: 'جسر بحري'
     },
     {
-      name: "منفذ البطحاء",
-      location: "الرياض - البطحاء",
-      description: "منفذ جوي مهم يخدم العاصمة والمنطقة الوسطى",
-      services: ["التخليص الجمركي", "الشحن الجوي", "الخدمات العاجلة"],
-      hours: "24/7",
-      staff: "14+ موظف"
+      name: 'فرع البطحاء',
+      description: 'يقع في محافظة العديد بالمنطقة الشرقية، هو المنفذ البري الوحيد مع دولة الإمارات العربية المتحدة. يبعد عن الرياض حوالي 450-500 كم، وعن أبوظبي حوالي 350-370 كم تقريبًا. يعتبر حلقة وصل بريّة رئيسية بين السعودية والإمارات، له دور كبير في التجارة البينية وحركة الأشخاص، ويعمل على تخفيف الضغط على المنافذ الأخرى في المنطقة الشرقية.',
+      icon: Truck,
+      location: 'محافظة العديد - المنطقة الشرقية',
+      type: 'منفذ بري'
     }
   ];
 
   return (
-    <section id="branches" className="py-20 bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white relative overflow-hidden">
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-20 left-20 w-40 h-40 bg-white/10 rounded-full animate-pulse"></div>
-        <div className="absolute bottom-20 right-20 w-32 h-32 bg-white/10 rounded-full animate-bounce"></div>
-        <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-white/10 rounded-full animate-ping"></div>
-        <div className="absolute top-1/3 right-1/3 w-28 h-28 bg-white/10 rounded-full animate-pulse"></div>
-        <div className="absolute bottom-1/3 left-1/2 w-20 h-20 bg-white/10 rounded-full animate-bounce"></div>
-      </div>
-
-      <div className="container mx-auto px-4 relative z-10">
+    <section id="branches" className="py-20 bg-gray-50">
+      <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            فروعنا ومواقعنا
-          </h2>
-          <p className="text-xl text-blue-200 max-w-3xl mx-auto">
-            شبكة واسعة من الفروع في أهم المنافذ الحدودية الاستراتيجية لخدمتكم
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">فروعنا</h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            نخدمكم عبر شبكة واسعة من الفروع المتخصصة في أهم المنافذ الحدودية والموانئ في المملكة العربية السعودية
           </p>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto mt-6 rounded-full"></div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {branches.map((branch, index) => (
-            <Card 
-              key={index} 
-              className="group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:rotate-1 border-0 bg-white/10 backdrop-blur-sm hover:bg-white/20"
-              style={{
-                animationDelay: `${index * 150}ms`
-              }}
-            >
-              <CardHeader className="text-center pb-4">
-                <div className="mx-auto mb-4 p-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full w-fit group-hover:scale-110 transition-transform duration-300">
-                  <Building className="h-6 w-6 text-white" />
-                </div>
-                <CardTitle className="text-lg font-bold text-white group-hover:text-blue-300 transition-colors">
-                  {branch.name}
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="flex items-center space-x-3 space-x-reverse text-blue-200">
-                  <MapPin className="h-4 w-4" />
-                  <span className="text-sm">{branch.location}</span>
-                </div>
-                
-                <p className="text-gray-300 text-sm leading-relaxed">
-                  {branch.description}
-                </p>
-                
-                <div className="space-y-2">
-                  <h4 className="font-semibold text-white text-sm">الخدمات المتاحة:</h4>
-                  <div className="flex flex-wrap gap-1">
-                    {branch.services.map((service, idx) => (
-                      <span key={idx} className="bg-blue-500/30 text-blue-200 px-2 py-1 rounded-full text-xs">
-                        {service}
-                      </span>
-                    ))}
+          {branches.map((branch, index) => {
+            const IconComponent = branch.icon;
+            return (
+              <Card 
+                key={index} 
+                className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-0 shadow-lg"
+              >
+                <CardHeader className="text-right">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="p-3 bg-blue-100 rounded-full group-hover:bg-blue-200 transition-colors duration-300">
+                      <IconComponent className="h-6 w-6 text-blue-600" />
+                    </div>
+                    <div className="text-right">
+                      <span className="text-sm text-blue-600 font-medium">{branch.type}</span>
+                    </div>
                   </div>
-                </div>
-                
-                <div className="flex justify-between items-center text-sm">
-                  <div className="flex items-center space-x-2 space-x-reverse text-green-300">
-                    <Clock className="h-3 w-3" />
-                    <span>{branch.hours}</span>
+                  <CardTitle className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
+                    {branch.name}
+                  </CardTitle>
+                  <div className="flex items-center text-gray-600 mt-2">
+                    <MapPin className="h-4 w-4 ml-1" />
+                    <span className="text-sm">{branch.location}</span>
                   </div>
-                  <div className="flex items-center space-x-2 space-x-reverse text-purple-300">
-                    <Users className="h-3 w-3" />
-                    <span>{branch.staff}</span>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+                </CardHeader>
+                <CardContent className="text-right">
+                  <CardDescription className="text-gray-700 leading-relaxed">
+                    {branch.description}
+                  </CardDescription>
+                </CardContent>
+              </Card>
+            );
+          })}
         </div>
       </div>
     </section>
