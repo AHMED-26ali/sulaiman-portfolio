@@ -1,16 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- Homepage -->
   <url>
     <loc>https://suleiman-c.netlify.app/</loc>
-    <lastmod>2025-01-15</lastmod>
+    <lastmod>2025-01-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="ar-sa" href="https://suleiman-c.netlify.app/" />
-    <xhtml:link rel="alternate" hreflang="ar-eg" href="https://suleiman-c.netlify.app/" />
-    <xhtml:link rel="alternate" hreflang="ar-kw" href="https://suleiman-c.netlify.app/" />
-    <xhtml:link rel="alternate" hreflang="ar-jo" href="https://suleiman-c.netlify.app/" />
-    <xhtml:link rel="alternate" hreflang="ar-qa" href="https://suleiman-c.netlify.app/" />
-    <xhtml:link rel="alternate" hreflang="ar-ae" href="https://suleiman-c.netlify.app/" />
   </url>
+
+  <!-- Services Section -->
+  <url>
+    <loc>https://suleiman-c.netlify.app/#services</loc>
+    <lastmod>2025-01-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- About Section -->
+  <url>
+    <loc>https://suleiman-c.netlify.app/#about</loc>
+    <lastmod>2025-01-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Contact Section -->
+  <url>
+    <loc>https://suleiman-c.netlify.app/#contact</loc>
+    <lastmod>2025-01-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog Section -->
+  <url>
+    <loc>https://suleiman-c.netlify.app/#blog</loc>
+    <lastmod>2025-01-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>
