@@ -3,45 +3,53 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
+  
   <!-- Homepage -->
   <url>
     <loc>https://suleiman-c.netlify.app/</loc>
-    <lastmod>2025-01-12</lastmod>
+    <lastmod>2025-01-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-
+  
   <!-- Services Section -->
   <url>
     <loc>https://suleiman-c.netlify.app/#services</loc>
-    <lastmod>2025-01-12</lastmod>
+    <lastmod>2025-01-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
-
-  <!-- About Section -->
+  
+  <!-- Why Us Section -->
   <url>
-    <loc>https://suleiman-c.netlify.app/#about</loc>
-    <lastmod>2025-01-12</lastmod>
+    <loc>https://suleiman-c.netlify.app/#why-us</loc>
+    <lastmod>2025-01-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
-  <!-- Contact Section -->
+  
+  <!-- Branches Section -->
   <url>
-    <loc>https://suleiman-c.netlify.app/#contact</loc>
-    <lastmod>2025-01-12</lastmod>
+    <loc>https://suleiman-c.netlify.app/#branches</loc>
+    <lastmod>2025-01-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
+  
   <!-- Blog Section -->
   <url>
     <loc>https://suleiman-c.netlify.app/#blog</loc>
-    <lastmod>2025-01-12</lastmod>
+    <lastmod>2025-01-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
-
+  
+  <!-- Contact Section -->
+  <url>
+    <loc>https://suleiman-c.netlify.app/#contact</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
 </urlset>

@@ -1,5 +1,6 @@
 import { ArrowLeft, Star, Zap, Shield } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import ThreeBackground from '@/components/effects/ThreeBackground';
 
 export default function Hero() {
   const images = [
@@ -26,14 +27,8 @@ export default function Hero() {
 
   return (
     <section id="home" className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-green-900 text-white relative overflow-hidden pt-16">
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-20 left-20 w-40 h-40 bg-white/10 rounded-full animate-pulse"></div>
-        <div className="absolute bottom-20 right-20 w-32 h-32 bg-white/10 rounded-full animate-bounce"></div>
-        <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-white/10 rounded-full animate-ping"></div>
-        <div className="absolute top-1/3 right-1/3 w-28 h-28 bg-white/10 rounded-full animate-pulse"></div>
-        <div className="absolute bottom-1/3 left-1/2 w-20 h-20 bg-white/10 rounded-full animate-bounce"></div>
-      </div>
+      {/* 3D Background - Always Enabled */}
+      <ThreeBackground enabled={true} />
 
       <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">

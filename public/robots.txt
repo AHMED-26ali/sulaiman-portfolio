@@ -1,35 +1,35 @@
 User-agent: *
 Allow: /
 
-# Sitemap
+# Sitemap location
 Sitemap: https://suleiman-c.netlify.app/sitemap.xml
 
-# Crawl-delay
+# Crawl delay (optional)
 Crawl-delay: 1
 
-# Specific rules for major search engines
+# Specific directives for major search engines
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 1
 
 User-agent: Bingbot
 Allow: /
+Crawl-delay: 1
 
 User-agent: Slurp
 Allow: /
+Crawl-delay: 1
 
-# Block unnecessary paths (if any)
-Disallow: /admin/
-Disallow: /private/
-Disallow: /*.json$
-Disallow: /api/
+# Block access to admin or sensitive areas (if any)
+# Disallow: /admin/
+# Disallow: /private/
 
-# Allow important files
-Allow: /favicon.ico
-Allow: /sitemap.xml
-Allow: /*.css
-Allow: /*.js
-Allow: /*.png
-Allow: /*.jpg
-Allow: /*.jpeg
-Allow: /*.gif
-Allow: /*.svg
+# Allow access to CSS and JS files
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.gif$
+Allow: /*.svg$
+Allow: /*.webp$
