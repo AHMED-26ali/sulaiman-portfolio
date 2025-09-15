@@ -120,7 +120,7 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* شاشة عرض الصور الاحترافية */}
+          {/* شاشة عرض الصور الاحترافية - بدون نصوص */}
           <div className="animate-fade-in-left">
             <div 
               className="relative w-full h-96 lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl group"
@@ -133,25 +133,19 @@ export default function Hero() {
                   src={images[currentImageIndex]}
                   alt={`خدمات التخليص الجمركي والترانزيت - مؤسسة سليمان الحويطي ${currentImageIndex + 1}`}
                   title={`خدمات التخليص الجمركي والترانزيت في السعودية - صورة ${currentImageIndex + 1}`}
-                  className="w-full h-full object-cover transition-all duration-1000 ease-in-out"
+                  className="w-full h-full object-cover transition-all duration-1000 ease-in-out transform group-hover:scale-105"
                   loading={currentImageIndex < 3 ? "eager" : "lazy"}
                 />
                 
-                {/* طبقة تدرج للنص */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                
-                {/* نص على الصورة */}
-                <div className="absolute bottom-6 left-6 right-6 text-white">
-                  <h3 className="text-2xl font-bold mb-2">خدمات التخليص الجمركي</h3>
-                  <p className="text-lg opacity-90">حلول شاملة ومتطورة لجميع احتياجاتكم التجارية</p>
-                </div>
+                {/* طبقة تدرج خفيفة للتأثير البصري فقط */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
 
-              {/* أزرار التحكم */}
-              <div className="absolute inset-0 flex items-center justify-between p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              {/* أزرار التحكم - محسنة */}
+              <div className="absolute inset-0 flex items-center justify-between p-6 opacity-0 group-hover:opacity-100 transition-all duration-300">
                 <button
                   onClick={prevImage}
-                  className="bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white p-3 rounded-full transition-all duration-300 transform hover:scale-110"
+                  className="bg-white/10 backdrop-blur-md hover:bg-white/20 text-white p-4 rounded-full transition-all duration-300 transform hover:scale-110 shadow-lg border border-white/20"
                   aria-label="الصورة السابقة"
                 >
                   <ChevronRight className="w-6 h-6" />
@@ -159,44 +153,44 @@ export default function Hero() {
                 
                 <button
                   onClick={nextImage}
-                  className="bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white p-3 rounded-full transition-all duration-300 transform hover:scale-110"
+                  className="bg-white/10 backdrop-blur-md hover:bg-white/20 text-white p-4 rounded-full transition-all duration-300 transform hover:scale-110 shadow-lg border border-white/20"
                   aria-label="الصورة التالية"
                 >
                   <ChevronLeft className="w-6 h-6" />
                 </button>
               </div>
 
-              {/* زر التشغيل/الإيقاف */}
-              <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              {/* زر التشغيل/الإيقاف - محسن */}
+              <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-all duration-300">
                 <button
                   onClick={togglePlayPause}
-                  className="bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white p-3 rounded-full transition-all duration-300 transform hover:scale-110"
+                  className="bg-white/10 backdrop-blur-md hover:bg-white/20 text-white p-3 rounded-full transition-all duration-300 transform hover:scale-110 shadow-lg border border-white/20"
                   aria-label={isPlaying ? "إيقاف التشغيل التلقائي" : "تشغيل التشغيل التلقائي"}
                 >
                   {isPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5" />}
                 </button>
               </div>
 
-              {/* مؤشر التقدم */}
-              <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/20">
+              {/* مؤشر التقدم - محسن */}
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/10">
                 <div 
-                  className="h-full bg-gradient-to-r from-blue-400 to-purple-400 transition-all duration-300"
+                  className="h-full bg-gradient-to-r from-blue-400 via-purple-400 to-green-400 transition-all duration-300 shadow-sm"
                   style={{ 
                     width: `${((currentImageIndex + 1) / images.length) * 100}%` 
                   }}
                 ></div>
               </div>
 
-              {/* نقاط التنقل */}
-              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              {/* نقاط التنقل - محسنة */}
+              <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-2 opacity-0 group-hover:opacity-100 transition-all duration-300">
                 {images.slice(0, 5).map((_, index) => (
                   <button
                     key={index}
                     onClick={() => setCurrentImageIndex(index)}
-                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                    className={`w-3 h-3 rounded-full transition-all duration-300 border border-white/30 ${
                       index === currentImageIndex % 5 
-                        ? 'bg-white scale-125' 
-                        : 'bg-white/50 hover:bg-white/75'
+                        ? 'bg-white scale-125 shadow-lg' 
+                        : 'bg-white/30 hover:bg-white/60 hover:scale-110'
                     }`}
                     aria-label={`الانتقال إلى الصورة ${index + 1}`}
                   />
@@ -204,8 +198,8 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* تأثيرات بصرية إضافية */}
-            <div className="absolute -inset-4 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-3xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
+            {/* تأثيرات بصرية إضافية محسنة */}
+            <div className="absolute -inset-6 bg-gradient-to-r from-blue-600/10 via-purple-600/10 to-green-600/10 rounded-3xl blur-2xl opacity-30 group-hover:opacity-60 transition-all duration-500 animate-pulse"></div>
           </div>
         </div>
 
@@ -232,4 +226,3 @@ export default function Hero() {
     </section>
   );
 }
-
