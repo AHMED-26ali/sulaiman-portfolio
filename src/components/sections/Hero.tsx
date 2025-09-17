@@ -78,12 +78,12 @@ export default function Hero() {
           {/* Content */}
           <div className="space-y-8 animate-fade-in-right">
             <div className="space-y-6">
-              {/* العنوان الرئيسي - ألوان زاهية جداً */}
+              {/* العنوان الرئيسي - ألوان زاهية محسنة */}
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-                <span className="block bg-gradient-to-r from-orange-400 via-red-500 to-pink-500 bg-clip-text text-transparent animate-fade-in-up hover:from-orange-300 hover:via-red-400 hover:to-pink-400 transition-all duration-500 cursor-default transform hover:scale-105 hover:rotate-1" style={{textShadow: '2px 2px 8px rgba(0,0,0,0.8), 0 0 20px rgba(0,0,0,0.6)', filter: 'drop-shadow(0 0 10px rgba(255, 165, 0, 0.5))'}}>
+                <span className="block bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400 bg-clip-text text-transparent animate-fade-in-up hover:from-blue-300 hover:via-cyan-300 hover:to-teal-300 transition-all duration-500 cursor-default transform hover:scale-105 hover:rotate-1" style={{textShadow: '2px 2px 8px rgba(0,0,0,0.8), 0 0 20px rgba(0,0,0,0.6)', filter: 'drop-shadow(0 0 15px rgba(34, 211, 238, 0.6))'}}>
                   سليمان الحويطي
                 </span>
-                <span className="block bg-gradient-to-r from-lime-400 via-green-500 to-emerald-500 bg-clip-text text-transparent animate-fade-in-up animation-delay-300 hover:from-lime-300 hover:via-green-400 hover:to-emerald-400 transition-all duration-500 cursor-default transform hover:scale-105 hover:-rotate-1" style={{textShadow: '2px 2px 8px rgba(0,0,0,0.8), 0 0 20px rgba(0,0,0,0.6)', filter: 'drop-shadow(0 0 10px rgba(50, 205, 50, 0.5))'}}>
+                <span className="block bg-gradient-to-r from-emerald-400 via-green-400 to-lime-400 bg-clip-text text-transparent animate-fade-in-up animation-delay-300 hover:from-emerald-300 hover:via-green-300 hover:to-lime-300 transition-all duration-500 cursor-default transform hover:scale-105 hover:-rotate-1" style={{textShadow: '2px 2px 8px rgba(0,0,0,0.8), 0 0 20px rgba(0,0,0,0.6)', filter: 'drop-shadow(0 0 15px rgba(16, 185, 129, 0.6))'}}>
                   للتخليص الجمركي والترانزيت
                 </span>
               </h1>
@@ -124,15 +124,15 @@ export default function Hero() {
             <div className="flex justify-center animate-fade-in-up animation-delay-700">
               <Button 
                 size="lg" 
-                className="bg-gradient-to-r from-pink-500 via-red-500 to-orange-500 hover:from-pink-400 hover:via-red-400 hover:to-orange-400 text-white font-bold py-4 px-8 rounded-full transform hover:scale-125 hover:rotate-2 transition-all duration-500 shadow-2xl hover:shadow-pink-500/50 border border-pink-400/40 hover:border-pink-300/60 group relative overflow-hidden animate-pulse"
+                className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:from-indigo-400 hover:via-purple-400 hover:to-pink-400 text-white font-bold py-4 px-8 rounded-full transform hover:scale-125 hover:rotate-2 transition-all duration-500 shadow-2xl hover:shadow-purple-500/50 border border-purple-400/40 hover:border-purple-300/60 group relative overflow-hidden animate-pulse"
                 onClick={scrollToServices}
               >
-                <span className="relative z-10 flex items-center drop-shadow-md bg-gradient-to-r from-white to-pink-100 bg-clip-text text-transparent group-hover:from-pink-100 group-hover:to-white">
+                <span className="relative z-10 flex items-center drop-shadow-md bg-gradient-to-r from-white to-purple-100 bg-clip-text text-transparent group-hover:from-purple-100 group-hover:to-white">
                   اكتشف خدماتنا
                   <ArrowLeft className="mr-2 h-5 w-5 group-hover:translate-x-2 group-hover:scale-110 transition-transform duration-300" />
                 </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-red-600/20 to-orange-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <div className="absolute inset-0 bg-gradient-to-r from-yellow-500/10 to-red-500/10 animate-pulse"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 to-pink-500/10 animate-pulse"></div>
               </Button>
             </div>
           </div>
@@ -191,7 +191,7 @@ export default function Hero() {
               {/* مؤشر التقدم - محسن */}
               <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/10">
                 <div 
-                  className="h-full bg-gradient-to-r from-pink-400 via-red-400 to-orange-400 transition-all duration-300 shadow-sm"
+                  className="h-full bg-gradient-to-r from-blue-400 via-purple-400 to-green-400 transition-all duration-300 shadow-sm"
                   style={{ 
                     width: `${((currentImageIndex + 1) / images.length) * 100}%` 
                   }}
@@ -216,7 +216,7 @@ export default function Hero() {
             </div>
 
             {/* تأثيرات بصرية إضافية محسنة */}
-            <div className="absolute -inset-6 bg-gradient-to-r from-pink-600/15 via-red-600/15 to-orange-600/15 rounded-3xl blur-2xl opacity-30 group-hover:opacity-60 transition-all duration-500 animate-pulse"></div>
+            <div className="absolute -inset-6 bg-gradient-to-r from-blue-600/15 via-purple-600/15 to-green-600/15 rounded-3xl blur-2xl opacity-30 group-hover:opacity-60 transition-all duration-500 animate-pulse"></div>
           </div>
         </div>
 
