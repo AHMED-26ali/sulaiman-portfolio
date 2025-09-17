@@ -62,9 +62,18 @@ export default function Hero() {
   };
 
   const scrollToServices = () => {
-    const element = document.getElementById('services');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+    const servicesElement = document.getElementById('services');
+    if (servicesElement) {
+      servicesElement.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    } else {
+      // إذا لم يوجد قسم الخدمات، انتقل إلى أسفل الصفحة
+      window.scrollTo({
+        top: window.innerHeight,
+        behavior: 'smooth'
+      });
     }
   };
 
@@ -78,29 +87,29 @@ export default function Hero() {
           {/* Content */}
           <div className="space-y-8 animate-fade-in-right">
             <div className="space-y-6">
-              {/* العنوان الرئيسي - ألوان زاهية محسنة */}
+              {/* العنوان الرئيسي - ألوان زاهية بدون أخضر وبدون أسود */}
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-                <span className="block bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400 bg-clip-text text-transparent animate-fade-in-up hover:from-blue-300 hover:via-cyan-300 hover:to-teal-300 transition-all duration-500 cursor-default transform hover:scale-105 hover:rotate-1" style={{textShadow: '2px 2px 8px rgba(0,0,0,0.8), 0 0 20px rgba(0,0,0,0.6)', filter: 'drop-shadow(0 0 15px rgba(34, 211, 238, 0.6))'}}>
+                <span className="block bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent animate-fade-in-up hover:from-blue-300 hover:via-cyan-300 hover:to-purple-300 transition-all duration-500 cursor-default transform hover:scale-105 hover:rotate-1" style={{filter: 'drop-shadow(0 0 15px rgba(34, 211, 238, 0.6))'}}>
                   سليمان الحويطي
                 </span>
-                <span className="block bg-gradient-to-r from-emerald-400 via-green-400 to-lime-400 bg-clip-text text-transparent animate-fade-in-up animation-delay-300 hover:from-emerald-300 hover:via-green-300 hover:to-lime-300 transition-all duration-500 cursor-default transform hover:scale-105 hover:-rotate-1" style={{textShadow: '2px 2px 8px rgba(0,0,0,0.8), 0 0 20px rgba(0,0,0,0.6)', filter: 'drop-shadow(0 0 15px rgba(16, 185, 129, 0.6))'}}>
+                <span className="block bg-gradient-to-r from-orange-400 via-red-400 to-pink-400 bg-clip-text text-transparent animate-fade-in-up animation-delay-300 hover:from-orange-300 hover:via-red-300 hover:to-pink-300 transition-all duration-500 cursor-default transform hover:scale-105 hover:-rotate-1" style={{filter: 'drop-shadow(0 0 15px rgba(251, 146, 60, 0.6))'}}>
                   للتخليص الجمركي والترانزيت
                 </span>
               </h1>
 
               {/* العنوان الفرعي - ألوان زاهية */}
               <h2 className="text-xl md:text-2xl lg:text-3xl mt-4 animate-fade-in-up animation-delay-500 leading-relaxed">
-                <span className="inline-block hover:scale-110 transition-all duration-300 bg-gradient-to-r from-yellow-300 to-orange-400 bg-clip-text text-transparent hover:from-yellow-200 hover:to-orange-300" style={{textShadow: '1px 1px 6px rgba(0,0,0,0.8)', filter: 'drop-shadow(0 0 8px rgba(255, 215, 0, 0.4))'}}>مؤسسة رائدة في خدمات</span>{' '}
+                <span className="inline-block hover:scale-110 transition-all duration-300 bg-gradient-to-r from-yellow-300 to-orange-400 bg-clip-text text-transparent hover:from-yellow-200 hover:to-orange-300" style={{filter: 'drop-shadow(0 0 8px rgba(255, 215, 0, 0.4))'}}>مؤسسة رائدة في خدمات</span>{' '}
                 <span className="inline-block hover:scale-110 transition-all duration-300 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent hover:from-cyan-300 hover:to-blue-400 animate-pulse" style={{filter: 'drop-shadow(0 0 8px rgba(0, 191, 255, 0.5))'}}>التخليص الجمركي</span>{' '}
-                <span className="inline-block hover:scale-110 transition-all duration-300 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent hover:from-purple-300 hover:to-pink-400" style={{textShadow: '1px 1px 6px rgba(0,0,0,0.8)', filter: 'drop-shadow(0 0 8px rgba(147, 51, 234, 0.4))'}}>والترانزيت في</span>{' '}
-                <span className="inline-block hover:scale-110 transition-all duration-300 bg-gradient-to-r from-green-400 to-teal-500 bg-clip-text text-transparent hover:from-green-300 hover:to-teal-400 animate-pulse" style={{filter: 'drop-shadow(0 0 8px rgba(34, 197, 94, 0.5))'}}>المملكة العربية السعودية</span>
+                <span className="inline-block hover:scale-110 transition-all duration-300 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent hover:from-purple-300 hover:to-pink-400" style={{filter: 'drop-shadow(0 0 8px rgba(147, 51, 234, 0.4))'}}>والترانزيت في</span>{' '}
+                <span className="inline-block hover:scale-110 transition-all duration-300 bg-gradient-to-r from-blue-400 to-teal-500 bg-clip-text text-transparent hover:from-blue-300 hover:to-teal-400 animate-pulse" style={{filter: 'drop-shadow(0 0 8px rgba(59, 130, 246, 0.5))'}}>المملكة العربية السعودية</span>
               </h2>
               
               {/* الوصف - ألوان زاهية جداً */}
               <p className="text-lg md:text-xl lg:text-2xl leading-relaxed animate-fade-in-up animation-delay-700">
-                <span className="inline-block hover:scale-105 transition-all duration-300 bg-gradient-to-r from-violet-400 to-purple-500 bg-clip-text text-transparent hover:from-violet-300 hover:to-purple-400 cursor-pointer" style={{textShadow: '1px 1px 4px rgba(0,0,0,0.7)', filter: 'drop-shadow(0 0 6px rgba(139, 69, 219, 0.5))'}}>نقدم خدمات التخليص الجمركي والترانزيت</span>{' '}
-                <span className="inline-block hover:scale-105 transition-all duration-300 bg-gradient-to-r from-rose-400 to-red-500 bg-clip-text text-transparent hover:from-rose-300 hover:to-red-400 cursor-pointer" style={{textShadow: '1px 1px 4px rgba(0,0,0,0.7)', filter: 'drop-shadow(0 0 6px rgba(244, 63, 94, 0.5))'}}>بأعلى معايير الجودة والاحترافية</span>{' '}
-                <span className="inline-block hover:scale-105 transition-all duration-300 bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent hover:from-amber-300 hover:to-orange-400 cursor-pointer" style={{textShadow: '1px 1px 4px rgba(0,0,0,0.7)', filter: 'drop-shadow(0 0 6px rgba(251, 191, 36, 0.5))'}}>في جميع أنحاء المملكة</span>
+                <span className="inline-block hover:scale-105 transition-all duration-300 bg-gradient-to-r from-violet-400 to-purple-500 bg-clip-text text-transparent hover:from-violet-300 hover:to-purple-400 cursor-pointer" style={{filter: 'drop-shadow(0 0 6px rgba(139, 69, 219, 0.5))'}}>نقدم خدمات التخليص الجمركي والترانزيت</span>{' '}
+                <span className="inline-block hover:scale-105 transition-all duration-300 bg-gradient-to-r from-rose-400 to-red-500 bg-clip-text text-transparent hover:from-rose-300 hover:to-red-400 cursor-pointer" style={{filter: 'drop-shadow(0 0 6px rgba(244, 63, 94, 0.5))'}}>بأعلى معايير الجودة والاحترافية</span>{' '}
+                <span className="inline-block hover:scale-105 transition-all duration-300 bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent hover:from-amber-300 hover:to-orange-400 cursor-pointer" style={{filter: 'drop-shadow(0 0 6px rgba(251, 191, 36, 0.5))'}}>في جميع أنحاء المملكة</span>
               </p>
 
               {/* Features - ألوان زاهية جداً */}
@@ -113,21 +122,21 @@ export default function Hero() {
                   <Zap className="h-6 w-6 text-cyan-300 group-hover:text-cyan-200 group-hover:scale-125 transition-all duration-300 animate-pulse" />
                   <span className="font-medium bg-gradient-to-r from-cyan-200 to-blue-200 bg-clip-text text-transparent group-hover:from-cyan-100 group-hover:to-blue-100 transition-all duration-300 drop-shadow-md">خدمة 24/7</span>
                 </div>
-                <div className="flex items-center space-x-3 space-x-reverse bg-gradient-to-r from-green-500/30 to-emerald-500/30 backdrop-blur-sm rounded-xl p-4 hover:from-green-400/40 hover:to-emerald-400/40 transition-all duration-300 transform hover:scale-110 hover:shadow-lg hover:shadow-green-500/30 border border-green-400/40 hover:border-green-300/60 group cursor-pointer">
-                  <Shield className="h-6 w-6 text-green-300 group-hover:text-green-200 group-hover:rotate-6 group-hover:scale-125 transition-all duration-300 animate-pulse" />
-                  <span className="font-medium bg-gradient-to-r from-green-200 to-emerald-200 bg-clip-text text-transparent group-hover:from-green-100 group-hover:to-emerald-100 transition-all duration-300 drop-shadow-md">موثوقية عالية</span>
+                <div className="flex items-center space-x-3 space-x-reverse bg-gradient-to-r from-purple-500/30 to-pink-500/30 backdrop-blur-sm rounded-xl p-4 hover:from-purple-400/40 hover:to-pink-400/40 transition-all duration-300 transform hover:scale-110 hover:shadow-lg hover:shadow-purple-500/30 border border-purple-400/40 hover:border-purple-300/60 group cursor-pointer">
+                  <Shield className="h-6 w-6 text-purple-300 group-hover:text-purple-200 group-hover:rotate-6 group-hover:scale-125 transition-all duration-300 animate-pulse" />
+                  <span className="font-medium bg-gradient-to-r from-purple-200 to-pink-200 bg-clip-text text-transparent group-hover:from-purple-100 group-hover:to-pink-100 transition-all duration-300 drop-shadow-md">موثوقية عالية</span>
                 </div>
               </div>
             </div>
 
-            {/* Action Button - ألوان زاهية جداً */}
+            {/* Action Button - محسن ويعمل بشكل صحيح */}
             <div className="flex justify-center animate-fade-in-up animation-delay-700">
               <Button 
                 size="lg" 
                 className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:from-indigo-400 hover:via-purple-400 hover:to-pink-400 text-white font-bold py-4 px-8 rounded-full transform hover:scale-125 hover:rotate-2 transition-all duration-500 shadow-2xl hover:shadow-purple-500/50 border border-purple-400/40 hover:border-purple-300/60 group relative overflow-hidden animate-pulse"
                 onClick={scrollToServices}
               >
-                <span className="relative z-10 flex items-center drop-shadow-md bg-gradient-to-r from-white to-purple-100 bg-clip-text text-transparent group-hover:from-purple-100 group-hover:to-white">
+                <span className="relative z-10 flex items-center drop-shadow-md text-white group-hover:text-purple-100">
                   اكتشف خدماتنا
                   <ArrowLeft className="mr-2 h-5 w-5 group-hover:translate-x-2 group-hover:scale-110 transition-transform duration-300" />
                 </span>
@@ -191,7 +200,7 @@ export default function Hero() {
               {/* مؤشر التقدم - محسن */}
               <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/10">
                 <div 
-                  className="h-full bg-gradient-to-r from-blue-400 via-purple-400 to-green-400 transition-all duration-300 shadow-sm"
+                  className="h-full bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 transition-all duration-300 shadow-sm"
                   style={{ 
                     width: `${((currentImageIndex + 1) / images.length) * 100}%` 
                   }}
@@ -216,7 +225,7 @@ export default function Hero() {
             </div>
 
             {/* تأثيرات بصرية إضافية محسنة */}
-            <div className="absolute -inset-6 bg-gradient-to-r from-blue-600/15 via-purple-600/15 to-green-600/15 rounded-3xl blur-2xl opacity-30 group-hover:opacity-60 transition-all duration-500 animate-pulse"></div>
+            <div className="absolute -inset-6 bg-gradient-to-r from-blue-600/15 via-purple-600/15 to-pink-600/15 rounded-3xl blur-2xl opacity-30 group-hover:opacity-60 transition-all duration-500 animate-pulse"></div>
           </div>
         </div>
 
@@ -226,17 +235,17 @@ export default function Hero() {
             <div className="text-4xl font-bold bg-gradient-to-r from-cyan-300 to-blue-400 bg-clip-text text-transparent mb-2 group-hover:scale-125 transition-transform duration-300 drop-shadow-lg animate-pulse">2000+</div>
             <div className="bg-gradient-to-r from-cyan-200 to-blue-200 bg-clip-text text-transparent group-hover:from-cyan-100 group-hover:to-blue-100 transition-colors duration-300 drop-shadow-md">عميل راضي</div>
           </div>
-          <div className="text-center bg-gradient-to-br from-green-500/30 to-emerald-500/30 backdrop-blur-sm rounded-2xl p-6 hover:from-green-400/40 hover:to-emerald-400/40 transition-all duration-300 transform hover:scale-110 hover:-rotate-2 border border-green-400/40 hover:border-green-300/60 group cursor-pointer hover:shadow-lg hover:shadow-green-500/30">
-            <div className="text-4xl font-bold bg-gradient-to-r from-green-300 to-emerald-400 bg-clip-text text-transparent mb-2 group-hover:scale-125 transition-transform duration-300 drop-shadow-lg animate-pulse">8000+</div>
-            <div className="bg-gradient-to-r from-green-200 to-emerald-200 bg-clip-text text-transparent group-hover:from-green-100 group-hover:to-emerald-100 transition-colors duration-300 drop-shadow-md">معاملة مكتملة</div>
+          <div className="text-center bg-gradient-to-br from-purple-500/30 to-pink-500/30 backdrop-blur-sm rounded-2xl p-6 hover:from-purple-400/40 hover:to-pink-400/40 transition-all duration-300 transform hover:scale-110 hover:-rotate-2 border border-purple-400/40 hover:border-purple-300/60 group cursor-pointer hover:shadow-lg hover:shadow-purple-500/30">
+            <div className="text-4xl font-bold bg-gradient-to-r from-purple-300 to-pink-400 bg-clip-text text-transparent mb-2 group-hover:scale-125 transition-transform duration-300 drop-shadow-lg animate-pulse">8000+</div>
+            <div className="bg-gradient-to-r from-purple-200 to-pink-200 bg-clip-text text-transparent group-hover:from-purple-100 group-hover:to-pink-100 transition-colors duration-300 drop-shadow-md">معاملة مكتملة</div>
           </div>
-          <div className="text-center bg-gradient-to-br from-purple-500/30 to-pink-500/30 backdrop-blur-sm rounded-2xl p-6 hover:from-purple-400/40 hover:to-pink-400/40 transition-all duration-300 transform hover:scale-110 hover:rotate-2 border border-purple-400/40 hover:border-purple-300/60 group cursor-pointer hover:shadow-lg hover:shadow-purple-500/30">
-            <div className="text-4xl font-bold bg-gradient-to-r from-purple-300 to-pink-400 bg-clip-text text-transparent mb-2 group-hover:scale-125 transition-transform duration-300 drop-shadow-lg animate-pulse">5</div>
-            <div className="bg-gradient-to-r from-purple-200 to-pink-200 bg-clip-text text-transparent group-hover:from-purple-100 group-hover:to-pink-100 transition-colors duration-300 drop-shadow-md">فروع ومواقع</div>
+          <div className="text-center bg-gradient-to-br from-orange-500/30 to-red-500/30 backdrop-blur-sm rounded-2xl p-6 hover:from-orange-400/40 hover:to-red-400/40 transition-all duration-300 transform hover:scale-110 hover:rotate-2 border border-orange-400/40 hover:border-orange-300/60 group cursor-pointer hover:shadow-lg hover:shadow-orange-500/30">
+            <div className="text-4xl font-bold bg-gradient-to-r from-orange-300 to-red-400 bg-clip-text text-transparent mb-2 group-hover:scale-125 transition-transform duration-300 drop-shadow-lg animate-pulse">5</div>
+            <div className="bg-gradient-to-r from-orange-200 to-red-200 bg-clip-text text-transparent group-hover:from-orange-100 group-hover:to-red-100 transition-colors duration-300 drop-shadow-md">فروع ومواقع</div>
           </div>
-          <div className="text-center bg-gradient-to-br from-yellow-500/30 to-orange-500/30 backdrop-blur-sm rounded-2xl p-6 hover:from-yellow-400/40 hover:to-orange-400/40 transition-all duration-300 transform hover:scale-110 hover:-rotate-2 border border-yellow-400/40 hover:border-yellow-300/60 group cursor-pointer hover:shadow-lg hover:shadow-yellow-500/30">
-            <div className="text-4xl font-bold bg-gradient-to-r from-yellow-300 to-orange-400 bg-clip-text text-transparent mb-2 group-hover:scale-125 transition-transform duration-300 drop-shadow-lg animate-pulse">15+</div>
-            <div className="bg-gradient-to-r from-yellow-200 to-orange-200 bg-clip-text text-transparent group-hover:from-yellow-100 group-hover:to-orange-100 transition-colors duration-300 drop-shadow-md">سنة خبرة</div>
+          <div className="text-center bg-gradient-to-br from-yellow-500/30 to-amber-500/30 backdrop-blur-sm rounded-2xl p-6 hover:from-yellow-400/40 hover:to-amber-400/40 transition-all duration-300 transform hover:scale-110 hover:-rotate-2 border border-yellow-400/40 hover:border-yellow-300/60 group cursor-pointer hover:shadow-lg hover:shadow-yellow-500/30">
+            <div className="text-4xl font-bold bg-gradient-to-r from-yellow-300 to-amber-400 bg-clip-text text-transparent mb-2 group-hover:scale-125 transition-transform duration-300 drop-shadow-lg animate-pulse">15+</div>
+            <div className="bg-gradient-to-r from-yellow-200 to-amber-200 bg-clip-text text-transparent group-hover:from-yellow-100 group-hover:to-amber-100 transition-colors duration-300 drop-shadow-md">سنة خبرة</div>
           </div>
         </div>
       </div>
