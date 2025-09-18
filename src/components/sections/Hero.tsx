@@ -4,48 +4,49 @@ import { Button } from '@/components/ui/button';
 import ThreeBackground from '@/components/effects/ThreeBackground';
 
 export default function Hero() {
-  // مصفوفة الصور عالية الجودة
+  // مصفوفة الصور الأصلية التي أرسلها المستخدم
   const images = [
-    // صور عالية الجودة للتخليص الجمركي والترانزيت
-    "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1200&h=1600&fit=crop&crop=center&q=90",
-    "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1200&h=1600&fit=crop&crop=center&q=90",
-    "https://images.unsplash.com/photo-1494412651409-8963ce7935a7?w=1200&h=1600&fit=crop&crop=center&q=90",
-    "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=1200&h=1600&fit=crop&crop=center&q=90",
-    "https://images.unsplash.com/photo-1578662015974-3e512eeaf1ef?w=1200&h=1600&fit=crop&crop=center&q=90",
-    "https://images.unsplash.com/photo-1601597111158-2fceff292cdc?w=1200&h=1600&fit=crop&crop=center&q=90",
-    "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=1200&h=1600&fit=crop&crop=center&q=90",
-    "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1200&h=1600&fit=crop&crop=center&q=90",
-    "https://images.unsplash.com/photo-1520637836862-4d197d17c93a?w=1200&h=1600&fit=crop&crop=center&q=90",
-    "https://images.unsplash.com/photo-1578662018446-dc2e0c6dfa86?w=1200&h=1600&fit=crop&crop=center&q=90",
-    "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=1200&h=1600&fit=crop&crop=center&q=90",
-    "https://images.unsplash.com/photo-1494412651409-8963ce7935a7?w=1200&h=1600&fit=crop&crop=center&q=90",
-    "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1200&h=1600&fit=crop&crop=center&q=90",
-    "https://images.unsplash.com/photo-1578662015974-3e512eeaf1ef?w=1200&h=1600&fit=crop&crop=center&q=90",
-    "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=1200&h=1600&fit=crop&crop=center&q=90",
-    "https://images.unsplash.com/photo-1601597111158-2fceff292cdc?w=1200&h=1600&fit=crop&crop=center&q=90",
-    "https://images.unsplash.com/photo-1520637836862-4d197d17c93a?w=1200&h=1600&fit=crop&crop=center&q=90",
-    "https://images.unsplash.com/photo-1578662018446-dc2e0c6dfa86?w=1200&h=1600&fit=crop&crop=center&q=90",
-    "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1200&h=1600&fit=crop&crop=center&q=90",
-    "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=1200&h=1600&fit=crop&crop=center&q=90",
-    "https://images.unsplash.com/photo-1494412651409-8963ce7935a7?w=1200&h=1600&fit=crop&crop=center&q=90",
-    "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1200&h=1600&fit=crop&crop=center&q=90",
-    "https://images.unsplash.com/photo-1578662015974-3e512eeaf1ef?w=1200&h=1600&fit=crop&crop=center&q=90",
-    "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=1200&h=1600&fit=crop&crop=center&q=90",
-    "https://images.unsplash.com/photo-1601597111158-2fceff292cdc?w=1200&h=1600&fit=crop&crop=center&q=90",
-    "https://images.unsplash.com/photo-1520637836862-4d197d17c93a?w=1200&h=1600&fit=crop&crop=center&q=90",
-    "https://images.unsplash.com/photo-1578662018446-dc2e0c6dfa86?w=1200&h=1600&fit=crop&crop=center&q=90",
-    "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1200&h=1600&fit=crop&crop=center&q=90",
-    "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=1200&h=1600&fit=crop&crop=center&q=90",
-    "https://images.unsplash.com/photo-1494412651409-8963ce7935a7?w=1200&h=1600&fit=crop&crop=center&q=90",
-    "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1200&h=1600&fit=crop&crop=center&q=90",
-    "https://images.unsplash.com/photo-1578662015974-3e512eeaf1ef?w=1200&h=1600&fit=crop&crop=center&q=90",
-    "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=1200&h=1600&fit=crop&crop=center&q=90",
-    "https://images.unsplash.com/photo-1601597111158-2fceff292cdc?w=1200&h=1600&fit=crop&crop=center&q=90",
-    "https://images.unsplash.com/photo-1520637836862-4d197d17c93a?w=1200&h=1600&fit=crop&crop=center&q=90",
-    "https://images.unsplash.com/photo-1578662018446-dc2e0c6dfa86?w=1200&h=1600&fit=crop&crop=center&q=90",
-    "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1200&h=1600&fit=crop&crop=center&q=90",
-    "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=1200&h=1600&fit=crop&crop=center&q=90",
-    "https://images.unsplash.com/photo-1494412651409-8963ce7935a7?w=1200&h=1600&fit=crop&crop=center&q=90"
+    // الصور الأصلية
+    "https://i.pinimg.com/736x/10/00/a8/1000a89b5f57ba2118f823884f23dd01.jpg",
+    "https://i.pinimg.com/736x/44/8b/87/448b879530978dd4dff3683357562267.jpg",
+    "https://i.pinimg.com/736x/08/0b/f7/080bf7d23fe74366fbd7a0f93b3ebda1.jpg",
+    "https://i.pinimg.com/736x/13/2d/87/132d87a87454d05f2970f127b806cd74.jpg",
+    "https://i.pinimg.com/736x/8d/2c/0e/8d2c0ebb452eda5260c8e4c728bee04a.jpg",
+    "https://i.pinimg.com/736x/69/e2/69/69e2696213e925c713b67a38dd796619.jpg",
+    "https://i.pinimg.com/736x/39/54/09/395409b14b2ef732c1909231c6d6e60c.jpg",
+    "https://i.pinimg.com/736x/72/14/1c/72141cd1f1de867d006bd74e64e40299.jpg",
+    "https://i.pinimg.com/736x/96/b1/40/96b1401f36348d55779a1246f7b2a809.jpg",
+    "https://i.pinimg.com/736x/17/73/f8/1773f8f358b2fb3360b67169dd536385.jpg",
+    "https://i.pinimg.com/1200x/85/b5/96/85b5966c6b37f156b91335bac4262983.jpg",
+    "https://i.pinimg.com/1200x/2f/8a/dc/2f8adc9602309ad71b5b90bfe1893257.jpg",
+    "https://i.pinimg.com/1200x/53/cb/b2/53cbb26aefdc506c7d2d978e675be67e.jpg",
+    "https://i.pinimg.com/1200x/b2/80/3a/b2803a9b719efca9dabbfed307c062a5.jpg",
+    "https://i.pinimg.com/1200x/64/c5/ec/64c5ec9259622dbd7d2bc0036678b6ee.jpg",
+    "https://i.pinimg.com/1200x/28/21/ac/2821ac050143da4ec61f6f0c75b0b2be.jpg",
+    "https://i.pinimg.com/736x/e1/ad/29/e1ad29604916676e9afe96c0eb077d2d.jpg",
+    "https://i.pinimg.com/736x/e0/45/c7/e045c7ee2b3c886016db8f5c89721390.jpg",
+    "https://i.pinimg.com/1200x/9d/57/47/9d5747c43997b50774de8b6ec450adfa.jpg",
+    "https://i.pinimg.com/736x/24/9b/cf/249bcf9ebf45f49f79f10d462cc3a0b4.jpg",
+    // الصور الجديدة المضافة
+    "https://i.pinimg.com/736x/31/be/b4/31beb43bc4f4fe6858df36de2c7acde9.jpg",
+    "https://i.pinimg.com/736x/7f/19/fd/7f19fd90ee55a370e0b552886a445838.jpg",
+    "https://i.pinimg.com/736x/dc/4b/4f/dc4b4fd304c9f371d9e281824c556908.jpg",
+    "https://i.pinimg.com/736x/0b/b4/93/0bb493c3bf38e9c8232c4e6fc9049a5e.jpg",
+    "https://i.pinimg.com/736x/5a/30/09/5a30091f054b60f3a930b756112efa5e.jpg",
+    "https://i.pinimg.com/736x/a3/63/8b/a3638b705ae5dfa35b31284a93f71b60.jpg",
+    "https://i.pinimg.com/736x/20/bb/c7/20bbc710cbc1cefa3250dc8dede0195d.jpg",
+    "https://i.pinimg.com/1200x/8d/3c/10/8d3c10fb9dd41480a09f5baa50dc8a66.jpg",
+    "https://i.pinimg.com/736x/1e/d0/d4/1ed0d47c5174794d97d5cf4ffe8e759a.jpg",
+    "https://i.pinimg.com/736x/52/fa/1e/52fa1e5af83f30d9f8b3abaef66da4ec.jpg",
+    "https://i.pinimg.com/1200x/ab/22/b2/ab22b29f59135071c31a7a58fe7e543d.jpg",
+    "https://i.pinimg.com/736x/b1/06/86/b1068640d04e24604769dc6130f21189.jpg",
+    "https://i.pinimg.com/1200x/14/7f/d0/147fd06865daf64022dc1a12ad9120c9.jpg",
+    "https://i.pinimg.com/736x/20/90/2b/20902b5703c6e31aed23870a0f343054.jpg",
+    "https://i.pinimg.com/736x/96/e5/f8/96e5f8db92e2962cd7745c3f49cdabb6.jpg",
+    "https://i.pinimg.com/1200x/62/bd/01/62bd01ef13bd46b44a5309afa93a9e9f.jpg",
+    "https://i.pinimg.com/736x/36/10/a4/3610a4a3335963ee54500b3ad0b90529.jpg",
+    "https://i.pinimg.com/736x/3f/73/fa/3f73fa178153a88f089985e42ae98830.jpg",
+    "https://i.pinimg.com/736x/a9/5f/e6/a95fe6bf1291eaca742fff2029ae096a.jpg"
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -185,14 +186,14 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* شاشة عرض الصور على شكل هاتف - حجم أكبر مع جودة عالية */}
+          {/* شاشة عرض الصور على شكل هاتف - مع تحسين جودة العرض */}
           <div className="animate-fade-in-left flex justify-center">
             <div className="relative">
               {/* إطار الهاتف - حجم أكبر */}
               <div className="relative bg-gray-900 rounded-[4rem] p-4 shadow-2xl border-4 border-gray-800">
                 {/* الشاشة - حجم أكبر */}
                 <div className="relative w-96 h-[700px] bg-black rounded-[3rem] overflow-hidden">
-                  {/* الصورة الحالية - جودة عالية */}
+                  {/* الصورة الحالية - مع تحسين جودة العرض */}
                   <div className="relative w-full h-full">
                     <img
                       src={images[currentImageIndex]}
@@ -201,9 +202,10 @@ export default function Hero() {
                       className="w-full h-full object-cover transition-all duration-1000 ease-in-out"
                       loading={currentImageIndex < 3 ? "eager" : "lazy"}
                       style={{
-                        imageRendering: 'high-quality',
-                        WebkitImageSmoothing: true,
-                        imageSmoothing: true
+                        imageRendering: 'crisp-edges',
+                        WebkitImageSmoothing: false,
+                        imageSmoothing: false,
+                        filter: 'contrast(1.1) saturate(1.1) brightness(1.05)'
                       }}
                     />
                   </div>
