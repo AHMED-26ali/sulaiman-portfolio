@@ -262,19 +262,19 @@ export default function Hero() {
                       }}>المملكة</span>
               </p>
 
-              {/* Features - أبيض */}
+              {/* Features - ألوان مختلفة */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 animate-fade-in-up animation-delay-700">
-                <div className="flex items-center space-x-3 space-x-reverse bg-white/10 backdrop-blur-sm rounded-xl p-4 hover:bg-white/20 transition-all duration-500 transform hover:scale-110 hover:rotate-3 hover:shadow-2xl border border-white/30 hover:border-white/50 group cursor-pointer animate-pulse">
-                  <Star className="h-7 w-7 text-white group-hover:text-gray-200 group-hover:rotate-180 group-hover:scale-125 transition-all duration-500 animate-spin" style={{filter: 'drop-shadow(0 0 10px rgba(255, 255, 255, 0.8))'}} />
-                  <span className="font-black text-lg text-white group-hover:text-gray-100 transition-all duration-500" style={{textShadow: '0 0 10px rgba(255, 255, 255, 0.6)'}}>خبرة +15 سنة</span>
+                <div className="flex items-center space-x-3 space-x-reverse bg-gradient-to-r from-blue-500/20 to-cyan-500/20 backdrop-blur-sm rounded-xl p-4 hover:from-blue-400/30 hover:to-cyan-400/30 transition-all duration-500 transform hover:scale-110 hover:rotate-3 hover:shadow-2xl border border-blue-400/40 hover:border-cyan-400/60 group cursor-pointer animate-pulse">
+                  <Star className="h-7 w-7 text-cyan-300 group-hover:text-blue-300 group-hover:rotate-180 group-hover:scale-125 transition-all duration-500 animate-spin" style={{filter: 'drop-shadow(0 0 10px rgba(34, 211, 238, 0.8))'}} />
+                  <span className="font-black text-lg text-cyan-100 group-hover:text-blue-100 transition-all duration-500" style={{textShadow: '0 0 10px rgba(34, 211, 238, 0.6)'}}>خبرة +15 سنة</span>
                 </div>
-                <div className="flex items-center space-x-3 space-x-reverse bg-white/10 backdrop-blur-sm rounded-xl p-4 hover:bg-white/20 transition-all duration-500 transform hover:scale-110 hover:-rotate-3 hover:shadow-2xl border border-white/30 hover:border-white/50 group cursor-pointer animate-pulse">
-                  <Zap className="h-7 w-7 text-white group-hover:text-gray-200 group-hover:scale-125 transition-all duration-500 animate-bounce" style={{filter: 'drop-shadow(0 0 10px rgba(255, 255, 255, 0.8))'}} />
-                  <span className="font-black text-lg text-white group-hover:text-gray-100 transition-all duration-500" style={{textShadow: '0 0 10px rgba(255, 255, 255, 0.6)'}}>خدمة 24/7</span>
+                <div className="flex items-center space-x-3 space-x-reverse bg-gradient-to-r from-purple-500/20 to-pink-500/20 backdrop-blur-sm rounded-xl p-4 hover:from-purple-400/30 hover:to-pink-400/30 transition-all duration-500 transform hover:scale-110 hover:-rotate-3 hover:shadow-2xl border border-purple-400/40 hover:border-pink-400/60 group cursor-pointer animate-pulse">
+                  <Zap className="h-7 w-7 text-pink-300 group-hover:text-purple-300 group-hover:scale-125 transition-all duration-500 animate-bounce" style={{filter: 'drop-shadow(0 0 10px rgba(236, 72, 153, 0.8))'}} />
+                  <span className="font-black text-lg text-pink-100 group-hover:text-purple-100 transition-all duration-500" style={{textShadow: '0 0 10px rgba(236, 72, 153, 0.6)'}}>خدمة 24/7</span>
                 </div>
-                <div className="flex items-center space-x-3 space-x-reverse bg-white/10 backdrop-blur-sm rounded-xl p-4 hover:bg-white/20 transition-all duration-500 transform hover:scale-110 hover:rotate-3 hover:shadow-2xl border border-white/30 hover:border-white/50 group cursor-pointer animate-pulse">
-                  <Shield className="h-7 w-7 text-white group-hover:text-gray-200 group-hover:rotate-12 group-hover:scale-125 transition-all duration-500 animate-pulse" style={{filter: 'drop-shadow(0 0 10px rgba(255, 255, 255, 0.8))'}} />
-                  <span className="font-black text-lg text-white group-hover:text-gray-100 transition-all duration-500" style={{textShadow: '0 0 10px rgba(255, 255, 255, 0.6)'}}>موثوقية عالية</span>
+                <div className="flex items-center space-x-3 space-x-reverse bg-gradient-to-r from-orange-500/20 to-red-500/20 backdrop-blur-sm rounded-xl p-4 hover:from-orange-400/30 hover:to-red-400/30 transition-all duration-500 transform hover:scale-110 hover:rotate-3 hover:shadow-2xl border border-orange-400/40 hover:border-red-400/60 group cursor-pointer animate-pulse">
+                  <Shield className="h-7 w-7 text-red-300 group-hover:text-orange-300 group-hover:rotate-12 group-hover:scale-125 transition-all duration-500 animate-pulse" style={{filter: 'drop-shadow(0 0 10px rgba(248, 113, 113, 0.8))'}} />
+                  <span className="font-black text-lg text-red-100 group-hover:text-orange-100 transition-all duration-500" style={{textShadow: '0 0 10px rgba(248, 113, 113, 0.6)'}}>موثوقية عالية</span>
                 </div>
               </div>
             </div>
@@ -381,23 +381,23 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Stats Section - أبيض */}
+        {/* Stats Section - ألوان مختلفة */}
         <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 animate-fade-in-up animation-delay-700">
-          <div className="text-center bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-500 transform hover:scale-110 hover:rotate-3 border border-white/30 hover:border-white/50 group cursor-pointer hover:shadow-2xl animate-pulse">
-            <div className="text-4xl md:text-5xl font-black text-white mb-3 group-hover:scale-125 transition-transform duration-500" style={{textShadow: '0 0 20px rgba(255, 255, 255, 0.8)', filter: 'drop-shadow(0 0 15px rgba(255, 255, 255, 0.6))'}}>2000+</div>
-            <div className="text-lg font-bold text-white group-hover:text-gray-100 transition-colors duration-500" style={{textShadow: '0 0 10px rgba(255, 255, 255, 0.6)'}}>عميل راضي</div>
+          <div className="text-center bg-gradient-to-br from-emerald-500/20 to-teal-500/20 backdrop-blur-sm rounded-2xl p-6 hover:from-emerald-400/30 hover:to-teal-400/30 transition-all duration-500 transform hover:scale-110 hover:rotate-3 border border-emerald-400/40 hover:border-teal-400/60 group cursor-pointer hover:shadow-2xl animate-pulse">
+            <div className="text-4xl md:text-5xl font-black text-emerald-200 mb-3 group-hover:scale-125 transition-transform duration-500" style={{textShadow: '0 0 20px rgba(16, 185, 129, 0.8)', filter: 'drop-shadow(0 0 15px rgba(16, 185, 129, 0.6))'}}>2000+</div>
+            <div className="text-lg font-bold text-teal-100 group-hover:text-emerald-100 transition-colors duration-500" style={{textShadow: '0 0 10px rgba(20, 184, 166, 0.6)'}}>عميل راضي</div>
           </div>
-          <div className="text-center bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-500 transform hover:scale-110 hover:-rotate-3 border border-white/30 hover:border-white/50 group cursor-pointer hover:shadow-2xl animate-pulse">
-            <div className="text-4xl md:text-5xl font-black text-white mb-3 group-hover:scale-125 transition-transform duration-500" style={{textShadow: '0 0 20px rgba(255, 255, 255, 0.8)', filter: 'drop-shadow(0 0 15px rgba(255, 255, 255, 0.6))'}}>8000+</div>
-            <div className="text-lg font-bold text-white group-hover:text-gray-100 transition-colors duration-500" style={{textShadow: '0 0 10px rgba(255, 255, 255, 0.6)'}}>معاملة مكتملة</div>
+          <div className="text-center bg-gradient-to-br from-violet-500/20 to-indigo-500/20 backdrop-blur-sm rounded-2xl p-6 hover:from-violet-400/30 hover:to-indigo-400/30 transition-all duration-500 transform hover:scale-110 hover:-rotate-3 border border-violet-400/40 hover:border-indigo-400/60 group cursor-pointer hover:shadow-2xl animate-pulse">
+            <div className="text-4xl md:text-5xl font-black text-violet-200 mb-3 group-hover:scale-125 transition-transform duration-500" style={{textShadow: '0 0 20px rgba(139, 92, 246, 0.8)', filter: 'drop-shadow(0 0 15px rgba(139, 92, 246, 0.6))'}}>8000+</div>
+            <div className="text-lg font-bold text-indigo-100 group-hover:text-violet-100 transition-colors duration-500" style={{textShadow: '0 0 10px rgba(99, 102, 241, 0.6)'}}>معاملة مكتملة</div>
           </div>
-          <div className="text-center bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-500 transform hover:scale-110 hover:rotate-3 border border-white/30 hover:border-white/50 group cursor-pointer hover:shadow-2xl animate-pulse">
-            <div className="text-4xl md:text-5xl font-black text-white mb-3 group-hover:scale-125 transition-transform duration-500" style={{textShadow: '0 0 20px rgba(255, 255, 255, 0.8)', filter: 'drop-shadow(0 0 15px rgba(255, 255, 255, 0.6))'}}>5</div>
-            <div className="text-lg font-bold text-white group-hover:text-gray-100 transition-colors duration-500" style={{textShadow: '0 0 10px rgba(255, 255, 255, 0.6)'}}>فروع ومواقع</div>
+          <div className="text-center bg-gradient-to-br from-amber-500/20 to-yellow-500/20 backdrop-blur-sm rounded-2xl p-6 hover:from-amber-400/30 hover:to-yellow-400/30 transition-all duration-500 transform hover:scale-110 hover:rotate-3 border border-amber-400/40 hover:border-yellow-400/60 group cursor-pointer hover:shadow-2xl animate-pulse">
+            <div className="text-4xl md:text-5xl font-black text-amber-200 mb-3 group-hover:scale-125 transition-transform duration-500" style={{textShadow: '0 0 20px rgba(245, 158, 11, 0.8)', filter: 'drop-shadow(0 0 15px rgba(245, 158, 11, 0.6))'}}>5</div>
+            <div className="text-lg font-bold text-yellow-100 group-hover:text-amber-100 transition-colors duration-500" style={{textShadow: '0 0 10px rgba(234, 179, 8, 0.6)'}}>فروع ومواقع</div>
           </div>
-          <div className="text-center bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-500 transform hover:scale-110 hover:-rotate-3 border border-white/30 hover:border-white/50 group cursor-pointer hover:shadow-2xl animate-pulse">
-            <div className="text-4xl md:text-5xl font-black text-white mb-3 group-hover:scale-125 transition-transform duration-500" style={{textShadow: '0 0 20px rgba(255, 255, 255, 0.8)', filter: 'drop-shadow(0 0 15px rgba(255, 255, 255, 0.6))'}}>15+</div>
-            <div className="text-lg font-bold text-white group-hover:text-gray-100 transition-colors duration-500" style={{textShadow: '0 0 10px rgba(255, 255, 255, 0.6)'}}>سنة خبرة</div>
+          <div className="text-center bg-gradient-to-br from-rose-500/20 to-pink-500/20 backdrop-blur-sm rounded-2xl p-6 hover:from-rose-400/30 hover:to-pink-400/30 transition-all duration-500 transform hover:scale-110 hover:-rotate-3 border border-rose-400/40 hover:border-pink-400/60 group cursor-pointer hover:shadow-2xl animate-pulse">
+            <div className="text-4xl md:text-5xl font-black text-rose-200 mb-3 group-hover:scale-125 transition-transform duration-500" style={{textShadow: '0 0 20px rgba(244, 63, 94, 0.8)', filter: 'drop-shadow(0 0 15px rgba(244, 63, 94, 0.6))'}}>15+</div>
+            <div className="text-lg font-bold text-pink-100 group-hover:text-rose-100 transition-colors duration-500" style={{textShadow: '0 0 10px rgba(236, 72, 153, 0.6)'}}>سنة خبرة</div>
           </div>
         </div>
       </div>
