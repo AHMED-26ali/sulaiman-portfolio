@@ -62,24 +62,58 @@ export default function Hero() {
   };
 
   const handleDiscoverServices = () => {
-    // البحث عن قسم الخدمات
-    const servicesSection = document.querySelector('#services, .services, [id*="service"], [class*="service"]');
+    console.log('تم النقر على زر اكتشف خدماتنا');
+    
+    // البحث عن قسم الخدمات بطرق متعددة
+    let servicesSection = document.getElementById('services');
+    
+    if (!servicesSection) {
+      servicesSection = document.querySelector('[id="services"]');
+    }
+    
+    if (!servicesSection) {
+      servicesSection = document.querySelector('section[id*="service"]');
+    }
+    
+    if (!servicesSection) {
+      servicesSection = document.querySelector('.services');
+    }
+    
+    if (!servicesSection) {
+      // البحث عن أي عنصر يحتوي على كلمة "خدمات"
+      const allElements = document.querySelectorAll('*');
+      for (const element of allElements) {
+        if (element.textContent && element.textContent.includes('خدماتنا المتميزة')) {
+          servicesSection = element.closest('section') || element;
+          break;
+        }
+      }
+    }
+    
+    console.log('قسم الخدمات الموجود:', servicesSection);
     
     if (servicesSection) {
-      // إذا وُجد قسم الخدمات، انتقل إليه
-      servicesSection.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
-      });
+      console.log('تم العثور على قسم الخدمات، الانتقال إليه...');
+      // إضافة تأخير قصير للتأكد من التحديث
+      setTimeout(() => {
+        servicesSection.scrollIntoView({ 
+          behavior: 'smooth',
+          block: 'start',
+          inline: 'nearest'
+        });
+      }, 100);
     } else {
-      // إذا لم يوجد، انتقل إلى القسم التالي أو أسفل الصفحة
-      const nextSection = document.querySelector('section:nth-of-type(2), .section:nth-of-type(2)');
+      console.log('لم يتم العثور على قسم الخدمات، التمرير لأسفل...');
+      // إذا لم يوجد، انتقل إلى القسم التالي
+      const nextSection = document.querySelector('section:nth-of-type(2)');
       if (nextSection) {
+        console.log('تم العثور على القسم التالي، الانتقال إليه...');
         nextSection.scrollIntoView({ 
           behavior: 'smooth',
           block: 'start'
         });
       } else {
+        console.log('التمرير لأسفل بمقدار ارتفاع الشاشة...');
         // كحل أخير، انتقل لأسفل بمقدار ارتفاع الشاشة
         window.scrollBy({
           top: window.innerHeight * 0.8,
