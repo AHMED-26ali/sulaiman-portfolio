@@ -133,171 +133,281 @@ export default function Hero() {
           {/* Content */}
           <div className="space-y-8 animate-fade-in-right">
             <div className="space-y-6">
-              {/* العنوان الرئيسي - ألوان محددة */}
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-black leading-tight">
-                <span className="block animate-fade-in-up hover:scale-110 transition-all duration-700 cursor-default transform hover:rotate-2 animate-pulse" 
+              {/* العنوان الرئيسي - تحسين الألوان والتأثيرات */}
+              <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-tight">
+                <span className="block animate-fade-in-up hover:scale-105 transition-all duration-700 cursor-default transform hover:rotate-1 animate-pulse" 
                       style={{
-                        color: '#FFFFFF',
-                        filter: 'drop-shadow(0 0 20px rgba(255, 255, 255, 0.8)) drop-shadow(0 0 40px rgba(255, 255, 255, 0.6))',
-                        textShadow: '0 0 30px rgba(255, 255, 255, 0.8), 0 0 60px rgba(255, 255, 255, 0.6), 2px 2px 4px rgba(0,0,0,0.8)'
+                        background: 'linear-gradient(135deg, #FFFFFF 0%, #F0F8FF 50%, #E6F3FF 100%)',
+                        WebkitBackgroundClip: 'text',
+                        WebkitTextFillColor: 'transparent',
+                        backgroundClip: 'text',
+                        filter: 'drop-shadow(0 0 30px rgba(255, 255, 255, 0.9)) drop-shadow(0 0 60px rgba(255, 255, 255, 0.7))',
+                        textShadow: '0 0 40px rgba(255, 255, 255, 0.9), 0 0 80px rgba(255, 255, 255, 0.7), 3px 3px 6px rgba(0,0,0,0.8)'
                       }}>
                   سليمان الحويطي
                 </span>
-                <span className="block animate-fade-in-up animation-delay-300 hover:scale-110 transition-all duration-700 cursor-default transform hover:-rotate-2 animate-pulse" 
+                <span className="block animate-fade-in-up animation-delay-300 hover:scale-105 transition-all duration-700 cursor-default transform hover:-rotate-1 animate-pulse mt-2" 
                       style={{
-                        color: '#49EB12',
-                        filter: 'drop-shadow(0 0 20px rgba(73, 235, 18, 0.8)) drop-shadow(0 0 40px rgba(73, 235, 18, 0.6))',
-                        textShadow: '0 0 30px rgba(73, 235, 18, 0.8), 0 0 60px rgba(73, 235, 18, 0.6), 2px 2px 4px rgba(0,0,0,0.8)'
+                        background: 'linear-gradient(135deg, #32D74B 0%, #00FF7F 30%, #7FFF00 60%, #ADFF2F 100%)',
+                        WebkitBackgroundClip: 'text',
+                        WebkitTextFillColor: 'transparent',
+                        backgroundClip: 'text',
+                        filter: 'drop-shadow(0 0 30px rgba(50, 215, 75, 0.9)) drop-shadow(0 0 60px rgba(50, 215, 75, 0.7))',
+                        textShadow: '0 0 40px rgba(50, 215, 75, 0.9), 0 0 80px rgba(50, 215, 75, 0.7), 3px 3px 6px rgba(0,0,0,0.8)'
                       }}>
                   للتخليص الجمركي والترانزيت
                 </span>
               </h1>
 
-              {/* العنوان الفرعي - أبيض */}
-              <h2 className="text-lg md:text-xl lg:text-2xl mt-6 animate-fade-in-up animation-delay-500 leading-relaxed">
-                <span className="inline-block hover:scale-125 transition-all duration-500 mx-1 animate-bounce text-white font-bold" 
-                      style={{
-                        filter: 'drop-shadow(0 0 15px rgba(255, 255, 255, 0.7))',
-                        textShadow: '0 0 20px rgba(255, 255, 255, 0.7), 1px 1px 3px rgba(0,0,0,0.8)',
-                        animationDelay: '0s'
-                      }}>مؤسسة</span>
-                <span className="inline-block hover:scale-125 transition-all duration-500 mx-1 animate-bounce text-white font-bold" 
-                      style={{
-                        filter: 'drop-shadow(0 0 15px rgba(255, 255, 255, 0.7))',
-                        textShadow: '0 0 20px rgba(255, 255, 255, 0.7), 1px 1px 3px rgba(0,0,0,0.8)',
-                        animationDelay: '0.2s'
-                      }}>رائدة</span>
-                <span className="inline-block hover:scale-125 transition-all duration-500 mx-1 animate-bounce text-white font-bold" 
-                      style={{
-                        filter: 'drop-shadow(0 0 15px rgba(255, 255, 255, 0.7))',
-                        textShadow: '0 0 20px rgba(255, 255, 255, 0.7), 1px 1px 3px rgba(0,0,0,0.8)',
-                        animationDelay: '0.4s'
-                      }}>في</span>
-                <span className="inline-block hover:scale-125 transition-all duration-500 mx-1 animate-bounce text-white font-bold" 
-                      style={{
-                        filter: 'drop-shadow(0 0 15px rgba(255, 255, 255, 0.7))',
-                        textShadow: '0 0 20px rgba(255, 255, 255, 0.7), 1px 1px 3px rgba(0,0,0,0.8)',
-                        animationDelay: '0.6s'
-                      }}>خدمات</span>
-                <br />
-                <span className="inline-block hover:scale-125 transition-all duration-500 mx-1 animate-bounce text-white font-bold" 
-                      style={{
-                        filter: 'drop-shadow(0 0 15px rgba(255, 255, 255, 0.7))',
-                        textShadow: '0 0 20px rgba(255, 255, 255, 0.7), 1px 1px 3px rgba(0,0,0,0.8)',
-                        animationDelay: '0.8s'
-                      }}>التخليص</span>
-                <span className="inline-block hover:scale-125 transition-all duration-500 mx-1 animate-bounce text-white font-bold" 
-                      style={{
-                        filter: 'drop-shadow(0 0 15px rgba(255, 255, 255, 0.7))',
-                        textShadow: '0 0 20px rgba(255, 255, 255, 0.7), 1px 1px 3px rgba(0,0,0,0.8)',
-                        animationDelay: '1s'
-                      }}>الجمركي</span>
-                <span className="inline-block hover:scale-125 transition-all duration-500 mx-1 animate-bounce text-white font-bold" 
-                      style={{
-                        filter: 'drop-shadow(0 0 15px rgba(255, 255, 255, 0.7))',
-                        textShadow: '0 0 20px rgba(255, 255, 255, 0.7), 1px 1px 3px rgba(0,0,0,0.8)',
-                        animationDelay: '1.2s'
-                      }}>والترانزيت</span>
-                <br />
-                <span className="inline-block hover:scale-125 transition-all duration-500 mx-1 animate-bounce text-white font-bold" 
-                      style={{
-                        filter: 'drop-shadow(0 0 15px rgba(255, 255, 255, 0.7))',
-                        textShadow: '0 0 20px rgba(255, 255, 255, 0.7), 1px 1px 3px rgba(0,0,0,0.8)',
-                        animationDelay: '1.4s'
-                      }}>في</span>
-                <span className="inline-block hover:scale-125 transition-all duration-500 mx-1 animate-bounce text-white font-bold" 
-                      style={{
-                        filter: 'drop-shadow(0 0 15px rgba(255, 255, 255, 0.7))',
-                        textShadow: '0 0 20px rgba(255, 255, 255, 0.7), 1px 1px 3px rgba(0,0,0,0.8)',
-                        animationDelay: '1.6s'
-                      }}>المملكة</span>
-                <span className="inline-block hover:scale-125 transition-all duration-500 mx-1 animate-bounce text-white font-bold" 
-                      style={{
-                        filter: 'drop-shadow(0 0 15px rgba(255, 255, 255, 0.7))',
-                        textShadow: '0 0 20px rgba(255, 255, 255, 0.7), 1px 1px 3px rgba(0,0,0,0.8)',
-                        animationDelay: '1.8s'
-                      }}>العربية</span>
-                <span className="inline-block hover:scale-125 transition-all duration-500 mx-1 animate-bounce text-white font-bold" 
-                      style={{
-                        filter: 'drop-shadow(0 0 15px rgba(255, 255, 255, 0.7))',
-                        textShadow: '0 0 20px rgba(255, 255, 255, 0.7), 1px 1px 3px rgba(0,0,0,0.8)',
-                        animationDelay: '2s'
-                      }}>السعودية</span>
-              </h2>
+              {/* العنوان الفرعي - تحسين الألوان */}
+              <div className="text-xl md:text-2xl lg:text-3xl xl:text-4xl mt-8 animate-fade-in-up animation-delay-500 leading-relaxed">
+                <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
+                  <span className="inline-block hover:scale-110 transition-all duration-500 animate-bounce font-bold px-3 py-1 rounded-lg" 
+                        style={{
+                          background: 'linear-gradient(135deg, #FF6B6B 0%, #FF8E8E 50%, #FFB3B3 100%)',
+                          WebkitBackgroundClip: 'text',
+                          WebkitTextFillColor: 'transparent',
+                          backgroundClip: 'text',
+                          filter: 'drop-shadow(0 0 20px rgba(255, 107, 107, 0.8))',
+                          textShadow: '0 0 25px rgba(255, 107, 107, 0.8), 2px 2px 4px rgba(0,0,0,0.8)',
+                          animationDelay: '0s'
+                        }}>مؤسسة</span>
+                  <span className="inline-block hover:scale-110 transition-all duration-500 animate-bounce font-bold px-3 py-1 rounded-lg" 
+                        style={{
+                          background: 'linear-gradient(135deg, #4ECDC4 0%, #7FDBDA 50%, #B3E8E5 100%)',
+                          WebkitBackgroundClip: 'text',
+                          WebkitTextFillColor: 'transparent',
+                          backgroundClip: 'text',
+                          filter: 'drop-shadow(0 0 20px rgba(78, 205, 196, 0.8))',
+                          textShadow: '0 0 25px rgba(78, 205, 196, 0.8), 2px 2px 4px rgba(0,0,0,0.8)',
+                          animationDelay: '0.2s'
+                        }}>رائدة</span>
+                  <span className="inline-block hover:scale-110 transition-all duration-500 animate-bounce font-bold px-3 py-1 rounded-lg" 
+                        style={{
+                          background: 'linear-gradient(135deg, #FFE66D 0%, #FFEF96 50%, #FFF7C2 100%)',
+                          WebkitBackgroundClip: 'text',
+                          WebkitTextFillColor: 'transparent',
+                          backgroundClip: 'text',
+                          filter: 'drop-shadow(0 0 20px rgba(255, 230, 109, 0.8))',
+                          textShadow: '0 0 25px rgba(255, 230, 109, 0.8), 2px 2px 4px rgba(0,0,0,0.8)',
+                          animationDelay: '0.4s'
+                        }}>في</span>
+                  <span className="inline-block hover:scale-110 transition-all duration-500 animate-bounce font-bold px-3 py-1 rounded-lg" 
+                        style={{
+                          background: 'linear-gradient(135deg, #A8E6CF 0%, #C7F0DB 50%, #E6FAF0 100%)',
+                          WebkitBackgroundClip: 'text',
+                          WebkitTextFillColor: 'transparent',
+                          backgroundClip: 'text',
+                          filter: 'drop-shadow(0 0 20px rgba(168, 230, 207, 0.8))',
+                          textShadow: '0 0 25px rgba(168, 230, 207, 0.8), 2px 2px 4px rgba(0,0,0,0.8)',
+                          animationDelay: '0.6s'
+                        }}>خدمات</span>
+                </div>
+                <div className="flex flex-wrap gap-2 justify-center lg:justify-start mt-3">
+                  <span className="inline-block hover:scale-110 transition-all duration-500 animate-bounce font-bold px-3 py-1 rounded-lg" 
+                        style={{
+                          background: 'linear-gradient(135deg, #FF9A9E 0%, #FECFEF 50%, #FECFEF 100%)',
+                          WebkitBackgroundClip: 'text',
+                          WebkitTextFillColor: 'transparent',
+                          backgroundClip: 'text',
+                          filter: 'drop-shadow(0 0 20px rgba(255, 154, 158, 0.8))',
+                          textShadow: '0 0 25px rgba(255, 154, 158, 0.8), 2px 2px 4px rgba(0,0,0,0.8)',
+                          animationDelay: '0.8s'
+                        }}>التخليص</span>
+                  <span className="inline-block hover:scale-110 transition-all duration-500 animate-bounce font-bold px-3 py-1 rounded-lg" 
+                        style={{
+                          background: 'linear-gradient(135deg, #A8EDEA 0%, #FED6E3 50%, #D299C2 100%)',
+                          WebkitBackgroundClip: 'text',
+                          WebkitTextFillColor: 'transparent',
+                          backgroundClip: 'text',
+                          filter: 'drop-shadow(0 0 20px rgba(168, 237, 234, 0.8))',
+                          textShadow: '0 0 25px rgba(168, 237, 234, 0.8), 2px 2px 4px rgba(0,0,0,0.8)',
+                          animationDelay: '1s'
+                        }}>الجمركي</span>
+                  <span className="inline-block hover:scale-110 transition-all duration-500 animate-bounce font-bold px-3 py-1 rounded-lg" 
+                        style={{
+                          background: 'linear-gradient(135deg, #FAD0C4 0%, #FFD1FF 50%, #E1BEE7 100%)',
+                          WebkitBackgroundClip: 'text',
+                          WebkitTextFillColor: 'transparent',
+                          backgroundClip: 'text',
+                          filter: 'drop-shadow(0 0 20px rgba(250, 208, 196, 0.8))',
+                          textShadow: '0 0 25px rgba(250, 208, 196, 0.8), 2px 2px 4px rgba(0,0,0,0.8)',
+                          animationDelay: '1.2s'
+                        }}>والترانزيت</span>
+                </div>
+                <div className="flex flex-wrap gap-2 justify-center lg:justify-start mt-3">
+                  <span className="inline-block hover:scale-110 transition-all duration-500 animate-bounce font-bold px-3 py-1 rounded-lg" 
+                        style={{
+                          background: 'linear-gradient(135deg, #FFC3A0 0%, #FFAFBD 50%, #FFC3A0 100%)',
+                          WebkitBackgroundClip: 'text',
+                          WebkitTextFillColor: 'transparent',
+                          backgroundClip: 'text',
+                          filter: 'drop-shadow(0 0 20px rgba(255, 195, 160, 0.8))',
+                          textShadow: '0 0 25px rgba(255, 195, 160, 0.8), 2px 2px 4px rgba(0,0,0,0.8)',
+                          animationDelay: '1.4s'
+                        }}>في</span>
+                  <span className="inline-block hover:scale-110 transition-all duration-500 animate-bounce font-bold px-3 py-1 rounded-lg" 
+                        style={{
+                          background: 'linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%)',
+                          WebkitBackgroundClip: 'text',
+                          WebkitTextFillColor: 'transparent',
+                          backgroundClip: 'text',
+                          filter: 'drop-shadow(0 0 20px rgba(102, 126, 234, 0.8))',
+                          textShadow: '0 0 25px rgba(102, 126, 234, 0.8), 2px 2px 4px rgba(0,0,0,0.8)',
+                          animationDelay: '1.6s'
+                        }}>المملكة</span>
+                  <span className="inline-block hover:scale-110 transition-all duration-500 animate-bounce font-bold px-3 py-1 rounded-lg" 
+                        style={{
+                          background: 'linear-gradient(135deg, #f093fb 0%, #f5576c 50%, #4facfe 100%)',
+                          WebkitBackgroundClip: 'text',
+                          WebkitTextFillColor: 'transparent',
+                          backgroundClip: 'text',
+                          filter: 'drop-shadow(0 0 20px rgba(240, 147, 251, 0.8))',
+                          textShadow: '0 0 25px rgba(240, 147, 251, 0.8), 2px 2px 4px rgba(0,0,0,0.8)',
+                          animationDelay: '1.8s'
+                        }}>العربية</span>
+                  <span className="inline-block hover:scale-110 transition-all duration-500 animate-bounce font-bold px-3 py-1 rounded-lg" 
+                        style={{
+                          background: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 50%, #43e97b 100%)',
+                          WebkitBackgroundClip: 'text',
+                          WebkitTextFillColor: 'transparent',
+                          backgroundClip: 'text',
+                          filter: 'drop-shadow(0 0 20px rgba(79, 172, 254, 0.8))',
+                          textShadow: '0 0 25px rgba(79, 172, 254, 0.8), 2px 2px 4px rgba(0,0,0,0.8)',
+                          animationDelay: '2s'
+                        }}>السعودية</span>
+                </div>
+              </div>
               
-              {/* الوصف - أبيض */}
-              <p className="text-base md:text-lg lg:text-xl leading-relaxed animate-fade-in-up animation-delay-700">
-                <span className="inline-block hover:scale-110 transition-all duration-400 cursor-pointer mx-1 text-white font-semibold" 
-                      style={{
-                        filter: 'drop-shadow(0 0 10px rgba(255, 255, 255, 0.6))',
-                        textShadow: '0 0 15px rgba(255, 255, 255, 0.6), 1px 1px 2px rgba(0,0,0,0.8)'
-                      }}>نقدم</span>
-                <span className="inline-block hover:scale-110 transition-all duration-400 cursor-pointer mx-1 text-white font-semibold" 
-                      style={{
-                        filter: 'drop-shadow(0 0 10px rgba(255, 255, 255, 0.6))',
-                        textShadow: '0 0 15px rgba(255, 255, 255, 0.6), 1px 1px 2px rgba(0,0,0,0.8)'
-                      }}>خدمات</span>
-                <span className="inline-block hover:scale-110 transition-all duration-400 cursor-pointer mx-1 text-white font-semibold" 
-                      style={{
-                        filter: 'drop-shadow(0 0 10px rgba(255, 255, 255, 0.6))',
-                        textShadow: '0 0 15px rgba(255, 255, 255, 0.6), 1px 1px 2px rgba(0,0,0,0.8)'
-                      }}>التخليص</span>
-                <span className="inline-block hover:scale-110 transition-all duration-400 cursor-pointer mx-1 text-white font-semibold" 
-                      style={{
-                        filter: 'drop-shadow(0 0 10px rgba(255, 255, 255, 0.6))',
-                        textShadow: '0 0 15px rgba(255, 255, 255, 0.6), 1px 1px 2px rgba(0,0,0,0.8)'
-                      }}>الجمركي</span>
-                <span className="inline-block hover:scale-110 transition-all duration-400 cursor-pointer mx-1 text-white font-semibold" 
-                      style={{
-                        filter: 'drop-shadow(0 0 10px rgba(255, 255, 255, 0.6))',
-                        textShadow: '0 0 15px rgba(255, 255, 255, 0.6), 1px 1px 2px rgba(0,0,0,0.8)'
-                      }}>والترانزيت</span>
-                <br />
-                <span className="inline-block hover:scale-110 transition-all duration-400 cursor-pointer mx-1 text-white font-semibold" 
-                      style={{
-                        filter: 'drop-shadow(0 0 10px rgba(255, 255, 255, 0.6))',
-                        textShadow: '0 0 15px rgba(255, 255, 255, 0.6), 1px 1px 2px rgba(0,0,0,0.8)'
-                      }}>بأعلى</span>
-                <span className="inline-block hover:scale-110 transition-all duration-400 cursor-pointer mx-1 text-white font-semibold" 
-                      style={{
-                        filter: 'drop-shadow(0 0 10px rgba(255, 255, 255, 0.6))',
-                        textShadow: '0 0 15px rgba(255, 255, 255, 0.6), 1px 1px 2px rgba(0,0,0,0.8)'
-                      }}>معايير</span>
-                <span className="inline-block hover:scale-110 transition-all duration-400 cursor-pointer mx-1 text-white font-semibold" 
-                      style={{
-                        filter: 'drop-shadow(0 0 10px rgba(255, 255, 255, 0.6))',
-                        textShadow: '0 0 15px rgba(255, 255, 255, 0.6), 1px 1px 2px rgba(0,0,0,0.8)'
-                      }}>الجودة</span>
-                <span className="inline-block hover:scale-110 transition-all duration-400 cursor-pointer mx-1 text-white font-semibold" 
-                      style={{
-                        filter: 'drop-shadow(0 0 10px rgba(255, 255, 255, 0.6))',
-                        textShadow: '0 0 15px rgba(255, 255, 255, 0.6), 1px 1px 2px rgba(0,0,0,0.8)'
-                      }}>والاحترافية</span>
-                <br />
-                <span className="inline-block hover:scale-110 transition-all duration-400 cursor-pointer mx-1 text-white font-semibold" 
-                      style={{
-                        filter: 'drop-shadow(0 0 10px rgba(255, 255, 255, 0.6))',
-                        textShadow: '0 0 15px rgba(255, 255, 255, 0.6), 1px 1px 2px rgba(0,0,0,0.8)'
-                      }}>في</span>
-                <span className="inline-block hover:scale-110 transition-all duration-400 cursor-pointer mx-1 text-white font-semibold" 
-                      style={{
-                        filter: 'drop-shadow(0 0 10px rgba(255, 255, 255, 0.6))',
-                        textShadow: '0 0 15px rgba(255, 255, 255, 0.6), 1px 1px 2px rgba(0,0,0,0.8)'
-                      }}>جميع</span>
-                <span className="inline-block hover:scale-110 transition-all duration-400 cursor-pointer mx-1 text-white font-semibold" 
-                      style={{
-                        filter: 'drop-shadow(0 0 10px rgba(255, 255, 255, 0.6))',
-                        textShadow: '0 0 15px rgba(255, 255, 255, 0.6), 1px 1px 2px rgba(0,0,0,0.8)'
-                      }}>أنحاء</span>
-                <span className="inline-block hover:scale-110 transition-all duration-400 cursor-pointer mx-1 text-white font-semibold" 
-                      style={{
-                        filter: 'drop-shadow(0 0 10px rgba(255, 255, 255, 0.6))',
-                        textShadow: '0 0 15px rgba(255, 255, 255, 0.6), 1px 1px 2px rgba(0,0,0,0.8)'
-                      }}>المملكة</span>
-              </p>
+              {/* الوصف - تحسين الألوان */}
+              <div className="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-relaxed animate-fade-in-up animation-delay-700 mt-8">
+                <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
+                  <span className="inline-block hover:scale-105 transition-all duration-400 cursor-pointer font-semibold px-2 py-1 rounded" 
+                        style={{
+                          background: 'linear-gradient(135deg, #FF6B6B 0%, #FF8787 100%)',
+                          WebkitBackgroundClip: 'text',
+                          WebkitTextFillColor: 'transparent',
+                          backgroundClip: 'text',
+                          filter: 'drop-shadow(0 0 15px rgba(255, 107, 107, 0.7))',
+                          textShadow: '0 0 20px rgba(255, 107, 107, 0.7), 1px 1px 3px rgba(0,0,0,0.8)'
+                        }}>نقدم</span>
+                  <span className="inline-block hover:scale-105 transition-all duration-400 cursor-pointer font-semibold px-2 py-1 rounded" 
+                        style={{
+                          background: 'linear-gradient(135deg, #4ECDC4 0%, #6DD5DB 100%)',
+                          WebkitBackgroundClip: 'text',
+                          WebkitTextFillColor: 'transparent',
+                          backgroundClip: 'text',
+                          filter: 'drop-shadow(0 0 15px rgba(78, 205, 196, 0.7))',
+                          textShadow: '0 0 20px rgba(78, 205, 196, 0.7), 1px 1px 3px rgba(0,0,0,0.8)'
+                        }}>خدمات</span>
+                  <span className="inline-block hover:scale-105 transition-all duration-400 cursor-pointer font-semibold px-2 py-1 rounded" 
+                        style={{
+                          background: 'linear-gradient(135deg, #FFE66D 0%, #FFF176 100%)',
+                          WebkitBackgroundClip: 'text',
+                          WebkitTextFillColor: 'transparent',
+                          backgroundClip: 'text',
+                          filter: 'drop-shadow(0 0 15px rgba(255, 230, 109, 0.7))',
+                          textShadow: '0 0 20px rgba(255, 230, 109, 0.7), 1px 1px 3px rgba(0,0,0,0.8)'
+                        }}>التخليص</span>
+                  <span className="inline-block hover:scale-105 transition-all duration-400 cursor-pointer font-semibold px-2 py-1 rounded" 
+                        style={{
+                          background: 'linear-gradient(135deg, #A8E6CF 0%, #B8F7D1 100%)',
+                          WebkitBackgroundClip: 'text',
+                          WebkitTextFillColor: 'transparent',
+                          backgroundClip: 'text',
+                          filter: 'drop-shadow(0 0 15px rgba(168, 230, 207, 0.7))',
+                          textShadow: '0 0 20px rgba(168, 230, 207, 0.7), 1px 1px 3px rgba(0,0,0,0.8)'
+                        }}>الجمركي</span>
+                  <span className="inline-block hover:scale-105 transition-all duration-400 cursor-pointer font-semibold px-2 py-1 rounded" 
+                        style={{
+                          background: 'linear-gradient(135deg, #FF9A9E 0%, #FFADB0 100%)',
+                          WebkitBackgroundClip: 'text',
+                          WebkitTextFillColor: 'transparent',
+                          backgroundClip: 'text',
+                          filter: 'drop-shadow(0 0 15px rgba(255, 154, 158, 0.7))',
+                          textShadow: '0 0 20px rgba(255, 154, 158, 0.7), 1px 1px 3px rgba(0,0,0,0.8)'
+                        }}>والترانزيت</span>
+                </div>
+                <div className="flex flex-wrap gap-2 justify-center lg:justify-start mt-2">
+                  <span className="inline-block hover:scale-105 transition-all duration-400 cursor-pointer font-semibold px-2 py-1 rounded" 
+                        style={{
+                          background: 'linear-gradient(135deg, #A8EDEA 0%, #B8F5F2 100%)',
+                          WebkitBackgroundClip: 'text',
+                          WebkitTextFillColor: 'transparent',
+                          backgroundClip: 'text',
+                          filter: 'drop-shadow(0 0 15px rgba(168, 237, 234, 0.7))',
+                          textShadow: '0 0 20px rgba(168, 237, 234, 0.7), 1px 1px 3px rgba(0,0,0,0.8)'
+                        }}>بأعلى</span>
+                  <span className="inline-block hover:scale-105 transition-all duration-400 cursor-pointer font-semibold px-2 py-1 rounded" 
+                        style={{
+                          background: 'linear-gradient(135deg, #FAD0C4 0%, #FBD7CC 100%)',
+                          WebkitBackgroundClip: 'text',
+                          WebkitTextFillColor: 'transparent',
+                          backgroundClip: 'text',
+                          filter: 'drop-shadow(0 0 15px rgba(250, 208, 196, 0.7))',
+                          textShadow: '0 0 20px rgba(250, 208, 196, 0.7), 1px 1px 3px rgba(0,0,0,0.8)'
+                        }}>معايير</span>
+                  <span className="inline-block hover:scale-105 transition-all duration-400 cursor-pointer font-semibold px-2 py-1 rounded" 
+                        style={{
+                          background: 'linear-gradient(135deg, #FFC3A0 0%, #FFD0B3 100%)',
+                          WebkitBackgroundClip: 'text',
+                          WebkitTextFillColor: 'transparent',
+                          backgroundClip: 'text',
+                          filter: 'drop-shadow(0 0 15px rgba(255, 195, 160, 0.7))',
+                          textShadow: '0 0 20px rgba(255, 195, 160, 0.7), 1px 1px 3px rgba(0,0,0,0.8)'
+                        }}>الجودة</span>
+                  <span className="inline-block hover:scale-105 transition-all duration-400 cursor-pointer font-semibold px-2 py-1 rounded" 
+                        style={{
+                          background: 'linear-gradient(135deg, #667eea 0%, #7b8ceb 100%)',
+                          WebkitBackgroundClip: 'text',
+                          WebkitTextFillColor: 'transparent',
+                          backgroundClip: 'text',
+                          filter: 'drop-shadow(0 0 15px rgba(102, 126, 234, 0.7))',
+                          textShadow: '0 0 20px rgba(102, 126, 234, 0.7), 1px 1px 3px rgba(0,0,0,0.8)'
+                        }}>والاحترافية</span>
+                </div>
+                <div className="flex flex-wrap gap-2 justify-center lg:justify-start mt-2">
+                  <span className="inline-block hover:scale-105 transition-all duration-400 cursor-pointer font-semibold px-2 py-1 rounded" 
+                        style={{
+                          background: 'linear-gradient(135deg, #f093fb 0%, #f5a6fc 100%)',
+                          WebkitBackgroundClip: 'text',
+                          WebkitTextFillColor: 'transparent',
+                          backgroundClip: 'text',
+                          filter: 'drop-shadow(0 0 15px rgba(240, 147, 251, 0.7))',
+                          textShadow: '0 0 20px rgba(240, 147, 251, 0.7), 1px 1px 3px rgba(0,0,0,0.8)'
+                        }}>في</span>
+                  <span className="inline-block hover:scale-105 transition-all duration-400 cursor-pointer font-semibold px-2 py-1 rounded" 
+                        style={{
+                          background: 'linear-gradient(135deg, #4facfe 0%, #64b5fe 100%)',
+                          WebkitBackgroundClip: 'text',
+                          WebkitTextFillColor: 'transparent',
+                          backgroundClip: 'text',
+                          filter: 'drop-shadow(0 0 15px rgba(79, 172, 254, 0.7))',
+                          textShadow: '0 0 20px rgba(79, 172, 254, 0.7), 1px 1px 3px rgba(0,0,0,0.8)'
+                        }}>جميع</span>
+                  <span className="inline-block hover:scale-105 transition-all duration-400 cursor-pointer font-semibold px-2 py-1 rounded" 
+                        style={{
+                          background: 'linear-gradient(135deg, #00f2fe 0%, #1af3fe 100%)',
+                          WebkitBackgroundClip: 'text',
+                          WebkitTextFillColor: 'transparent',
+                          backgroundClip: 'text',
+                          filter: 'drop-shadow(0 0 15px rgba(0, 242, 254, 0.7))',
+                          textShadow: '0 0 20px rgba(0, 242, 254, 0.7), 1px 1px 3px rgba(0,0,0,0.8)'
+                        }}>أنحاء</span>
+                  <span className="inline-block hover:scale-105 transition-all duration-400 cursor-pointer font-semibold px-2 py-1 rounded" 
+                        style={{
+                          background: 'linear-gradient(135deg, #43e97b 0%, #58eb8a 100%)',
+                          WebkitBackgroundClip: 'text',
+                          WebkitTextFillColor: 'transparent',
+                          backgroundClip: 'text',
+                          filter: 'drop-shadow(0 0 15px rgba(67, 233, 123, 0.7))',
+                          textShadow: '0 0 20px rgba(67, 233, 123, 0.7), 1px 1px 3px rgba(0,0,0,0.8)'
+                        }}>المملكة</span>
+                </div>
+              </div>
 
               {/* Features - ألوان مختلفة */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 animate-fade-in-up animation-delay-700">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 animate-fade-in-up animation-delay-700 mt-10">
                 <div className="flex items-center space-x-3 space-x-reverse bg-gradient-to-r from-blue-500/20 to-cyan-500/20 backdrop-blur-sm rounded-xl p-4 hover:from-blue-400/30 hover:to-cyan-400/30 transition-all duration-500 transform hover:scale-110 hover:rotate-3 hover:shadow-2xl border border-blue-400/40 hover:border-cyan-400/60 group cursor-pointer animate-pulse">
                   <Star className="h-7 w-7 text-cyan-300 group-hover:text-blue-300 group-hover:rotate-180 group-hover:scale-125 transition-all duration-500 animate-spin" style={{filter: 'drop-shadow(0 0 10px rgba(34, 211, 238, 0.8))'}} />
                   <span className="font-black text-lg text-cyan-100 group-hover:text-blue-100 transition-all duration-500" style={{textShadow: '0 0 10px rgba(34, 211, 238, 0.6)'}}>خبرة +15 سنة</span>
@@ -314,18 +424,18 @@ export default function Hero() {
             </div>
 
             {/* Action Button - أبيض وأخضر */}
-            <div className="flex justify-center animate-fade-in-up animation-delay-700">
+            <div className="flex justify-center lg:justify-start animate-fade-in-up animation-delay-700 mt-10">
               <Button 
                 size="lg" 
-                className="bg-gradient-to-r from-white/20 via-green-500/80 to-white/20 hover:from-white/30 hover:via-green-400/90 hover:to-white/30 text-white font-black py-4 px-8 rounded-full transform hover:scale-125 hover:rotate-6 transition-all duration-700 shadow-2xl hover:shadow-green-500/80 border-2 border-white/40 hover:border-green-400/70 group relative overflow-hidden animate-pulse"
+                className="bg-gradient-to-r from-white/20 via-green-500/80 to-white/20 hover:from-white/30 hover:via-green-400/90 hover:to-white/30 text-white font-black py-6 px-12 rounded-full transform hover:scale-125 hover:rotate-6 transition-all duration-700 shadow-2xl hover:shadow-green-500/80 border-2 border-white/40 hover:border-green-400/70 group relative overflow-hidden animate-pulse text-xl"
                 onClick={handleDiscoverServices}
                 style={{
                   filter: 'drop-shadow(0 0 20px rgba(73, 235, 18, 0.8)) drop-shadow(0 0 40px rgba(255, 255, 255, 0.6))'
                 }}
               >
-                <span className="relative z-10 flex items-center text-white font-black text-xl" style={{textShadow: '0 0 15px rgba(73, 235, 18, 0.8), 2px 2px 4px rgba(0,0,0,0.8)'}}>
+                <span className="relative z-10 flex items-center text-white font-black" style={{textShadow: '0 0 15px rgba(73, 235, 18, 0.8), 2px 2px 4px rgba(0,0,0,0.8)'}}>
                   اكتشف خدماتنا
-                  <ArrowLeft className="mr-3 h-6 w-6 group-hover:translate-x-2 group-hover:scale-125 group-hover:rotate-12 transition-transform duration-500 animate-bounce" />
+                  <ArrowLeft className="mr-3 h-7 w-7 group-hover:translate-x-2 group-hover:scale-125 group-hover:rotate-12 transition-transform duration-500 animate-bounce" />
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-green-600/30 to-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700 animate-pulse"></div>
               </Button>
