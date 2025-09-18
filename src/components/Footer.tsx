@@ -122,7 +122,74 @@ export default function Footer() {
 
   return (
     <>
-      <footer className="bg-gradient-to-br from-gray-900 to-slate-900 text-white py-16">
+      <footer className="text-white py-16 section-transparent footer-3d-container relative">
+        {/* 3D Shapes Background */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          {/* Floating 3D Shapes */}
+          <div className="shape-3d" style={{ top: '10%', left: '5%', width: '80px', height: '80px', animationDelay: '0s' }}></div>
+          <div className="shape-3d" style={{ top: '20%', right: '10%', width: '60px', height: '60px', animationDelay: '1s' }}></div>
+          <div className="shape-3d" style={{ bottom: '30%', left: '15%', width: '70px', height: '70px', animationDelay: '2s' }}></div>
+          <div className="shape-3d" style={{ bottom: '10%', right: '20%', width: '50px', height: '50px', animationDelay: '3s' }}></div>
+          
+          {/* 3D Cube */}
+          <div className="shape-cube absolute" style={{ top: '15%', left: '25%' }}></div>
+          <div className="shape-cube absolute" style={{ bottom: '20%', right: '30%' }}></div>
+          
+          {/* Pyramid */}
+          <div className="shape-pyramid absolute" style={{ top: '40%', right: '15%' }}></div>
+          <div className="shape-pyramid absolute" style={{ bottom: '40%', left: '10%' }}></div>
+          
+          {/* Spheres */}
+          <div className="shape-sphere absolute" style={{ top: '25%', left: '40%' }}></div>
+          <div className="shape-sphere absolute" style={{ bottom: '25%', right: '40%' }}></div>
+          
+          {/* Diamonds */}
+          <div className="shape-diamond absolute" style={{ top: '35%', right: '25%' }}></div>
+          <div className="shape-diamond absolute" style={{ bottom: '35%', left: '30%' }}></div>
+          
+          {/* Hexagons */}
+          <div className="shape-hexagon absolute" style={{ top: '50%', left: '20%' }}></div>
+          <div className="shape-hexagon absolute" style={{ bottom: '50%', right: '25%' }}></div>
+          
+          {/* Floating Particles */}
+          {Array.from({ length: 20 }, (_, i) => (
+            <div 
+              key={i}
+              className="floating-particle" 
+              style={{ 
+                left: `${Math.random() * 100}%`, 
+                animationDelay: `${Math.random() * 15}s`,
+                animationDuration: `${15 + Math.random() * 10}s`
+              }}
+            ></div>
+          ))}
+          
+          {/* Light Beams */}
+          {Array.from({ length: 8 }, (_, i) => (
+            <div 
+              key={i}
+              className="light-beam" 
+              style={{ 
+                left: `${10 + i * 12}%`, 
+                bottom: '0',
+                animationDelay: `${i * 1}s`
+              }}
+            ></div>
+          ))}
+          
+          {/* Glowing Orbs */}
+          {Array.from({ length: 12 }, (_, i) => (
+            <div 
+              key={i}
+              className="glowing-orb" 
+              style={{ 
+                top: `${Math.random() * 80 + 10}%`,
+                left: `${Math.random() * 80 + 10}%`, 
+                animationDelay: `${Math.random() * 5}s`
+              }}
+            ></div>
+          ))}
+        </div>
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Company Info */}
@@ -140,11 +207,11 @@ export default function Footer() {
             <div className="space-y-4">
               <h4 className="text-lg font-semibold text-blue-400">روابط سريعة</h4>
               <ul className="space-y-2">
-                <li><a href="#services" className="text-gray-300 hover:text-white transition-colors">خدماتنا</a></li>
-                <li><a href="#branches" className="text-gray-300 hover:text-white transition-colors">فروعنا</a></li>
-                <li><a href="#why-us" className="text-gray-300 hover:text-white transition-colors">لماذا نحن</a></li>
-                <li><a href="#blog" className="text-gray-300 hover:text-white transition-colors">المدونة</a></li>
-                <li><a href="#contact" className="text-gray-300 hover:text-white transition-colors">تواصل معنا</a></li>
+                <li><a href="#services" title="اطلع على خدماتنا المتميزة في التخليص الجمركي" className="text-gray-300 hover:text-white transition-colors">خدماتنا</a></li>
+                <li><a href="#branches" title="تعرف على مواقع فروعنا في المملكة" className="text-gray-300 hover:text-white transition-colors">فروعنا</a></li>
+                <li><a href="#why-us" title="اكتشف لماذا نحن الخيار الأفضل" className="text-gray-300 hover:text-white transition-colors">لماذا نحن</a></li>
+                <li><a href="#blog" title="اقرأ آخر أخبار ومقالات التخليص الجمركي" className="text-gray-300 hover:text-white transition-colors">المدونة</a></li>
+                <li><a href="#contact" title="تواصل معنا للحصول على استشارة مجانية" className="text-gray-300 hover:text-white transition-colors">تواصل معنا</a></li>
               </ul>
             </div>
 

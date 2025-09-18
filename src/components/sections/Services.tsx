@@ -1,309 +1,345 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { 
-  Truck, 
-  FileText, 
-  Globe, 
-  Shield, 
-  Clock, 
-  Users, 
-  Package, 
-  MapPin,
-  CheckCircle,
-  Zap,
-  Award,
-  Target,
-  Briefcase,
-  Ship,
-  Plane,
-  Building,
-  Calculator,
-  Phone,
-  Mail,
-  Settings
-} from 'lucide-react';
+import { Truck, Ship, Plane, FileText, Clock, Shield, Users, Globe, Package, Calculator, Building, Award, Heart, Lightbulb, Rocket, Settings, Phone, Zap, Target } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 export default function Services() {
   const services = [
     {
-      icon: <FileText className="w-8 h-8" />,
-      title: "التخليص الجمركي للاستيراد",
-      description: "خدمات شاملة للتخليص الجمركي لجميع أنواع البضائع المستوردة",
-      features: ["إجراءات سريعة", "أسعار تنافسية", "خبرة واسعة"],
-      color: "from-blue-500 to-cyan-500",
-      bgColor: "bg-blue-50",
-      iconColor: "text-blue-600"
+      icon: FileText,
+      title: "التخليص الجمركي الشامل",
+      description: "خدمات تخليص جمركي متكاملة لجميع أنواع البضائع مع ضمان السرعة والدقة في الإنجاز والأمان التام"
     },
     {
-      icon: <Globe className="w-8 h-8" />,
-      title: "التخليص الجمركي للتصدير", 
-      description: "تسهيل إجراءات تصدير البضائع إلى جميع أنحاء العالم",
-      features: ["وثائق معتمدة", "متابعة دقيقة", "ضمان الجودة"],
-      color: "from-green-500 to-emerald-500",
-      bgColor: "bg-green-50",
-      iconColor: "text-green-600"
+      icon: Truck,
+      title: "النقل البري والترانزيت",
+      description: "خدمات نقل برية آمنة وسريعة مع تتبع مباشر للشحنات عبر جميع المنافذ الحدودية والموانئ"
     },
     {
-      icon: <Truck className="w-8 h-8" />,
-      title: "خدمات الترانزيت",
-      description: "نقل البضائع عبر الحدود بأمان وسرعة عالية",
-      features: ["تتبع مباشر", "أمان عالي", "توصيل سريع"],
-      color: "from-purple-500 to-violet-500",
-      bgColor: "bg-purple-50",
-      iconColor: "text-purple-600"
-    },
-    {
-      icon: <Package className="w-8 h-8" />,
-      title: "خدمات التخزين",
-      description: "مستودعات آمنة ومجهزة بأحدث التقنيات",
-      features: ["مراقبة 24/7", "تأمين شامل", "مساحات متنوعة"],
-      color: "from-orange-500 to-red-500",
-      bgColor: "bg-orange-50",
-      iconColor: "text-orange-600"
-    },
-    {
-      icon: <Ship className="w-8 h-8" />,
+      icon: Ship,
       title: "الشحن البحري",
-      description: "خدمات الشحن البحري لجميع أنواع البضائع",
-      features: ["حاويات متخصصة", "تأمين البضائع", "جدولة منتظمة"],
-      color: "from-teal-500 to-cyan-500",
-      bgColor: "bg-teal-50",
-      iconColor: "text-teal-600"
+      description: "حلول شحن دولي موثوق للبضائع الثقيلة والحاويات مع خدمات تأمين شاملة عبر الموانئ"
     },
     {
-      icon: <Plane className="w-8 h-8" />,
-      title: "الشحن الجوي",
-      description: "شحن سريع وآمن عبر الطيران للبضائع العاجلة",
-      features: ["سرعة عالية", "أمان مضمون", "تتبع فوري"],
-      color: "from-indigo-500 to-blue-500",
-      bgColor: "bg-indigo-50",
-      iconColor: "text-indigo-600"
+      icon: Plane,
+      title: "الشحن الجوي السريع",
+      description: "خدمات شحن جوي عاجل للبضائع الحساسة والطبية مع ضمان الوصول الآمن في الوقت المحدد"
     },
     {
-      icon: <Building className="w-8 h-8" />,
-      title: "الخدمات اللوجستية",
-      description: "حلول لوجستية متكاملة لسلسلة التوريد",
-      features: ["إدارة المخزون", "تحسين التكاليف", "كفاءة عالية"],
-      color: "from-pink-500 to-rose-500",
-      bgColor: "bg-pink-50",
-      iconColor: "text-pink-600"
+      icon: Clock,
+      title: "خدمة 24/7",
+      description: "فريق عمل متاح على مدار الساعة لضمان استمرارية الخدمة وحل أي مشكلة طارئة بسرعة"
     },
     {
-      icon: <Calculator className="w-8 h-8" />,
+      icon: Shield,
+      title: "التأمين الشامل",
+      description: "حماية كاملة للبضائع ضد جميع المخاطر مع تغطية تأمينية شاملة وموثوقة للشحن الدولي"
+    },
+    {
+      icon: Users,
+      title: "الاستشارات التجارية",
+      description: "خدمات استشارية متخصصة في التجارة الدولية والقوانين الجمركية لتوجيه عملائنا للاستيراد والتصدير السلس"
+    },
+    {
+      icon: Globe,
+      title: "التجارة الدولية",
+      description: "تسهيل عمليات الاستيراد والتصدير السلس مع جميع دول العالم وفقاً للمعايير الدولية عبر الموانئ"
+    },
+    {
+      icon: Package,
+      title: "إدارة المخازن",
+      description: "خدمات تخزين آمنة ومنظمة مع أنظمة إدارة مخزون متطورة وتتبع دقيق للبضائع"
+    },
+    {
+      icon: Calculator,
       title: "حساب الرسوم الجمركية",
-      description: "حساب دقيق للرسوم والضرائب الجمركية",
-      features: ["حسابات دقيقة", "شفافية كاملة", "توفير التكاليف"],
-      color: "from-yellow-500 to-orange-500",
-      bgColor: "bg-yellow-50",
-      iconColor: "text-yellow-600"
+      description: "حساب دقيق للرسوم والضرائب الجمركية مع توضيح مفصل لجميع التكاليف والشحن الدولي"
     },
     {
-      icon: <Shield className="w-8 h-8" />,
-      title: "التأمين على البضائع",
-      description: "حماية شاملة للبضائع ضد جميع المخاطر",
-      features: ["تغطية شاملة", "تعويض سريع", "أسعار مناسبة"],
-      color: "from-emerald-500 to-teal-500",
-      bgColor: "bg-emerald-50",
-      iconColor: "text-emerald-600"
+      icon: Building,
+      title: "خدمات الشركات",
+      description: "حلول متكاملة للشركات الكبيرة والمتوسطة مع خطط خدمة مخصصة ومرنة للاستيراد والتصدير"
     },
     {
-      icon: <Users className="w-8 h-8" />,
-      title: "الاستشارات الجمركية",
-      description: "استشارات متخصصة في القوانين والإجراءات الجمركية",
-      features: ["خبراء معتمدون", "نصائح قيمة", "حلول مبتكرة"],
-      color: "from-violet-500 to-purple-500",
-      bgColor: "bg-violet-50",
-      iconColor: "text-violet-600"
-    },
-    {
-      icon: <FileText className="w-8 h-8" />,
-      title: "إعداد الوثائق",
-      description: "إعداد وتجهيز جميع الوثائق المطلوبة للشحن",
-      features: ["دقة عالية", "سرعة في التنفيذ", "اعتماد رسمي"],
-      color: "from-slate-500 to-gray-500",
-      bgColor: "bg-slate-50",
-      iconColor: "text-slate-600"
-    },
-    {
-      icon: <MapPin className="w-8 h-8" />,
-      title: "تتبع الشحنات",
-      description: "نظام تتبع متطور لمراقبة الشحنات لحظة بلحظة",
-      features: ["تتبع مباشر", "إشعارات فورية", "تقارير مفصلة"],
-      color: "from-red-500 to-pink-500",
-      bgColor: "bg-red-50",
-      iconColor: "text-red-600"
-    },
-    {
-      icon: <Clock className="w-8 h-8" />,
-      title: "الخدمات العاجلة",
-      description: "خدمات سريعة للشحنات العاجلة والحساسة للوقت",
-      features: ["أولوية قصوى", "معالجة فورية", "ضمان الوقت"],
-      color: "from-amber-500 to-yellow-500",
-      bgColor: "bg-amber-50",
-      iconColor: "text-amber-600"
-    },
-    {
-      icon: <Target className="w-8 h-8" />,
-      title: "حلول مخصصة",
-      description: "حلول مصممة خصيصاً لتلبية احتياجات العملاء",
-      features: ["تصميم مخصص", "مرونة عالية", "خدمة شخصية"],
-      color: "from-lime-500 to-green-500",
-      bgColor: "bg-lime-50",
-      iconColor: "text-lime-600"
-    },
-    {
-      icon: <Briefcase className="w-8 h-8" />,
-      title: "إدارة سلسلة التوريد",
-      description: "إدارة شاملة لسلسلة التوريد من المصدر للوجهة",
-      features: ["تحسين العمليات", "خفض التكاليف", "زيادة الكفاءة"],
-      color: "from-sky-500 to-blue-500",
-      bgColor: "bg-sky-50",
-      iconColor: "text-sky-600"
-    },
-    {
-      icon: <Award className="w-8 h-8" />,
+      icon: Award,
       title: "ضمان الجودة",
-      description: "ضمان أعلى معايير الجودة في جميع الخدمات",
-      features: ["معايير دولية", "فحص دقيق", "تحسين مستمر"],
-      color: "from-rose-500 to-pink-500",
-      bgColor: "bg-rose-50",
-      iconColor: "text-rose-600"
+      description: "التزام بأعلى معايير الجودة مع ضمان رضا العملاء وتقديم خدمة متميزة وآمنة"
     },
     {
-      icon: <Phone className="w-8 h-8" />,
-      title: "الدعم الفني",
-      description: "دعم فني متخصص على مدار الساعة",
-      features: ["دعم 24/7", "خبراء متخصصون", "حلول سريعة"],
-      color: "from-cyan-500 to-teal-500",
-      bgColor: "bg-cyan-50",
-      iconColor: "text-cyan-600"
+      icon: Heart,
+      title: "خدمة العملاء المتميزة",
+      description: "فريق خدمة عملاء مدرب على أعلى مستوى لتقديم الدعم والمساعدة الفورية للشحن الدولي الموثوق"
     },
     {
-      icon: <Settings className="w-8 h-8" />,
-      title: "التكامل التقني",
-      description: "ربط الأنظمة وتكامل العمليات إلكترونياً",
-      features: ["أنظمة متطورة", "تكامل سلس", "أتمتة العمليات"],
-      color: "from-fuchsia-500 to-purple-500",
-      bgColor: "bg-fuchsia-50",
-      iconColor: "text-fuchsia-600"
+      icon: Lightbulb,
+      title: "الحلول المبتكرة",
+      description: "تطوير حلول مبتكرة ومخصصة لتلبية احتياجات العملاء الخاصة والمعقدة في التخليص الجمركي"
     },
     {
-      icon: <Mail className="w-8 h-8" />,
-      title: "التقارير والتحليلات",
-      description: "تقارير مفصلة وتحليلات لتحسين الأداء",
-      features: ["تقارير دورية", "تحليل البيانات", "رؤى قيمة"],
-      color: "from-stone-500 to-slate-500",
-      bgColor: "bg-stone-50",
-      iconColor: "text-stone-600"
+      icon: Rocket,
+      title: "التطوير المستمر",
+      description: "استثمار مستمر في التكنولوجيا والتدريب لضمان تقديم أفضل الخدمات عبر الموانئ"
     },
     {
-      icon: <Zap className="w-8 h-8" />,
-      title: "الخدمات الرقمية",
-      description: "منصة رقمية متطورة لإدارة جميع العمليات",
-      features: ["واجهة سهلة", "عمليات رقمية", "وصول آمن"],
-      color: "from-neutral-500 to-gray-500",
-      bgColor: "bg-neutral-50",
-      iconColor: "text-neutral-600"
+      icon: Settings,
+      title: "الأتمتة والتقنية",
+      description: "استخدام أحدث التقنيات والأنظمة الآلية لتسريع العمليات وتقليل الأخطاء في الشحن"
+    },
+    {
+      icon: Phone,
+      title: "التواصل المباشر",
+      description: "قنوات تواصل متعددة ومباشرة مع العملاء لضمان التواصل الفعال والسريع للخدمات"
+    },
+    {
+      icon: Zap,
+      title: "السرعة في الإنجاز",
+      description: "التزام بالمواعيد المحددة مع ضمان إنجاز المعاملات في أسرع وقت ممكن وبأمان تام"
+    },
+    {
+      icon: Target,
+      title: "الدقة والاحترافية",
+      description: "عمل دقيق ومحترف في جميع المعاملات مع اهتمام بأدق التفاصيل للاستيراد والتصدير"
+    },
+    {
+      icon: Globe,
+      title: "الخدمات اللوجستية المتكاملة",
+      description: "حلول لوجستية شاملة تشمل التخطيط والتنفيذ والمتابعة لسلسلة التوريد الكاملة مع تحسين التكاليف والأوقات عبر الموانئ مع ضمان الشحن الدولي الموثوق والاستيراد والتصدير السلس"
     }
   ];
 
   return (
-    <section id="services" className="py-20 bg-gradient-to-br from-blue-900 via-purple-900 to-green-900 relative overflow-hidden">
-      {/* Enhanced Animated Background */}
-      <div className="absolute inset-0">
-        {/* Floating particles */}
-        {[...Array(30)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-2 h-2 bg-white/20 rounded-full animate-ping"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`,
-              animationDuration: `${2 + Math.random() * 3}s`
-            }}
-          />
-        ))}
+    <section id="services" className="py-20 text-white relative overflow-hidden section-transparent">
+      {/* Enhanced Interactive Animated Background Elements */}
+      <div className="absolute inset-0 pointer-events-none">
+        {/* Large floating orbs */}
+        <div className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-br from-blue-500/30 to-cyan-500/30 rounded-full blur-xl animate-float-services-slow interactive-orb-services"></div>
+        <div className="absolute bottom-20 right-20 w-24 h-24 bg-gradient-to-br from-green-500/30 to-emerald-500/30 rounded-full blur-xl animate-float-services-medium interactive-orb-services"></div>
+        <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-gradient-to-br from-purple-500/30 to-violet-500/30 rounded-full blur-lg animate-float-services-fast interactive-orb-services"></div>
+        <div className="absolute top-1/3 right-1/3 w-20 h-20 bg-gradient-to-br from-yellow-500/30 to-orange-500/30 rounded-full blur-lg animate-float-services-reverse interactive-orb-services"></div>
+        <div className="absolute bottom-1/3 left-1/2 w-28 h-28 bg-gradient-to-br from-red-500/30 to-pink-500/30 rounded-full blur-xl animate-float-services-diagonal interactive-orb-services"></div>
+        <div className="absolute top-10 right-10 w-36 h-36 bg-gradient-to-br from-indigo-500/30 to-blue-500/30 rounded-full blur-2xl animate-spin-slow interactive-orb-services"></div>
         
-        {/* Animated waves */}
-        <div className="absolute top-0 left-0 w-full h-full">
-          <div className="absolute top-1/4 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse animation-delay-1000"></div>
-          <div className="absolute top-3/4 right-0 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-bounce animation-delay-2000"></div>
-          <div className="absolute bottom-1/4 left-1/3 w-72 h-72 bg-green-500/10 rounded-full blur-3xl animate-ping animation-delay-3000"></div>
-        </div>
+        {/* Geometric shapes */}
+        <div className="absolute top-1/5 right-1/5 w-14 h-14 bg-gradient-to-br from-teal-400/40 to-cyan-400/40 transform rotate-45 animate-rotate-services-slow interactive-shape-services"></div>
+        <div className="absolute bottom-1/5 left-1/4 w-10 h-20 bg-gradient-to-br from-purple-400/40 to-pink-400/40 animate-rotate-services-medium interactive-shape-services"></div>
+        <div className="absolute top-3/5 right-1/6 w-18 h-18 bg-gradient-to-br from-green-400/40 to-lime-400/40 rounded-full animate-rotate-services-fast interactive-shape-services" style={{clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)'}}></div>
+        <div className="absolute bottom-2/5 left-1/6 w-12 h-12 bg-gradient-to-br from-orange-400/40 to-red-400/40 animate-rotate-services-reverse interactive-shape-services"></div>
+        
+        {/* Particle system */}
+        <div className="absolute top-16 left-16 w-3 h-3 bg-blue-300/70 rounded-full animate-particle-services-1 interactive-particle-services"></div>
+        <div className="absolute top-40 right-40 w-2 h-2 bg-green-300/70 rounded-full animate-particle-services-2 interactive-particle-services"></div>
+        <div className="absolute bottom-40 left-40 w-4 h-4 bg-purple-300/70 rounded-full animate-particle-services-3 interactive-particle-services"></div>
+        <div className="absolute bottom-16 right-16 w-3 h-3 bg-yellow-300/70 rounded-full animate-particle-services-4 interactive-particle-services"></div>
+        <div className="absolute top-2/3 right-16 w-2 h-2 bg-pink-300/70 rounded-full animate-particle-services-5 interactive-particle-services"></div>
+        <div className="absolute bottom-2/3 left-16 w-4 h-4 bg-cyan-300/70 rounded-full animate-particle-services-6 interactive-particle-services"></div>
+        
+        {/* Animated lines */}
+        <svg className="absolute inset-0 w-full h-full opacity-15" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="servicesGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#60A5FA" stopOpacity="0.6" />
+              <stop offset="50%" stopColor="#A78BFA" stopOpacity="0.4" />
+              <stop offset="100%" stopColor="#34D399" stopOpacity="0.6" />
+            </linearGradient>
+            <linearGradient id="servicesGrad2" x1="100%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stopColor="#F472B6" stopOpacity="0.6" />
+              <stop offset="50%" stopColor="#FBBF24" stopOpacity="0.4" />
+              <stop offset="100%" stopColor="#06B6D4" stopOpacity="0.6" />
+            </linearGradient>
+          </defs>
+          <path d="M0,80 Q250,40 500,80 T1000,80" stroke="url(#servicesGrad1)" strokeWidth="2" fill="none">
+            <animate attributeName="stroke-dasharray" values="0,1000;1000,0;0,1000" dur="7s" repeatCount="indefinite" />
+          </path>
+          <path d="M0,200 Q300,120 600,200 T1200,200" stroke="url(#servicesGrad2)" strokeWidth="2" fill="none">
+            <animate attributeName="stroke-dasharray" values="1000,0;0,1000;1000,0" dur="9s" repeatCount="indefinite" />
+          </path>
+        </svg>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-white via-blue-200 to-green-200 bg-clip-text text-transparent mb-4 animate-pulse">
-            خدماتنا المتخصصة
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto animate-fadeInUp animation-delay-500">
-            نقدم مجموعة شاملة من الخدمات المتخصصة في مجال التخليص الجمركي والترانزيت
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-glow-blue">
+            خدماتنا المتميزة
+          </h1>
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-green-400 mx-auto mb-6"></div>
+          <p className="text-xl text-blue-200 max-w-3xl mx-auto leading-relaxed">
+            خدمات التخليص الجمركي والترانزيت الأسرع والأكثر أمانًا عبر الموانئ، مع شحن دولي موثوق واستيراد وتصدير سلس مع شركتنا، اختيارك الأمثل للأعمال
           </p>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-green-500 mx-auto mt-6 rounded-full animate-bounce"></div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {services.map((service, index) => (
-            <Card 
-              key={index}
-              className={`group hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-4 hover:scale-105 hover:rotate-1 border-0 shadow-lg bg-white/90 backdrop-blur-sm overflow-hidden animate-fadeInUp`}
-              style={{ animationDelay: `${index * 100}ms` }}
+            <article 
+              key={index} 
+              className={`card-advanced ${
+                index % 6 === 0 ? 'card-gradient-blue' : 
+                index % 6 === 1 ? 'card-gradient-purple' : 
+                index % 6 === 2 ? 'card-gradient-green' : 
+                index % 6 === 3 ? 'card-gradient-cyan' : 
+                index % 6 === 4 ? 'card-gradient-pink' : 'card-gradient-orange'
+              } pulse-on-hover stagger-${(index % 6) + 1} float-animation`}
+              style={{
+                animationDelay: `${index * 150}ms`
+              }}
             >
-              <CardHeader className="text-center pb-4 relative">
-                <div className={`w-16 h-16 mx-auto rounded-full bg-gradient-to-r ${service.color} flex items-center justify-center text-white shadow-lg group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 animate-bounce`}>
-                  {service.icon}
+              <div className="p-6 text-center">
+                <div className={`icon-container-advanced mx-auto mb-6 ${
+                  index % 6 === 0 ? 'bg-gradient-to-br from-blue-500 to-blue-600' : 
+                  index % 6 === 1 ? 'bg-gradient-to-br from-purple-500 to-purple-600' : 
+                  index % 6 === 2 ? 'bg-gradient-to-br from-green-500 to-green-600' : 
+                  index % 6 === 3 ? 'bg-gradient-to-br from-cyan-500 to-cyan-600' : 
+                  index % 6 === 4 ? 'bg-gradient-to-br from-pink-500 to-pink-600' : 'bg-gradient-to-br from-orange-500 to-orange-600'
+                } animated-border`}>
+                  <service.icon className="h-6 w-6 text-white relative z-10" />
                 </div>
-                <CardTitle className={`text-lg font-bold mt-4 ${service.iconColor} group-hover:text-gray-800 transition-colors animate-pulse`}>
+                <h2 className={`text-xl font-bold mb-4 ${
+                  index % 6 === 0 ? 'text-blue-300 text-glow-blue' : 
+                  index % 6 === 1 ? 'text-purple-300 text-glow-purple' : 
+                  index % 6 === 2 ? 'text-green-300 text-glow-green' : 
+                  index % 6 === 3 ? 'text-cyan-300' : 
+                  index % 6 === 4 ? 'text-pink-300' : 'text-orange-300'
+                }`}>
                   {service.title}
-                </CardTitle>
-                
-                {/* Animated border */}
-                <div className="absolute inset-0 border-2 border-transparent group-hover:border-gradient-to-r group-hover:from-blue-400 group-hover:to-green-400 rounded-lg transition-all duration-500"></div>
-              </CardHeader>
-              <CardContent className="text-center">
-                <CardDescription className="text-gray-600 mb-4 leading-relaxed group-hover:text-gray-800 transition-colors">
+                </h2>
+                <p className="text-gray-300 text-sm leading-relaxed">
                   {service.description}
-                </CardDescription>
-                <div className="space-y-2">
-                  {service.features.map((feature, featureIndex) => (
-                    <Badge 
-                      key={featureIndex}
-                      variant="secondary" 
-                      className={`text-xs ${service.iconColor} bg-white/70 hover:bg-white transition-all duration-300 transform hover:scale-110 animate-fadeInUp`}
-                      style={{ animationDelay: `${(index * 100) + (featureIndex * 50)}ms` }}
-                    >
-                      <CheckCircle className="w-3 h-3 mr-1 animate-spin" />
-                      {feature}
-                    </Badge>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
+                </p>
+              </div>
+            </article>
           ))}
         </div>
-
-        <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white shadow-2xl transform hover:scale-105 transition-all duration-500 animate-fadeInUp animation-delay-2000">
-            <h3 className="text-2xl font-bold mb-4 animate-bounce">لماذا تختار خدماتنا؟</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="flex items-center justify-center space-x-3 space-x-reverse transform hover:scale-110 transition-transform duration-300">
-                <Award className="w-8 h-8 text-yellow-300 animate-spin" />
-                <span className="font-semibold">خبرة أكثر من 15 سنة</span>
-              </div>
-              <div className="flex items-center justify-center space-x-3 space-x-reverse transform hover:scale-110 transition-transform duration-300">
-                <Shield className="w-8 h-8 text-green-300 animate-pulse" />
-                <span className="font-semibold">ضمان الجودة والأمان</span>
-              </div>
-              <div className="flex items-center justify-center space-x-3 space-x-reverse transform hover:scale-110 transition-transform duration-300">
-                <Clock className="w-8 h-8 text-blue-300 animate-bounce" />
-                <span className="font-semibold">خدمة سريعة ومتاحة 24/7</span>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
+
+      <style jsx>{`
+        @keyframes float-services-slow {
+          0%, 100% { transform: translate(0, 0) rotate(0deg) scale(1); }
+          25% { transform: translate(25px, -25px) rotate(90deg) scale(1.1); }
+          50% { transform: translate(-15px, -35px) rotate(180deg) scale(0.9); }
+          75% { transform: translate(-35px, 15px) rotate(270deg) scale(1.05); }
+        }
+        
+        @keyframes float-services-medium {
+          0%, 100% { transform: translate(0, 0) rotate(0deg) scale(1); }
+          33% { transform: translate(-30px, 20px) rotate(120deg) scale(1.15); }
+          66% { transform: translate(20px, -30px) rotate(240deg) scale(0.85); }
+        }
+        
+        @keyframes float-services-fast {
+          0%, 100% { transform: translate(0, 0) rotate(0deg) scale(1); }
+          50% { transform: translate(35px, -40px) rotate(180deg) scale(1.2); }
+        }
+        
+        @keyframes float-services-reverse {
+          0%, 100% { transform: translate(0, 0) rotate(360deg) scale(1); }
+          50% { transform: translate(-40px, 30px) rotate(180deg) scale(0.8); }
+        }
+        
+        @keyframes float-services-diagonal {
+          0%, 100% { transform: translate(0, 0) rotate(0deg) scale(1); }
+          25% { transform: translate(20px, 20px) rotate(45deg) scale(1.1); }
+          50% { transform: translate(-20px, -20px) rotate(90deg) scale(0.9); }
+          75% { transform: translate(-30px, 30px) rotate(135deg) scale(1.05); }
+        }
+        
+        @keyframes rotate-services-slow {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
+        
+        @keyframes rotate-services-medium {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(-360deg); }
+        }
+        
+        @keyframes rotate-services-fast {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
+        
+        @keyframes rotate-services-reverse {
+          from { transform: rotate(360deg); }
+          to { transform: rotate(0deg); }
+        }
+        
+        @keyframes particle-services-1 {
+          0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.7; }
+          25% { transform: translate(40px, -20px) scale(1.4); opacity: 1; }
+          50% { transform: translate(80px, 10px) scale(0.8); opacity: 0.5; }
+          75% { transform: translate(60px, 35px) scale(1.2); opacity: 0.8; }
+        }
+        
+        @keyframes particle-services-2 {
+          0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.6; }
+          33% { transform: translate(-35px, 25px) scale(1.3); opacity: 1; }
+          66% { transform: translate(50px, -15px) scale(0.9); opacity: 0.7; }
+        }
+        
+        @keyframes particle-services-3 {
+          0%, 100% { transform: translate(0, 0) scale(1) rotate(0deg); opacity: 0.8; }
+          50% { transform: translate(-65px, -35px) scale(1.4) rotate(180deg); opacity: 1; }
+        }
+        
+        @keyframes particle-services-4 {
+          0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.7; }
+          25% { transform: translate(-25px, -12px) scale(0.7); opacity: 0.4; }
+          75% { transform: translate(40px, 20px) scale(1.2); opacity: 1; }
+        }
+        
+        @keyframes particle-services-5 {
+          0%, 100% { transform: translate(0, 0) scale(1) rotate(0deg); opacity: 0.6; }
+          50% { transform: translate(45px, -30px) scale(1.1) rotate(360deg); opacity: 1; }
+        }
+        
+        @keyframes particle-services-6 {
+          0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.8; }
+          33% { transform: translate(30px, 15px) scale(1.3); opacity: 1; }
+          66% { transform: translate(-20px, -25px) scale(0.8); opacity: 0.5; }
+        }
+        
+        .animate-float-services-slow { animation: float-services-slow 14s ease-in-out infinite; }
+        .animate-float-services-medium { animation: float-services-medium 11s ease-in-out infinite; }
+        .animate-float-services-fast { animation: float-services-fast 7s ease-in-out infinite; }
+        .animate-float-services-reverse { animation: float-services-reverse 16s ease-in-out infinite; }
+        .animate-float-services-diagonal { animation: float-services-diagonal 13s ease-in-out infinite; }
+        .animate-rotate-services-slow { animation: rotate-services-slow 18s linear infinite; }
+        .animate-rotate-services-medium { animation: rotate-services-medium 13s linear infinite; }
+        .animate-rotate-services-fast { animation: rotate-services-fast 9s linear infinite; }
+        .animate-rotate-services-reverse { animation: rotate-services-reverse 15s linear infinite; }
+        .animate-particle-services-1 { animation: particle-services-1 11s linear infinite; }
+        .animate-particle-services-2 { animation: particle-services-2 9s linear infinite; }
+        .animate-particle-services-3 { animation: particle-services-3 15s linear infinite; }
+        .animate-particle-services-4 { animation: particle-services-4 7s linear infinite; }
+        .animate-particle-services-5 { animation: particle-services-5 13s linear infinite; }
+        .animate-particle-services-6 { animation: particle-services-6 10s linear infinite; }
+        
+        /* Mouse interaction effects */
+        .interactive-orb-services:hover {
+          transform: scale(1.4) !important;
+          filter: blur(6px) brightness(1.6);
+          transition: all 0.3s ease;
+        }
+        
+        .interactive-shape-services:hover {
+          transform: scale(1.3) rotate(90deg) !important;
+          filter: brightness(1.5);
+          transition: all 0.3s ease;
+        }
+        
+        .interactive-particle-services:hover {
+          transform: scale(2.5) !important;
+          opacity: 1 !important;
+          filter: brightness(2.2);
+          transition: all 0.2s ease;
+        }
+        
+        .interactive-service-card:hover {
+          transform: translateY(-8px) scale(1.05) rotate(2deg) !important;
+          box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        
+        .interactive-service-icon:hover {
+          transform: scale(1.2) rotate(15deg);
+          filter: brightness(1.3);
+        }
+      `}</style>
     </section>
   );
 }

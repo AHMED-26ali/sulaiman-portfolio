@@ -8,11 +8,11 @@ import Footer from '@/components/Footer';
 
 export default function Index() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen section-seamless">
       <Hero />
       <Services />
-      <Branches />
       <WhyUs />
+      <Branches />
       <Blog />
       <Contact />
       <Footer />

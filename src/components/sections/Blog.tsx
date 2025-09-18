@@ -150,15 +150,52 @@ export default function Blog() {
   ];
 
   return (
-    <section id="blog" className="py-20 bg-gradient-to-br from-slate-800 via-gray-900 to-zinc-900 text-white relative overflow-hidden">
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-20 left-20 w-32 h-32 bg-blue-500/20 rounded-full animate-pulse"></div>
-        <div className="absolute bottom-20 right-20 w-24 h-24 bg-green-500/20 rounded-full animate-bounce"></div>
-        <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-purple-500/20 rounded-full animate-ping"></div>
-        <div className="absolute top-1/3 right-1/3 w-20 h-20 bg-yellow-500/20 rounded-full animate-pulse"></div>
-        <div className="absolute bottom-1/3 left-1/2 w-28 h-28 bg-red-500/20 rounded-full animate-bounce"></div>
-        <div className="absolute top-10 right-10 w-36 h-36 bg-indigo-500/20 rounded-full animate-spin-slow"></div>
+    <section id="blog" className="py-20 text-white relative overflow-hidden section-transparent">
+      {/* Enhanced Interactive Background Elements */}
+      <div className="absolute inset-0 pointer-events-none">
+        {/* كرات متحركة كبيرة مع تفاعل الماوس */}
+        <div className="absolute -top-48 -left-48 w-[600px] h-[600px] bg-gradient-to-br from-blue-300/15 to-purple-300/15 rounded-full blur-3xl animate-float-blog-slow interactive-orb-blog"></div>
+        <div className="absolute top-24 -right-48 w-[500px] h-[500px] bg-gradient-to-br from-green-300/15 to-teal-300/15 rounded-full blur-3xl animate-float-blog-medium interactive-orb-blog"></div>
+        <div className="absolute -bottom-48 left-1/4 w-[450px] h-[450px] bg-gradient-to-br from-purple-300/15 to-pink-300/15 rounded-full blur-3xl animate-float-blog-fast interactive-orb-blog"></div>
+        <div className="absolute bottom-24 -right-24 w-[400px] h-[400px] bg-gradient-to-br from-orange-300/15 to-red-300/15 rounded-full blur-3xl animate-float-blog-reverse interactive-orb-blog"></div>
+        <div className="absolute top-1/2 left-1/6 w-[350px] h-[350px] bg-gradient-to-br from-yellow-300/15 to-orange-300/15 rounded-full blur-3xl animate-float-blog-diagonal interactive-orb-blog"></div>
+        <div className="absolute top-16 right-1/3 w-[300px] h-[300px] bg-gradient-to-br from-cyan-300/15 to-blue-300/15 rounded-full blur-3xl animate-float-blog-spiral interactive-orb-blog"></div>
+        
+        {/* أشكال هندسية متفاعلة */}
+        <div className="absolute top-1/5 right-1/5 w-20 h-20 bg-gradient-to-br from-teal-400/40 to-cyan-400/40 transform rotate-45 animate-rotate-blog-slow interactive-shape-blog"></div>
+        <div className="absolute bottom-1/5 left-1/4 w-16 h-32 bg-gradient-to-br from-purple-400/40 to-pink-400/40 animate-rotate-blog-medium interactive-shape-blog"></div>
+        <div className="absolute top-3/5 right-1/6 w-24 h-24 bg-gradient-to-br from-green-400/40 to-lime-400/40 rounded-full animate-rotate-blog-fast interactive-shape-blog" style={{clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)'}}></div>
+        <div className="absolute bottom-2/5 left-1/6 w-18 h-18 bg-gradient-to-br from-orange-400/40 to-red-400/40 animate-rotate-blog-reverse interactive-shape-blog"></div>
+        
+        {/* جسيمات متحركة صغيرة */}
+        <div className="absolute top-20 left-20 w-32 h-32 bg-blue-500/20 rounded-full animate-pulse interactive-particle-blog"></div>
+        <div className="absolute bottom-20 right-20 w-24 h-24 bg-green-500/20 rounded-full animate-bounce interactive-particle-blog"></div>
+        <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-purple-500/20 rounded-full animate-ping interactive-particle-blog"></div>
+        <div className="absolute top-1/3 right-1/3 w-20 h-20 bg-yellow-500/20 rounded-full animate-pulse interactive-particle-blog"></div>
+        <div className="absolute bottom-1/3 left-1/2 w-28 h-28 bg-red-500/20 rounded-full animate-bounce interactive-particle-blog"></div>
+        <div className="absolute top-10 right-10 w-36 h-36 bg-indigo-500/20 rounded-full animate-spin-slow interactive-particle-blog"></div>
+        
+        {/* خطوط SVG متحركة */}
+        <svg className="absolute inset-0 w-full h-full opacity-10" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="blogGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#60A5FA" stopOpacity="0.6" />
+              <stop offset="50%" stopColor="#A78BFA" stopOpacity="0.4" />
+              <stop offset="100%" stopColor="#34D399" stopOpacity="0.6" />
+            </linearGradient>
+            <linearGradient id="blogGrad2" x1="100%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stopColor="#F472B6" stopOpacity="0.6" />
+              <stop offset="50%" stopColor="#FBBF24" stopOpacity="0.4" />
+              <stop offset="100%" stopColor="#06B6D4" stopOpacity="0.6" />
+            </linearGradient>
+          </defs>
+          <path d="M0,100 Q300,50 600,100 T1200,100" stroke="url(#blogGrad1)" strokeWidth="3" fill="none">
+            <animate attributeName="stroke-dasharray" values="0,1200;1200,0;0,1200" dur="8s" repeatCount="indefinite" />
+          </path>
+          <path d="M0,300 Q400,200 800,300 T1600,300" stroke="url(#blogGrad2)" strokeWidth="2" fill="none">
+            <animate attributeName="stroke-dasharray" values="1200,0;0,1200;1200,0" dur="10s" repeatCount="indefinite" />
+          </path>
+        </svg>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -176,7 +213,7 @@ export default function Blog() {
           {blogPosts.map((post, index) => (
             <Card 
               key={index} 
-              className="group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:rotate-1 border-0 bg-white/10 backdrop-blur-sm hover:bg-white/20 overflow-hidden"
+              className="group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:rotate-1 border-0 bg-white/10 backdrop-blur-sm hover:bg-white/20 overflow-hidden animate-card-entrance interactive-blog-card"
               style={{
                 animationDelay: `${index * 150}ms`
               }}
@@ -192,7 +229,7 @@ export default function Blog() {
                   </span>
                 </div>
                 <div className="flex items-center space-x-3 space-x-reverse mb-3">
-                  <div className={`p-2 bg-gradient-to-r ${post.color} rounded-full group-hover:scale-110 transition-transform duration-300`}>
+                  <div className={`p-2 bg-gradient-to-r ${post.color} rounded-full group-hover:scale-110 transition-transform duration-300 interactive-blog-icon`}>
                     <post.icon className="h-4 w-4 text-white" />
                   </div>
                   <CardTitle className="text-lg font-bold text-white group-hover:text-slate-300 transition-colors leading-tight">
@@ -209,6 +246,114 @@ export default function Blog() {
           ))}
         </div>
       </div>
+
+      <style jsx>{`
+        /* Mouse interaction effects */
+        .interactive-orb-blog:hover {
+          transform: scale(1.4) !important;
+          filter: blur(2xl) brightness(1.6);
+          transition: all 0.3s ease;
+        }
+        
+        .interactive-shape-blog:hover {
+          transform: scale(1.3) rotate(90deg) !important;
+          filter: brightness(1.5);
+          transition: all 0.3s ease;
+        }
+        
+        .interactive-particle-blog:hover {
+          transform: scale(1.5) !important;
+          opacity: 1 !important;
+          filter: brightness(2);
+          transition: all 0.2s ease;
+        }
+        
+        .interactive-blog-card:hover {
+          transform: translateY(-8px) scale(1.05) rotate(2deg) !important;
+          box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+        
+        .interactive-blog-icon:hover {
+          transform: scale(1.3) rotate(15deg);
+          filter: brightness(1.4);
+        }
+
+        @keyframes float-blog-slow {
+          0%, 100% { transform: translate(0, 0) rotate(0deg) scale(1); }
+          25% { transform: translate(50px, -50px) rotate(90deg) scale(1.15); }
+          50% { transform: translate(-30px, -60px) rotate(180deg) scale(0.85); }
+          75% { transform: translate(-60px, 30px) rotate(270deg) scale(1.05); }
+        }
+        
+        @keyframes float-blog-medium {
+          0%, 100% { transform: translate(0, 0) rotate(0deg) scale(1); }
+          33% { transform: translate(-55px, 45px) rotate(120deg) scale(1.2); }
+          66% { transform: translate(45px, -55px) rotate(240deg) scale(0.8); }
+        }
+        
+        @keyframes float-blog-fast {
+          0%, 100% { transform: translate(0, 0) rotate(0deg) scale(1); }
+          50% { transform: translate(60px, -70px) rotate(180deg) scale(1.25); }
+        }
+        
+        @keyframes float-blog-reverse {
+          0%, 100% { transform: translate(0, 0) rotate(360deg) scale(1); }
+          50% { transform: translate(-65px, 55px) rotate(180deg) scale(0.75); }
+        }
+        
+        @keyframes float-blog-diagonal {
+          0%, 100% { transform: translate(0, 0) rotate(0deg) scale(1); }
+          25% { transform: translate(45px, 45px) rotate(45deg) scale(1.1); }
+          50% { transform: translate(-45px, -45px) rotate(90deg) scale(0.9); }
+          75% { transform: translate(-55px, 55px) rotate(135deg) scale(1.05); }
+        }
+        
+        @keyframes float-blog-spiral {
+          0% { transform: translate(0, 0) rotate(0deg) scale(1); }
+          25% { transform: translate(40px, -20px) rotate(90deg) scale(1.1); }
+          50% { transform: translate(0, -40px) rotate(180deg) scale(0.9); }
+          75% { transform: translate(-40px, -20px) rotate(270deg) scale(1.05); }
+          100% { transform: translate(0, 0) rotate(360deg) scale(1); }
+        }
+        
+        @keyframes rotate-blog-slow {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
+        
+        @keyframes rotate-blog-medium {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(-360deg); }
+        }
+        
+        @keyframes rotate-blog-fast {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
+        
+        @keyframes rotate-blog-reverse {
+          from { transform: rotate(360deg); }
+          to { transform: rotate(0deg); }
+        }
+        
+        @keyframes card-entrance {
+          0% { opacity: 0; transform: translateY(100px) rotateX(90deg); }
+          100% { opacity: 1; transform: translateY(0) rotateX(0deg); }
+        }
+        
+        .animate-float-blog-slow { animation: float-blog-slow 20s ease-in-out infinite; }
+        .animate-float-blog-medium { animation: float-blog-medium 16s ease-in-out infinite; }
+        .animate-float-blog-fast { animation: float-blog-fast 12s ease-in-out infinite; }
+        .animate-float-blog-reverse { animation: float-blog-reverse 24s ease-in-out infinite; }
+        .animate-float-blog-diagonal { animation: float-blog-diagonal 18s ease-in-out infinite; }
+        .animate-float-blog-spiral { animation: float-blog-spiral 22s ease-in-out infinite; }
+        .animate-rotate-blog-slow { animation: rotate-blog-slow 18s linear infinite; }
+        .animate-rotate-blog-medium { animation: rotate-blog-medium 13s linear infinite; }
+        .animate-rotate-blog-fast { animation: rotate-blog-fast 9s linear infinite; }
+        .animate-rotate-blog-reverse { animation: rotate-blog-reverse 15s linear infinite; }
+        .animate-spin-slow { animation: spin 8s linear infinite; }
+        .animate-card-entrance { animation: card-entrance 0.8s ease-out forwards; opacity: 0; }
+      `}</style>
     </section>
   );
 }
