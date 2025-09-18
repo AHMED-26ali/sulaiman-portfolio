@@ -1,0 +1,38 @@
+{
+  "name": "مؤسسة سليمان الحويطي للتخليص الجمركي والترانزيت",
+  "short_name": "سليمان الحويطي",
+  "description": "مؤسسة رائدة في خدمات التخليص الجمركي والترانزيت في المملكة العربية السعودية",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0891b2",
+  "orientation": "portrait-primary",
+  "lang": "ar",
+  "dir": "rtl",
+  "icons": [
+    {
+      "src": "https://i.pinimg.com/736x/7f/12/80/7f1280df00efb23c191881da5c430049.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://i.pinimg.com/736x/7f/12/80/7f1280df00efb23c191881da5c430049.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "logistics", "customs"],
+  "keywords": [
+    "تخليص جمركي",
+    "ترانزيت", 
+    "استيراد",
+    "تصدير",
+    "جمارك",
+    "شحن",
+    "نقل",
+    "لوجستية",
+    "سليمان الحويطي"
+  ]
+}
