@@ -1,62 +1,57 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowLeft, Star, Zap, Shield, ChevronLeft, ChevronRight, Play, Pause } from 'lucide-react';
+import { ArrowLeft, Star, Zap, Shield } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import ThreeBackground from '@/components/effects/ThreeBackground';
 
 export default function Hero() {
-  // مصفوفة الصور المحدثة مع الصور الجديدة
+  // مصفوفة الصور عالية الجودة
   const images = [
-    // الصور الأصلية
-    "https://i.pinimg.com/736x/10/00/a8/1000a89b5f57ba2118f823884f23dd01.jpg",
-    "https://i.pinimg.com/736x/44/8b/87/448b879530978dd4dff3683357562267.jpg",
-    "https://i.pinimg.com/736x/08/0b/f7/080bf7d23fe74366fbd7a0f93b3ebda1.jpg",
-    "https://i.pinimg.com/736x/13/2d/87/132d87a87454d05f2970f127b806cd74.jpg",
-    "https://i.pinimg.com/736x/8d/2c/0e/8d2c0ebb452eda5260c8e4c728bee04a.jpg",
-    "https://i.pinimg.com/736x/69/e2/69/69e2696213e925c713b67a38dd796619.jpg",
-    "https://i.pinimg.com/736x/39/54/09/395409b14b2ef732c1909231c6d6e60c.jpg",
-    "https://i.pinimg.com/736x/72/14/1c/72141cd1f1de867d006bd74e64e40299.jpg",
-    "https://i.pinimg.com/736x/96/b1/40/96b1401f36348d55779a1246f7b2a809.jpg",
-    "https://i.pinimg.com/736x/17/73/f8/1773f8f358b2fb3360b67169dd536385.jpg",
-    "https://i.pinimg.com/1200x/85/b5/96/85b5966c6b37f156b91335bac4262983.jpg",
-    "https://i.pinimg.com/1200x/2f/8a/dc/2f8adc9602309ad71b5b90bfe1893257.jpg",
-    "https://i.pinimg.com/1200x/53/cb/b2/53cbb26aefdc506c7d2d978e675be67e.jpg",
-    "https://i.pinimg.com/1200x/b2/80/3a/b2803a9b719efca9dabbfed307c062a5.jpg",
-    "https://i.pinimg.com/1200x/64/c5/ec/64c5ec9259622dbd7d2bc0036678b6ee.jpg",
-    "https://i.pinimg.com/1200x/28/21/ac/2821ac050143da4ec61f6f0c75b0b2be.jpg",
-    "https://i.pinimg.com/736x/e1/ad/29/e1ad29604916676e9afe96c0eb077d2d.jpg",
-    "https://i.pinimg.com/736x/e0/45/c7/e045c7ee2b3c886016db8f5c89721390.jpg",
-    "https://i.pinimg.com/1200x/9d/57/47/9d5747c43997b50774de8b6ec450adfa.jpg",
-    "https://i.pinimg.com/736x/24/9b/cf/249bcf9ebf45f49f79f10d462cc3a0b4.jpg",
-    // الصور الجديدة المضافة
-    "https://i.pinimg.com/736x/31/be/b4/31beb43bc4f4fe6858df36de2c7acde9.jpg",
-    "https://i.pinimg.com/736x/7f/19/fd/7f19fd90ee55a370e0b552886a445838.jpg",
-    "https://i.pinimg.com/736x/dc/4b/4f/dc4b4fd304c9f371d9e281824c556908.jpg",
-    "https://i.pinimg.com/736x/0b/b4/93/0bb493c3bf38e9c8232c4e6fc9049a5e.jpg",
-    "https://i.pinimg.com/736x/5a/30/09/5a30091f054b60f3a930b756112efa5e.jpg",
-    "https://i.pinimg.com/736x/a3/63/8b/a3638b705ae5dfa35b31284a93f71b60.jpg",
-    "https://i.pinimg.com/736x/20/bb/c7/20bbc710cbc1cefa3250dc8dede0195d.jpg",
-    "https://i.pinimg.com/1200x/8d/3c/10/8d3c10fb9dd41480a09f5baa50dc8a66.jpg",
-    "https://i.pinimg.com/736x/1e/d0/d4/1ed0d47c5174794d97d5cf4ffe8e759a.jpg",
-    "https://i.pinimg.com/736x/52/fa/1e/52fa1e5af83f30d9f8b3abaef66da4ec.jpg",
-    "https://i.pinimg.com/1200x/ab/22/b2/ab22b29f59135071c31a7a58fe7e543d.jpg",
-    "https://i.pinimg.com/736x/b1/06/86/b1068640d04e24604769dc6130f21189.jpg",
-    "https://i.pinimg.com/1200x/14/7f/d0/147fd06865daf64022dc1a12ad9120c9.jpg",
-    "https://i.pinimg.com/736x/20/90/2b/20902b5703c6e31aed23870a0f343054.jpg",
-    "https://i.pinimg.com/736x/96/e5/f8/96e5f8db92e2962cd7745c3f49cdabb6.jpg",
-    "https://i.pinimg.com/1200x/62/bd/01/62bd01ef13bd46b44a5309afa93a9e9f.jpg",
-    "https://i.pinimg.com/736x/36/10/a4/3610a4a3335963ee54500b3ad0b90529.jpg",
-    "https://i.pinimg.com/736x/3f/73/fa/3f73fa178153a88f089985e42ae98830.jpg",
-    "https://i.pinimg.com/736x/a9/5f/e6/a95fe6bf1291eaca742fff2029ae096a.jpg"
+    // صور عالية الجودة للتخليص الجمركي والترانزيت
+    "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1200&h=1600&fit=crop&crop=center&q=90",
+    "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1200&h=1600&fit=crop&crop=center&q=90",
+    "https://images.unsplash.com/photo-1494412651409-8963ce7935a7?w=1200&h=1600&fit=crop&crop=center&q=90",
+    "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=1200&h=1600&fit=crop&crop=center&q=90",
+    "https://images.unsplash.com/photo-1578662015974-3e512eeaf1ef?w=1200&h=1600&fit=crop&crop=center&q=90",
+    "https://images.unsplash.com/photo-1601597111158-2fceff292cdc?w=1200&h=1600&fit=crop&crop=center&q=90",
+    "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=1200&h=1600&fit=crop&crop=center&q=90",
+    "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1200&h=1600&fit=crop&crop=center&q=90",
+    "https://images.unsplash.com/photo-1520637836862-4d197d17c93a?w=1200&h=1600&fit=crop&crop=center&q=90",
+    "https://images.unsplash.com/photo-1578662018446-dc2e0c6dfa86?w=1200&h=1600&fit=crop&crop=center&q=90",
+    "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=1200&h=1600&fit=crop&crop=center&q=90",
+    "https://images.unsplash.com/photo-1494412651409-8963ce7935a7?w=1200&h=1600&fit=crop&crop=center&q=90",
+    "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1200&h=1600&fit=crop&crop=center&q=90",
+    "https://images.unsplash.com/photo-1578662015974-3e512eeaf1ef?w=1200&h=1600&fit=crop&crop=center&q=90",
+    "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=1200&h=1600&fit=crop&crop=center&q=90",
+    "https://images.unsplash.com/photo-1601597111158-2fceff292cdc?w=1200&h=1600&fit=crop&crop=center&q=90",
+    "https://images.unsplash.com/photo-1520637836862-4d197d17c93a?w=1200&h=1600&fit=crop&crop=center&q=90",
+    "https://images.unsplash.com/photo-1578662018446-dc2e0c6dfa86?w=1200&h=1600&fit=crop&crop=center&q=90",
+    "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1200&h=1600&fit=crop&crop=center&q=90",
+    "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=1200&h=1600&fit=crop&crop=center&q=90",
+    "https://images.unsplash.com/photo-1494412651409-8963ce7935a7?w=1200&h=1600&fit=crop&crop=center&q=90",
+    "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1200&h=1600&fit=crop&crop=center&q=90",
+    "https://images.unsplash.com/photo-1578662015974-3e512eeaf1ef?w=1200&h=1600&fit=crop&crop=center&q=90",
+    "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=1200&h=1600&fit=crop&crop=center&q=90",
+    "https://images.unsplash.com/photo-1601597111158-2fceff292cdc?w=1200&h=1600&fit=crop&crop=center&q=90",
+    "https://images.unsplash.com/photo-1520637836862-4d197d17c93a?w=1200&h=1600&fit=crop&crop=center&q=90",
+    "https://images.unsplash.com/photo-1578662018446-dc2e0c6dfa86?w=1200&h=1600&fit=crop&crop=center&q=90",
+    "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1200&h=1600&fit=crop&crop=center&q=90",
+    "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=1200&h=1600&fit=crop&crop=center&q=90",
+    "https://images.unsplash.com/photo-1494412651409-8963ce7935a7?w=1200&h=1600&fit=crop&crop=center&q=90",
+    "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1200&h=1600&fit=crop&crop=center&q=90",
+    "https://images.unsplash.com/photo-1578662015974-3e512eeaf1ef?w=1200&h=1600&fit=crop&crop=center&q=90",
+    "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=1200&h=1600&fit=crop&crop=center&q=90",
+    "https://images.unsplash.com/photo-1601597111158-2fceff292cdc?w=1200&h=1600&fit=crop&crop=center&q=90",
+    "https://images.unsplash.com/photo-1520637836862-4d197d17c93a?w=1200&h=1600&fit=crop&crop=center&q=90",
+    "https://images.unsplash.com/photo-1578662018446-dc2e0c6dfa86?w=1200&h=1600&fit=crop&crop=center&q=90",
+    "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1200&h=1600&fit=crop&crop=center&q=90",
+    "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=1200&h=1600&fit=crop&crop=center&q=90",
+    "https://images.unsplash.com/photo-1494412651409-8963ce7935a7?w=1200&h=1600&fit=crop&crop=center&q=90"
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(true);
-  const [isHovered, setIsHovered] = useState(false);
 
-  // التمرير التلقائي للصور
+  // التمرير التلقائي للصور - بدون إيقاف
   useEffect(() => {
-    if (!isPlaying || isHovered) return;
-
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => 
         prevIndex === images.length - 1 ? 0 : prevIndex + 1
@@ -64,23 +59,7 @@ export default function Hero() {
     }, 3000); // تغيير الصورة كل 3 ثوانٍ
 
     return () => clearInterval(interval);
-  }, [isPlaying, isHovered, images.length]);
-
-  const nextImage = () => {
-    setCurrentImageIndex((prevIndex) => 
-      prevIndex === images.length - 1 ? 0 : prevIndex + 1
-    );
-  };
-
-  const prevImage = () => {
-    setCurrentImageIndex((prevIndex) => 
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
-    );
-  };
-
-  const togglePlayPause = () => {
-    setIsPlaying(!isPlaying);
-  };
+  }, [images.length]);
 
   const handleDiscoverServices = () => {
     console.log('تم النقر على زر اكتشف خدماتنا');
@@ -206,66 +185,31 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* شاشة عرض الصور - تصميم الهاتف */}
+          {/* شاشة عرض الصور على شكل هاتف - حجم أكبر مع جودة عالية */}
           <div className="animate-fade-in-left flex justify-center">
             <div className="relative">
-              {/* إطار الهاتف */}
-              <div className="relative bg-gradient-to-b from-gray-800 via-gray-900 to-black rounded-[3rem] p-3 shadow-2xl border-4 border-gray-700">
-                {/* الشاشة */}
-                <div 
-                  className="relative w-80 h-[600px] bg-black rounded-[2.5rem] overflow-hidden shadow-inner group"
-                  onMouseEnter={() => setIsHovered(true)}
-                  onMouseLeave={() => setIsHovered(false)}
-                >
-                  {/* النوتش العلوي */}
-                  <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-6 bg-black rounded-b-2xl z-30 border-l-2 border-r-2 border-gray-800"></div>
-                  
-                  {/* الصورة الحالية */}
+              {/* إطار الهاتف - حجم أكبر */}
+              <div className="relative bg-gray-900 rounded-[4rem] p-4 shadow-2xl border-4 border-gray-800">
+                {/* الشاشة - حجم أكبر */}
+                <div className="relative w-96 h-[700px] bg-black rounded-[3rem] overflow-hidden">
+                  {/* الصورة الحالية - جودة عالية */}
                   <div className="relative w-full h-full">
                     <img
                       src={images[currentImageIndex]}
                       alt={`خدمات التخليص الجمركي والترانزيت - مؤسسة سليمان الحويطي ${currentImageIndex + 1}`}
                       title={`خدمات التخليص الجمركي والترانزيت في السعودية - صورة ${currentImageIndex + 1}`}
                       className="w-full h-full object-cover transition-all duration-1000 ease-in-out"
-                      loading={currentImageIndex < 5 ? "eager" : "lazy"}
+                      loading={currentImageIndex < 3 ? "eager" : "lazy"}
+                      style={{
+                        imageRendering: 'high-quality',
+                        WebkitImageSmoothing: true,
+                        imageSmoothing: true
+                      }}
                     />
-                    
-                    {/* طبقة تدرج خفيفة */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-black/20"></div>
                   </div>
 
-                  {/* أزرار التحكم - مخفية افتراضياً */}
-                  <div className="absolute inset-0 flex items-center justify-between px-4 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20">
-                    <button
-                      onClick={prevImage}
-                      className="bg-white/20 backdrop-blur-md hover:bg-white/30 text-white p-2 rounded-full transition-all duration-300 shadow-lg border border-white/30"
-                      aria-label="الصورة السابقة"
-                    >
-                      <ChevronRight className="w-4 h-4" />
-                    </button>
-                    
-                    <button
-                      onClick={nextImage}
-                      className="bg-white/20 backdrop-blur-md hover:bg-white/30 text-white p-2 rounded-full transition-all duration-300 shadow-lg border border-white/30"
-                      aria-label="الصورة التالية"
-                    >
-                      <ChevronLeft className="w-4 h-4" />
-                    </button>
-                  </div>
-
-                  {/* زر التشغيل/الإيقاف */}
-                  <div className="absolute top-8 right-4 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20">
-                    <button
-                      onClick={togglePlayPause}
-                      className="bg-white/20 backdrop-blur-md hover:bg-white/30 text-white p-2 rounded-full transition-all duration-300 shadow-lg border border-white/30"
-                      aria-label={isPlaying ? "إيقاف التشغيل التلقائي" : "تشغيل التشغيل التلقائي"}
-                    >
-                      {isPlaying ? <Pause className="w-3 h-3" /> : <Play className="w-3 h-3" />}
-                    </button>
-                  </div>
-
-                  {/* مؤشر التقدم */}
-                  <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/20 z-20">
+                  {/* مؤشر التقدم فقط */}
+                  <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/20">
                     <div 
                       className="h-full bg-green-500 transition-all duration-300"
                       style={{ 
@@ -273,37 +217,17 @@ export default function Hero() {
                       }}
                     ></div>
                   </div>
-
-                  {/* عداد الصور */}
-                  <div className="absolute bottom-4 left-4 bg-black/50 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm z-20">
-                    {currentImageIndex + 1} / {images.length}
-                  </div>
-
-                  {/* نقاط التنقل */}
-                  <div className="absolute bottom-4 right-4 flex space-x-1 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20">
-                    {images.slice(0, 5).map((_, index) => (
-                      <button
-                        key={index}
-                        onClick={() => setCurrentImageIndex(index)}
-                        className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                          index === currentImageIndex % 5 
-                            ? 'bg-green-500 scale-125' 
-                            : 'bg-white/50 hover:bg-white/80'
-                        }`}
-                        aria-label={`الانتقال إلى الصورة ${index + 1}`}
-                      />
-                    ))}
-                  </div>
                 </div>
 
-                {/* الزر الرئيسي للهاتف */}
-                <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gray-800 rounded-full border-2 border-gray-600 flex items-center justify-center">
-                  <div className="w-8 h-8 bg-gray-700 rounded-full border border-gray-500"></div>
-                </div>
+                {/* الكاميرا الأمامية */}
+                <div className="absolute top-8 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-gray-800 rounded-full"></div>
+                
+                {/* السماعة */}
+                <div className="absolute top-8 left-1/2 transform -translate-x-1/2 translate-x-10 w-10 h-1.5 bg-gray-800 rounded-full"></div>
               </div>
 
-              {/* تأثير الوهج حول الهاتف */}
-              <div className="absolute -inset-4 bg-gradient-to-r from-green-400/20 via-blue-500/20 to-purple-500/20 rounded-[4rem] blur-2xl opacity-30 animate-pulse"></div>
+              {/* تأثيرات الوهج حول الهاتف */}
+              <div className="absolute -inset-6 bg-gradient-to-r from-green-400/10 via-blue-500/10 to-purple-400/10 rounded-[5rem] blur-2xl opacity-50 animate-pulse"></div>
             </div>
           </div>
         </div>
